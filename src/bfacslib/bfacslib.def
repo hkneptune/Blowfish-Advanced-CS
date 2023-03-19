@@ -1,0 +1,73 @@
+LIBRARY	bfacslib
+
+EXPORTS
+
+	; //////////////////////////// bfacsext ////////////////////////////
+
+    DllCanUnloadNow		PRIVATE
+    DllGetClassObject   PRIVATE
+
+	; //////////////////////////// cryptpak ////////////////////////////
+	
+	CRC32_Test
+	CRC32_Update
+	LZSS_Create
+	LZSS_Destroy
+	LZSS_Compress
+    LZSS_Decompress
+    MD5_SelfTest
+    MD5_Create
+    MD5_Initialize
+    MD5_Destroy
+    MD5_Reset
+    MD5_Update
+    MD5_Final
+    RandomPool_Create
+    RandomPool_Initialize
+    RandomPool_Destroy
+    RandomPool_Reseed
+    RandomPool_GetData
+    Yarrow_Create
+    Yarrow_Initialize
+    Yarrow_Destroy
+    Yarrow_Reseed
+    Yarrow_GetData
+    SHA1_SelfTest
+    SHA1_Create
+    SHA1_Initialize
+    SHA1_Destroy
+    SHA1_Reset
+    SHA1_Update
+    SHA1_Final
+    SHA512_SelfTest
+    SHA512_Create
+    SHA512_Initialize
+    SHA512_Destroy
+    SHA512_Reset
+    SHA512_Update
+    SHA512_Final
+	Support_GetVersion
+	Support_GetCrunchKeyBuildBufSize
+	Support_CrunchKey
+	CipherServer_GetCipherNames
+	CipherServer_GetCipherInfo 
+	CipherServer_Create
+	CipherServer_Destroy
+	CipherServer_ExecuteSelfTest
+	CipherServer_GetInfoBlock
+	CipherServer_OpenSession
+	CipherServer_ResetSession
+	CipherServer_CloseSession
+	CipherServer_EncryptBlocks
+	CipherServer_DecryptBlocks
+	CipherServer_GetRandomData
+	BASE64_Encode	
+	BASE64_Decode	
+
+	; //////////////////////////// zlibex ////////////////////////////
+
+	ZLibEx_Create
+	ZLibEx_Destroy
+	ZLibEx_Process
+	ZLibEx_Finalize
+	ZLibEx_GetLastError

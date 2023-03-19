@@ -1,0 +1,269 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Key Input Dialog</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Key Input Dialog"></object></p>
+
+<p><a name="dialog_keyinput"></a><font size="3" face="Arial"><b>Key
+Input</b></font></p>
+
+<p><font size="2" face="Arial">Here you put in your key
+consisting of a password or a key disk to start encryption or
+decryption actions on the files you selected.</font></p>
+
+<p><font size="2" face="Arial">The password can be everything, a
+single word or a complete sentence. The maximum length of a
+password is just limited by the edit control itself (which is
+usually around 32kB), assumed that you are running the registered
+version (with no key limitations) of Blowfish Advanced CS.</font></p>
+
+<p><font size="2" face="Arial">You can also type in the complete
+ASCII character set by using <em>binary sequences</em>. E.g. if
+you want to have the character with the ASCII code # 8 (that's
+the code for the backspace key) at the end of your password named
+&quot;special&quot; you just type &quot;special\08&quot;. The
+&quot;\08&quot; sequence tells Blowfish Advanced CS to ignore the
+&quot;\&quot; prefix and to take the next two characters as the
+hexadecimal representation of the ASCII code. If you want to use
+the &quot;\&quot; alone you will have to type &quot;\\&quot;. By
+this method the key spectrum can be extended easily and
+brute-force attacks will be much harder. You may even use zero
+bytes in your password, e.g. &quot;sec\00ret&quot;.</font></p>
+
+<p><font size="2" face="Arial">If the password cannot be detected
+with the Auto Confirmation turned on or if Auto Confirmation is
+turned off you will have to enter the password (for encryption
+purposes only) a second time to avoid typing mistakes.</font></p>
+
+<p><font size="2" face="Arial">There will be a warning appearing
+in case the <em>Caps Lock Key</em> is enabled. This protects you
+from accidentally and unintentially entering passphrases with
+capital letters, one of the most common input errors made.</font></p>
+
+<p><font size="2" face="Arial">Please read the </font><a
+href="Security_aspects.htm"><font size="2" face="Arial">security
+aspects</font></a><font size="2" face="Arial"> to avoid flaws
+when choosing your password.</font></p>
+
+<p><font size="2" face="Arial">Use the <em><b>Apply</b></em>
+button to fix changes permanently.</font></p>
+
+<p><font size="2" face="Arial">The following items are visible
+for every action:</font></p>
+
+<p><font size="2" face="Arial"><b>Use Cached Key</b></font></p>
+
+<p><font size="2" face="Arial">If a key is available the </font><a
+href="Key_Cache.htm"><font size="2" face="Arial">key cache</font></a><font
+size="2" face="Arial"> and you want to use it, so turn on this
+switch. All other key input controls will then be disabled.</font></p>
+
+<p><font size="2" face="Arial"><b>Show Password</b></font></p>
+
+<p><font size="2" face="Arial">If your are sure that nobody (not
+even a hidden camera) has the possibility to look over your
+shoulder you can turn on this switch to see your password instead
+of the blank characters. Blank characters are much better to hide
+a password instead of the usual asterisks, because it is harder
+for someone to guess the length of the password when one has the
+chance to peep.</font></p>
+
+<p><font size="2" face="Arial"><b>Auto Confirmation</b></font></p>
+
+<p><font size="2" face="Arial">Confirming a password again and
+again gets boring after a while. With Auto Confirmation turned on
+Blowfish Advanced CS will remember the password you entered and
+confirmed. If you enter the password later again the program
+detects it and continues without further requests. The key input
+dialog will be closed as soon as your password is recognized, so
+you mustn't even touch the enter key. This saves a lot of time
+and avoids typing errors which occur even with confirmations.
+After retyping a password again and again it gets so common that
+you may even duplicate a wrong key-stroke.</font></p>
+
+<p><font size="2" face="Arial"><b>Cache Key</b></font></p>
+
+<p><font size="2" face="Arial">If you want the key you are
+entering to be put into the program's </font><a
+href="Key_Cache.htm"><font size="2" face="Arial">key cache</font></a><font
+size="2" face="Arial"> then check this switch. Remember that when
+you are entering multiple keys the resulting big key will be put
+into the cache, not the single one.</font></p>
+
+<p><font size="2" face="Arial"><b>Multi Key Input</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS allows you to
+concatenate several keys. You can combine passwords and key file
+contents in any order you want to. This allows you e.g. to secure
+your key disk with an additional password (like a PIN number). If
+the key disk was stolen one will still need the password to have
+access to your data. Another example is to need two persons to
+access a secret document: both of them use their own password or
+key disk and are only able to decrypt the data together. Multi
+keys are entered by activating the switch. You will then be asked
+after every key input if another key is going to be entered.
+After all keys are provided they are linked together (in the
+order they were put in) and treated as one big single key. So if
+the first password e.g. was &quot;123&quot; and the second one
+&quot;456&quot; the resulting key is &quot;123456&quot;. For
+decryption you may enter &quot;123456&quot; instead of two single
+keys, of course.</font></p>
+
+<p><font size="2" face="Arial"><b>Use Key Disk</b></font></p>
+
+<p><font size="2" face="Arial">Activate this switch if you want
+to use a keydisk instead of a password. A keydisk is a
+(preferably removable) disk, usually a conventional 3.5&quot;
+floppy disk, with a defined key file on it. By default this file
+is located at &quot;A:\BFACSKEY&quot;, but you can </font><a
+href="Miscellaneous.htm"><font size="2" face="Arial">change this
+setting</font></a><font size="2" face="Arial"> in the options
+dialog. There you can also create a key disk with secure random
+data. Insert the key disk only at the time when Blowfish Advanced
+CS wants to read it. That will be shortly after you leave the key
+input dialog with the &quot;OK&quot; button. Using key files is
+the right choice for those people who have problems to remember
+or don't want to remember passwords. It is also a fine feature
+for sharing keys in a small workgroup. </font><font
+color="#FF0000" size="2" face="Arial"><strong>Please backup your
+key disks!</strong> </font><font size="2" face="Arial">If a key
+disk is lost your data encrypted with the key file will be gone. </font><font
+color="#FF0000" size="2" face="Arial"><strong>Keep key disks at a
+safe place!</strong></font><font size="2" face="Arial"><b> </b>If
+someone has access to them one will be able to copy it and then
+decrypt all your encrypted data.</font></p>
+
+<p><font size="2" face="Arial">These items are only available for
+encryption:</font></p>
+
+<p><font size="2" face="Arial"><b>Compress</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS can compress
+file data before encrypting it. By setting this switch you can
+turn on data compression. If a file cannot be compressed, e.g.
+multimedia files like JPEG or archives like ZIP, it is stored in
+an non-compressed form to avoid wasting disk space. Please check
+this out, because the program tries to compress every file and
+starts a second time, with compression temporarily turned off.
+You may also tell the software what </font><a
+href="File_Handling.htm"><font size="2" face="Arial">filetypes
+not to compress</font></a><font size="2" face="Arial">.
+Compression is time-consuming, due to that the whole process
+slows down. But on highly compressable documents, like text files
+or spreadsheet tables it does not only save disk space, but
+increases the security, too. Cryptanalysis on compressed data is
+much harder then on uncompressed data.</font></p>
+
+<p><font size="2" face="Arial"><b>Store Original Pathnames</b></font></p>
+
+<p><font size="2" face="Arial">Storing pathnames is useful if you
+want to keep complete directory structures, but don't want to
+leave the files at their original locations. The original
+pathname of a file will be stored encrypted in the header of the
+cryptfile. If you decrypt the file its original path will be
+restored. E.g. if you encrypt the file
+&quot;D:\Documents\Private\mydiary.doc&quot; with pathname
+storing on and you decrypt the encrypted file (with activated
+pathname restoring) to the target path &quot;E:\Backups&quot; the
+original file will be recreated as
+&quot;E:\Backups\Documents\Private\mydiary.doc&quot;.</font></p>
+
+<p><font size="2" face="Arial"><b>Rename Files</b></font></p>
+
+<p><font size="2" face="Arial">Activating this option will cause
+a complete renaming of encrypted files, so nobody can predict
+anything about what was in your file when the original name and
+extension have vanished. Depending on the </font><a
+href="File_Handling.htm"><font size="2" face="Arial">settings in
+the options dialog</font></a><font size="2" face="Arial"> files
+will be renamed either with random characters or with an
+enumerated name masking. There you can also choose if the program
+should add the </font><a href="Configuration.htm"><font size="2"
+face="Arial">.BFA extension</font></a><font size="2" face="Arial">
+to encrypted files.</font></p>
+
+<p><font size="2" face="Arial"><b>Relative To Current Path</b></font></p>
+
+<p><font size="2" face="Arial">This switch is only enabled if you
+store original pathnames. If it's checked pathnames will only be
+store relatively to the current path of the browser. E.g. if
+you're in &quot;E:\Backups\Documents&quot; and encrypt the file
+&quot;E:\Backups\Documents\Private\mydiary.doc&quot; the original
+path and name will be saved as &quot;Private\mydiary.doc&quot;.
+Otherwise the complete path will be stored, in our case
+&quot;Backups\Documents\Private\mydiary.doc&quot;.</font></p>
+
+<p><font size="2" face="Arial">For decryption only this item is
+available:</font></p>
+
+<p><font size="2" face="Arial"><b>Restore Original Path</b></font></p>
+
+<p><font size="2" face="Arial">If you have encrypted files with
+their pathnames (either relatively to the base path or not) you
+can recreate the directory structures by checking this switch. If
+you let it unchecked, the original pathname will be ignored.</font></p>
+
+<p><font size="2" face="Arial">For encryption and decryption
+these items are available:</font></p>
+
+<p><font size="2" face="Arial"><b>Keep Directories</b></font></p>
+
+<p><font size="2" face="Arial">If you are using a target path you
+can force the software to keep all directories and recreate them
+at the new location. E.g. if you are in
+&quot;E:\Backups\Documents&quot; and your target path is
+&quot;D:\Documents&quot; an encrypted file like
+&quot;E:\Backups\Documents\Private\mydiary.doc.bfa&quot; will be
+decrypted to &quot;D:\Documents\Private\mydiary.doc&quot;. It is
+not recommended to combine this option with the restoring of
+pathnames for decryption.</font></p>
+
+<p><font size="2" face="Arial"><b>Use Destination Path</b></font></p>
+
+<p><font size="2" face="Arial">By default files will be written
+at the same place where the original files (either encrypted or
+unencrypted) were located. If you want to have the files at
+another location, e.g. for backup purposes, you can type in a
+destination if the switch is turned on. Use the <b>Browse...</b>
+button to select a previously entered pathname from the list (or
+to browse for a new folder). In combination with the store and
+restore pathnames switches you can recreate complete directory
+structures where you want them to be.</font></p>
+
+<p><font size="2" face="Arial"><b>Remove Source Files</b></font></p>
+
+<p><font size="2" face="Arial">If you encrypt or decrypt files to
+a destination the process is similar like copying with encryption
+or decryption afterwards. By activating this switch the source
+files will be wiped (for encryption) or deleted (for decryption
+purposes), so the process is similar to moving files.</font></p>
+
+<p><font size="2" face="Arial">For reencryption these items are
+available<u>:</u></font></p>
+
+<p><font size="2" face="Arial"><b>Old/New Encryption Algorithm</b></font></p>
+
+<p><font size="2" face="Arial">You can select a new encryption
+algorithm for the files or provide the previously chosen
+algorithm respectively. You may also use the same algorithm for
+reencryption, but then you should at last change the encryption
+key. Otherwise the results would be the same. Please remember
+that even if you're using the same key and don't change the
+algorithm the reencrypted files will be totally different in
+their content. This is because every time your key is combined
+with a random value (salt). For more information please read the </font><a
+href="Technical_Reference.htm"><font size="2" face="Arial">technical
+reference</font></a><font size="2" face="Arial">.</font></p>
+</body>
+</html>

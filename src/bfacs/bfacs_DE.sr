@@ -1,0 +1,822 @@
+
+// Deutsche String-Definitionen für Blowfish Advanced CS
+// Copyright (C) 1999-2005 Markus Hahn
+
+[COUNTRY_CONFIG]
+Language=Deutsch
+HelpFile=BFACS_DE.CHM
+
+[ABOUTFORM]
+CAPTION=Info
+OKBTN=OK
+VERSION=Version %s
+COPYRIGHT=Copyright © 1997-2005 Markus Hahn
+EDITION=Personal Edition
+COL_PRP=Eigenschaft
+COL_CNT=Inhalt
+CV_BFACSLIB=bfaCS Library Version
+CV_WINVER=Windows Version
+CV_WINPF=Plattform
+CV_CNAME=Computername
+CV_UNAME=Benutzername
+CV_NUMOFPR=Anzahl der Prozessoren
+CV_MEMLOAD=Speicherauslastung
+CV_PHMEM=Speichergrösse
+CV_FPHMEM=Freier Speicher
+CV_PFSIZE=Auslagerungsdatei
+CV_FPFSPAC=Frei in Auslagerungsdatei
+CV_SCRRES=Bildschirmauflösung
+CV_MOUSE=Maus
+CV_MOUSWH=Mausrad
+
+[BFACSREGISTRYKEYS]
+000=Blowfish Advanced CS verschlüsselt
+001=Blowfish Advanced CS Job
+CAPTION=Blowfish Advanced CS
+ENCRYPT=Verschlüsseln
+DECRYPT=Entschlüsseln
+WIPE=Vernichten
+REENCRYPT=Umverschlüsseln
+DESLACK=Freien Dateispeicher löschen
+WORKWITH=Arbeiten mit
+VIEW=Betrachten
+ERRMESS1=Blowfish Advanced CS Shell Erweiterung
+ERRMESS2=Kann "%s" nicht starten (%s).
+HELPCAPTION=Blowfish Advanced CS Kommandos
+HELPENCRYPT=Ausgewählte Objekte verschlüsseln.
+HELPDECRYPT=Ausgewählte Objekte entschlüsseln.
+HELPWIPE=Ausgewählte Objekte vernichten.
+HELPREENCRYPT=Ausgewählte Objekte umverschlüsseln.
+HELPDESLACK=Freien Dateispeicher bei ausgewählten Objekten löschen.
+HELPWORKWITH=Mit dieser verschlüsselten Datei arbeiten.
+HELPVIEW=Verschlüsselte Datei betrachten.
+
+[BFAFILE]
+022=Zugriff auf Quelldatei nicht möglich
+023=Quelldatei nicht gefunden
+024=allgemeiner Fehler beim Öffnen der Quelldatei
+025=Quelldatei kann nach Überspringen nicht geschlossen werden
+026=I/O Fehler beim Überprüfen des Verschlüsselungsstatus
+027=bereits verschlüsselt
+028="%s" existiert bereits.
+029=Größe der Quelldatei nicht ermittelbar
+030=Zeitstempel der Quelldatei nicht ermittelbar
+031=der Quelldatei nicht ermittelbar
+032=Attribute der Ausgabedatei können nicht zurückgesetzt werden
+033=kann ungültig verschlüsselte Datei nicht löschen
+034=Schreiben des Dateikopfes schlug fehl
+035=8.3 Umbenennung wurde verwendet
+036=abgebrochen
+038=fataler Fehler während des Vernichtens:\20
+039=kann originale Datei nicht löschen, verschlüsselte Ausgabedatei wurde wieder gelöscht
+040=verschlüsselte Datei kann nach einem Fehler bei der Wiederherstellung des Zeitstempels nicht geschlossen werden
+041=nicht unterstützte BFA Version
+042=unbekannte Kompressionsmethode
+043=Quelldatei kann nach Kompressionsfehler nicht zurückgesetzt werden
+044=Zugriff auf Zieldatei nicht möglich
+045=allgemeiner Fehler beim Öffnen der Zieldatei
+049=Kopf der verschlüsselte Datei ist beschädigt
+050=Datenträger voll
+051=Schreiben auf Zieldatei fehlgeschlagen
+052=CRC32 Fehler
+054=temporäre Datei kann nicht umbenannt werden
+055=Quelldatei kann nicht entfernt werden
+056=ungültige Zieldatei kann nicht entfernt werden
+065=I/O Fehler beim Lesen der Quelldatei
+067=kann temporäre Datei nicht umbenennen, als "%s" zur Wiederherstellung hinterlassen
+068=kann Queldatei nach Fehler nicht schliessen
+080=keine Warnungen
+081=schwache Vernichtung
+082=Löschen fehlgeschlagen
+083=kann Attribute nicht setzen
+084=kann Zeitstempel nicht setzen
+085=abgebrochen
+086=Datei abgeschnitten (unvollständig)
+087=Fehler beim Vernichten von "%s", Teile könnten beeits überschrieben worden sein, verschlüsseltes Gegenstück "%s" wurde hinterlassen
+088=unbekanntes Format
+
+[BFAMANAGER]
+000=Originaldatei
+001=Größe
+002=Verschlüsselt nach
+003=Ratio
+004=Fehler, Warnungen, Hinweise
+005=Verschlüsselte Datei
+006=Entschlüsselt nach
+007=Originalgröße
+100=Speichermangel
+101=abgebrochen
+102=Fataler Fehler:\20
+104=Der Zielpfad ist voll.\0d\0aSie könnten einen neuen Datenträger einlegen oder Speicherplatz freigeben.\0d\0aNochmals versuchen?
+105=\0d\0aDiese Datei überschreiben?
+
+[BFAVIEWER]
+FRMT_WIPECB=Entferne %s (%s Bytes)...
+FRMT_VIEWCB=Entschlüssele %s (%s Bytes), %d%% fertig...
+
+[BFAWORKWITH]
+USERBREAK=Abbruch durch Benutzer
+OPENERROR=Kann "%s" nicht öffnen (%s).\0d\0aWollen Sie die Datei wieder verschlüsseln?
+KEEPWAITING=Sind Sie mit dem Bearbeiten von "%s" fertig?\0d\0a(Bei Verneinung bleibt die Datei unverschlüsselt.)
+FRMT_DECCB=Entschlüssele "%s" (%s Bytes), %d%% fertig...
+FRMT_ENCCB=Verschlüssele "%s" (%s Bytes) zurück, %d%% fertig...
+FRMT_WIPCB=Vernichte "%s", bitte warten...
+RMFROMFAV=Die Datei "%s" wurde nicht gefunden,\0d\0aist aber in der Liste eingetragen.\0d\0aWollen Sie diesen Eintrag löschen?
+
+[BFJOB]
+SEARCHERR=Fehler beim Suchen aufgetreten (%s).
+NUMOFSINGLEFILE=1 Datei (%s Bytes)
+NUMOFSINGLEFILE_DSL=1 Datei
+NUMOFFILES=%s Dateien (zusammen %s Bytes)
+NUMOFFILES_DSL=%s Dateien
+SKIPPED=Operation durch den Benutzer übersprungen.
+USERBREAK=Benutzerabbruch
+FATALERR=Fataler Fehler aufgetreten (%s).
+GHOSTFILES=%d Dateien nicht vorhanden:
+NOFILES=Keine Dateien gefunden.
+ERROR_ENC=Fehler während der Verschlüsselung (%s).
+ERROR_DEC=Fehler während der Entschlüsselung (%s).
+ERROR_WIPE=Fehler während der Vernichtung (%s).
+ERROR_REENC=Fehler während der Umverschlüsselung (%s).
+ERRORS=Es sind Fehler aufgetreten.
+WARNINGS=Es sind Warnungen vorhanden.
+ALLSUCCESS=Operation vollständig abgeschlossen.
+CONFIRMMESS=%s gefunden.\0d\0aMit dem %s beginnen?
+DOING_ENC=Verschlüsseln
+DOING_DEC=Entschlüsseln
+DOING_WIPE=Vernichten
+DOING_DESL=Löschen von freiem Dateispeicher
+DOING_REENC=Umverschlüsseln
+UNCONFKEYWARN=Der Schlüssel (oder Teile davon) wurden bei der Eingabe nicht bestätigt.\0d\0aTrotzdem fortfahren?
+FMT_SUM=Operation: %s\0d\0aStatus: %s\0d\0aBenötigte Zeit: %s\0d\0a%s\0d\0a
+FMT_TITLE=Titel: %s\0d\0a
+OP_ENC=Verschlüsselung
+OP_DEC=Entschlüsselung
+OP_WIPE=Vernichtung
+OP_REENC=Umverschlüsselung
+OP_DSLK=Löschen von freiem Dateispeicher
+OP_VIEW=Betrachten
+OP_WWITH=Bearbeiten
+BATCH_APPENDLOADERR=Fehler beim Laden der existierenden Datei: %s
+BATCH_CANNOTSAVE=Kann Jobdatei nicht speichern.
+BATCH_LOADERR=Fehler beim Laden der Jobdatei.
+BATCH_NOTAJOBFILE=Datei ist keine Jobdatei.
+BATCH_INVALIDERR=Jobdatei ist ungültig oder beschädigt.
+DEFJOBTITLE=Job für %s
+
+[BFMANAGER]
+MAXERR=Mehr als %d Fehler sind aufgetreten.\0d\0aTrotzdem fortfahren?
+
+[CIPHERSERVERTOOLS]
+ETS01=kein Fehler
+ETS02=allgemeiner Fehler
+ETS03=Algorithmus nicht gefunden
+ETS04=Algorithmus ungültig
+ETS05=Speichermangel
+ETS06=schwacher Schlüssel entdeckt
+ETS07=Selbsttest gescheitert
+ETS08=Session noch aktiv
+ETS09=keine aktive Session
+ETS10=falscher Sessiontyp
+ETSUNKNOWN=unbekannter Fehler
+
+[CRPTFILE]
+000=allgemeiner Fehler
+001=fataler Fehler
+002=Algorithmus nicht gefunden
+003=Selbsttest fehlgeschlagen
+004=ungültiger Algorithmus
+005=Speichermangel
+006=Schlüsselaufbereitung fehlgeschlagen
+007=Datei nicht gefunden
+008=Zugriff verweigert
+009=Datei schreibgeschützt
+010=Datenträger voll
+011=schwacher Schlüssel erkannt
+012=I/O Fehler
+013=falscher Algorithmus
+014=Datei nicht verschlüsselt
+015=falscher Schlüssel
+016=nicht unterstütztes Format
+017=Datei abgeschnitten
+018=allgemeiner Fehler beim Öffnen
+019=Moduskonflikt
+020=interner Fehler
+021=Dateiende erreicht
+022=unbekannter Fehler
+023=ungültiger Öffnungsmodus
+024=unbekannter Fehlercode #
+025=Datei bereits geöffnet
+026=Nullschlussel
+027=Schlüssel zu gross
+028=keine Datei offen
+
+[DESLACKER]
+000=Dateiname
+001=Ergebnis
+002=Erledigt.
+003=Fehler:\20
+004=Nicht bearbeitet:\20
+005=Benutzerabbruch
+010=Mehr als %d Fehler aufgetreten.\0d\0aTrotzdem fortfahren?
+ERR_01=kann Attribute nicht lesen
+ERR_02=kann Attribute nicht zurücksetzen
+ERR_03=kann Datei nicht öffnen
+ERR_04=kann Dateilänge nicht ermitteln
+ERR_05=kann nicht ans Dateiende positionieren
+ERR_06=kann nicht auf Datei schreiben
+ERR_07=kann Dateilänge nicht zurücksetzen
+ERR_08=kann Dateilänge nicht wiederherstellen
+ERR_09=kann Zeitstempel der Datei nicht wiederherstellen
+ERR_10=kann nach Fehler Datei nicht mehr schliessen
+ERR_11=kann Datei nicht schliessen
+ERR_12=kann Attribute nicht wiederherstellen
+FMT_ERR=Fehler: %s (%s)
+TOOMANYERRS=unterbrochen nach zu vielen Fehlern
+
+[DESTSELECTWIN]
+REMOVEBTN=Löschen
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+INPUTBOXINFO=Zielpfad:
+BROWSEBTN=Suchen...
+000=Fehler
+001=Pfad "%s" existiert nicht.\0d\0aSoll er jetzt erzeugt werden?
+002=Kann Pfad "%s" nicht erzeugen.
+003=Wählen Sie einen Pfad aus:
+
+[DISKCLEAR]
+OUTOFMEM=Speichermangel
+DONEMESS=Freien Speicherplatz von %s gelöscht.
+ERR_OPEN=kann temporäre Datei "%s" nicht erzeugen (%s)
+ERR_IO=I/O Fehler (%s)
+ERR_CLOSE=kann temporäre Datei "%s" nicht schliessen (%s)
+ERR_DEL=mindestens eine temporäre Datei konnte nicht gelöscht werden
+CONT_AFTER_ERR=Ein Problem ist aufgetreten: %s.\0d\0aTrotzem fortfahren?
+
+[DISKCLEARFORM]
+DRIVEPREFIX=Laufwerk\20
+SHOWPROG0=%s von %s Bytes
+SHOWPROG1=%s Bytes
+CAPTION=Freien Speicherplatz löschen
+STARTBTN=Beginnen
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+MINIMIZEBTN=Minimieren
+SETUPGROUP=Einstellungen
+HOWTOSELECT=Wo löschen?
+HTS_CURRDRV=Auf dem aktuellen Pfad
+HTS_ALLDRIVES=Auf allen Laufwerken
+HTS_ALLFIXEDDRIVES=Auf allen Festplatten
+NOBUFFERSWITCH=Nicht verzögertes Schreiben
+SILENTSWITCH=Keine Meldungen
+LOWPRIOSWITCH=Niedrige Prioriät
+METHODINFO=Löschen mit:
+MSEL_ZEROS=Nullen
+MSEL_RNDBLOCK=Statischen Zufallsdaten
+MSEL_RNDSTREAM=Kontinuierlichen Zufallsdaten
+ERRORMESS=Fehler beim Löschen von "%s" : %s.
+REALLYBREAK=Wollen Sie wirklich abbrechen?
+ACTION_CLEAR=Lösche freien Speicherplatz
+
+[EXECUTOR]
+FATAL=Ein fataler Fehler ist aufgetreten:\0d\0a%s
+ERROR=Fehler: %s
+ACTION_ENCRYPT=Verschüsselung
+ACTION_DECRYPT=Entschlüsselung
+ACTION_WIPE=Vernichtung
+ACTION_REENCRYPT=Umverschlüsselung
+ACTION_DESLACK=Löschen von freiem Dateispeicher
+ACTION_WORKWITH=Bearbeiten
+ACTION_ERR=Arbeitet
+CONFJOBEXEC=Job "%s" jetzt ausführen?
+VW_ERROR=Fehler beim Betrachten:\20
+VW_WRONGKEY=Falscher Schlüssel, Datei kann nicht betrachtet werden.
+JOBERROR=Fehler beim Ausführen von Job "%s" : %s
+
+[FAVORITESWIN]
+CAPTION=Favoritenverwaltung
+FAVLISTINFO=Favoriten:
+REMOVEBTN=Löschen
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+
+[FILEBROWSER]
+FF_INFO=%s Ordner, %s Datei(en)
+SEL_INFO=%s Objekt(e) ausgewählt (%s Bytes zusammen)
+SORTING=Sortiere...
+BROWSING=%d Objekt(e) gefunden...
+ST_INFO=%s Bytes (%s Bytes freier Speicher)
+DUNNO=???
+NETWORK=Netzwerk
+EXEC=Öffne "%s" ...
+MSG_COPY=Kopiere %s
+MSG_MOVE=Verschiebe %s
+MSG_DELETE=Lösche %s
+ERR00=Wechsel nach "%s" nicht möglich.
+ERR01=Es ist ein Problem bei der Suche nach Dateien aufgetreten.
+ERR02=Durchsuchen des Netzwerkpfades nicht möglich.
+ERR20=Quell- und Zielpfad sind identisch.
+ERR21=Abbruch durch Benutzer.\0d\0a%d Datei(en) wurden kopiert.
+ERR22=Datei "%s" (%s Bytes) durch "%s" (%s Bytes) ersetzen?
+ERR23=%d Datei(en) konnten nicht kopiert werden.
+ERR24=Verschieben von Ordnern auf andere (Netzwerk-)Laufwerke wird nicht unterstützt.
+ERR25=Abbruch durch Benutzer.\0d\0a%d Objekt(e) wurden verschoben.
+ERR26=%d Objekt(e) konnten nicht verschoben werden.
+ERR27=Abbruch durch Benutzer.\0d\0a%d Objekt(e) wurden vollständig gelöscht.
+ERR28=%d Objekt(e) konnten nicht gelöscht werden.
+ERR40=Interner Fehler aufgetreten.
+ERR41=Objekt "%s" existiert bereits.\0d\0aWollen Sie einen anderen Namen probieren?
+ERR42=Kann "%s" nicht in "%s" umbenennen.\0d\0aFortfahren?
+ERR50=Der Ordnerpfad "%s" kann nicht erzeugt werden.
+ERR51=Nicht alle Ordner von "%s" konnten erzeugt werden.
+INTERRUPT=Abbruch des Suchprozesses durch den Benutzer.
+COLNAME=Name
+COLREALNAME=Originalname
+COLSIZE=Grösse
+COLREALSIZE=Originalgrösse
+COLTIME=Zeit
+COLTYPE=(Originaler) Typ
+COLATTR=Attribute
+NOFILES=Keine Dateien gefunden.
+SCANERR01=Falscher Schlüssel
+SCANERR02=Falscher Algorithmus
+SCANERR03=Datei nicht gefunden
+SCANERR04=Unbekanntes Format (falscher Algorithmus?)
+SCANERR05=Fehler (%s)
+SCANFATAL=Fataler Fehler während dem Scannen von "%s" aufgetreten: %s.\0d\0aScannen wurde abgebrochen.
+USERBREAK=Abbruch durch Benutzer
+
+[FILESUPP]
+000=Datei nicht gefunden
+001=freier Speicher (>2GB) nicht ermittelbar
+002=freier Speicher nicht ermittelbar
+SHEX000=Das Betriebssystem hat keinen Speicher oder keine Ressourcen mehr frei.
+SHEX001=Die angegebene Datei wurde nicht gefunden.
+SHEX002=Der angegebene Pfad wurde nicht gefunden.
+SHEX003=Die EXE-Datei ist ungültig (keine Win32-EXE oder beschädigt).
+SHEX004=Das Betriebssystem verweigerte den Zugriff auf die angegebene Datei.
+SHEX005=Die Verbindung für den Dateiname ist unvollständig oder ungültig.
+SHEX006=Die DDE Transaktion konnte nicht abgeschlossen werden, da andere DDE Transaktionen noch bearbeitet wurden.
+SHEX007=Die DDE Transaktion ist fehlgeschlagen.
+SHEX008=Die DDE Transaktion konnte aufgrund einer Zeitüberschreitung nicht abgeschlossen werden.
+SHEX009=Die angegebene DLL wurde nicht gefunden.
+SHEX010=Es existiert keine Applikation, die mit dieser Dateiendung verknüpft ist.
+SHEX011=Die Operation konnte augrund von Speichermangel nicht abgeschlossen werden.
+SHEX012=Eine Verletzung beim gemeinsamen Zugriff ist aufgetreten.
+
+[GLOBALS]
+000=Speichere Konfiguration...
+001=Die Konfiguration konnte nicht nach "%s" gespeichert werden.
+002=\20- Problem beim Herunterfahren
+
+[JOBCHOOSERFORM]
+CAPTION=Was ist zu tun?
+OKBTN=OK
+CANCELBTN=Abbrechen
+ACTION=Aktion
+SEL_ENCRYPT=Verschlüsseln
+SEL_DECRYPT=Entschlüsseln
+SEL_WIPE=Vernichten
+SEL_REENCRYPT=Umverschlüsseln
+SEL_DESLACK=Freien Dateispeicher löschen
+SEL_VIEW=Betrachten
+SEL_WORKWITH=Arbeiten mit
+
+[KEYDISK]
+OUTOFMEM=Speichermangel
+IOERR=I/O Problem
+DUNNO=unbekanntes Problem
+ERRMESS=Kann die Schlüsseldatei "%s" nicht lesen (%s).\0d\0aNochmals probieren?
+KEYFILETOOLARGE=Die Schlüsseldatei"%s" (%s Bytes) ist größer als die maximal zulässige Größe.\0d\0aDie ersten %s Bytes werden verwendet, der Rest ignoriert.\0d\0aWollen Sie fortfahren?
+
+[LOGFORM]
+CAPTION=Jobreport
+OKBTN=OK
+HELPBTN=Hilfe
+SAVEBTN=Speichern...
+MAKEJOBFILEBTN=Job speichern...
+ERRWAR=\20- %d Fehler, %d Warnungen
+SD_REP_TITLE=Jobreport speichern
+SD_REP_FILTER=Textdateien (*.txt)|*.TXT|Alle Dateien (*.*)|*.*
+CONFIRM=Bestätigen
+ERROR=Fehler
+REPCREATERR=Reportdatei "%s" kann nicht erzeugt werden.
+ALREADYEXISTS="%s" existiert bereits.\0d\0aDen Report an diese Datei anhängen?
+SD_JOB_TITLE=Job speichern, Schritt 1/2
+SD_JOB_FILTER=Jobdateien (*.bfj)|*.BFJ
+JOBFILEEXISTS=Die Jobdatei "%s" existiert bereits.\0d\0aWollen Sie den Job anhängen?
+TITLEREQ_CAPTION=Job speichern, Schritt 2/2
+TITLEREQ_PROMPT=Bitte geben Sie einen Titel für den Job an:
+JOBFILESAVED=Job "%s" wurde erfolgreich in \0d\0a"%s" gespeichert.
+LM_SORT=Nach Ausnahmen sortieren
+
+[MAKEKEYDISKFORM]
+CAPTION=Schlüsseldisk erzeugen
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+SIZEINFO=Grösse (in Bits):
+HOWTOINFO=Vor der Erzeugung des Schlüssels werden zufällige Daten benötigt.\0d\0aBewegen Sie hierzu die Maus über dem Fenster oder drücken Sie irgendwelche Tasten.
+SELFILENAME=Speichern der Schlüsseldatei
+OVERWRITE="%s" existiert bereits.\0d\0aFalls es sich um eine Schlüsseldatei handeln sollte\0d\0akönnen damit verschlüsselte Daten nach dem Überschreiben\0d\0anicht wiederhergestellt werden.\0d\0aTrotzdem überschreiben?
+WARNING=Warnung
+ERROR=Fehler
+CANNOTCREATE=Die Schlüsseldatei "%s" konnte nicht geschrieben werden.
+FILTER=Alle Dateien (*.*)|*.*
+CREATED=Schlüsseldatei "%s" mit %d Bytes (%d Bits) Zufallsdaten wurde erzeugt.
+SUCCESS=Erfolg
+
+[MAINFORM]
+COPYING=Kopiere
+MOVING=Verschiebe
+DELETING=Lösche
+ABORTED=Abgebrochen
+CONFIRM=Bestätigen
+WARNING=Warnung
+ERROR=Fehler
+SCANERR=Der Scanner kann nicht gestartet werden (%s).
+SCAN=SCAN
+PRESS_ESC=ESC für Abbruch
+ESC_DETECT=ESC Taste wurde gedrückt
+CP_CAPTION=Pfad wechseln
+CP_PROMPT=Geben Sie den neuen Pfad ein:
+COPYDESTCAPTION=Kopieren
+MOVEDESTCAPTION=Verschieben
+CONF_DELETE=Wollen Sie diese Objekte wirklich löschen?
+NO_WWW=Der Standard-Webbrowser konnte nicht gestarted werden.
+000=Initialisiere Benutzeroberfläche...
+MN_FILE=Datei
+MN_FILE_ENCRYPT=Verschlüsseln...
+MN_FILE_DECRYPT=Entschlüsseln...
+MN_FILE_VIEW=Betrachten...
+MN_FILE_WORKWITH=Arbeiten mit
+MN_FILE_REENCRYPT=Umverschlüsseln...
+MN_FILE_WIPE=Vernichten
+MN_FILE_DESLACK=Freien Dateispeicher löschen
+MN_FILE_EXIT=Beenden
+MN_BROWSER=Auswahl
+MN_BROWSER_BROWSE=Navigieren...
+MN_BROWSER_CHANGEPATH=Pfad wechseln...
+MN_BROWSER_UPONELEVEL=Eine Ebene nach oben
+MN_BROWSER_REFRESH=Neu einlesen
+MN_BROWSER_NEWFOLDER=Neue Ordner...
+MN_BROWSER_ICONS=Große Symbole
+MN_BROWSER_SMALLICONS=Kleine Symbole
+MN_BROWSER_LIST=Liste
+MN_BROWSER_REPORT=Details
+MN_BROWSER_EXCLUDE=Nicht anzeigen...
+MN_BROWSER_EXCLUDE_ARCHIVE=Archivdateien
+MN_BROWSER_EXCLUDE_READONLY=Schreibgeschützte Dateien
+MN_BROWSER_EXCLUDE_HIDDEN=Versteckte Dateien
+MN_BROWSER_EXCLUDE_SYSTEM=Systemdateien
+MN_BROWSER_SCANNER=Scanner
+MN_BROWSER_CHOOSEFONT=Zeichensatz auswählen...
+MN_TOOLS=Extras
+MN_TOOLS_OPTIONS=Optionen...
+MN_TOOLS_SHOWBUTTONS=Schaltflächenleiste anzeigen
+MN_TOOLS_SHOWBROWSERTOOLS=Werkzeugleiste für Auswahl anzeigen
+MN_TOOLS_SHOWSEEDINFO=Zufallszahlen Status...
+MN_TOOLS_EXPIREKEYCACHE=Schlüsselspeicher löschen
+MN_TOOLS_CLEARWORKWITHFAVS=Liste der Arbeitsdateien leeren
+MN_TOOLS_SDFC=Kindersicherung...
+MN_TOOLS_LANGUAGE=Sprache
+MN_TOOLS_CLEARDISKSPACE=Freien Speicherplatz löschen...
+MN_FAVORITES=Favoriten
+MN_FAVORITES_ADDPATH=Aktuellen Pfad hinzufügen
+MN_FAVORITES_MANAGE=Verwalten...
+MN_HELP=Hilfe
+MN_HELP_HELP=Inhalt
+MN_HELP_WEB=Zur Webseite...
+MN_HELP_ABOUT=Info
+PM_ENCRYPT=Verschlüsseln...
+PM_DECRYPT=Entschlüsseln...
+PM_WIPE=Vernichten
+PM_WORKWITH=Arbeiten mit...
+PM_COPY=Kopieren...
+PM_MOVE=Verschieben...
+PM_RENAME=Umbenennen...
+PM_DELETE=Löschen
+PM_SELECT=Selektieren
+PM_SELECT_ALL=Alles
+PM_SELECT_FILES=Dateien
+PM_SELECT_FOLDERS=Ordner
+PM_SELECT_ENCRYPTED=Verschlüsselte Dateien
+PM_SELECT_DECRYPTED=Unverschlüsselte Dateien
+PM_SELECT_BYSTRING=Dateien mit Begriff...
+FORMAT=Formatieren...
+TM_SHOW=Anzeigen
+TM_EXIT=Beenden
+SELSEARCHCAPT=Dateien mit Suchbegriff auswählen
+HINT_ENCRYPT=Verschlüsseln (Ctrl+E)
+HINT_DECRYP=Entschlüsseln (Ctrl+D)
+HINT_WIPE=Vernichten (Ctrl+W)
+HINT_WORKWITH=Arbeiten mit (Ctrl+O)
+HINT_OPTIONS=Optionen (Ctrl+T)
+HINT_EXIT=Beenden (Ctrl+Q)
+HINT_ABOUT=Info
+HINT_HELP=Hilfe (F1)
+HINT_BT_UPONELEVEL=Eine Ebene nach oben (Ctrl+L)
+HINT_BT_REFRESH=Neu einlesen (F5)
+HINT_BT_BROWSE=Navigieren (F3)
+HINT_BT_NEWFOLDER=Neue Ordner
+HINT_BT_ICONS=Große Symbole
+HINT_BT_SMALLICONS=Kleine Symbole
+HINT_BT_LIST=Liste
+HINT_BT_REPORT=Details
+HINT_BT_HISTBACK=Zurück
+HINT_BT_HISTFORWARDS=Vorwärts
+SELECTPATH=Wählen Sie einen Pfad aus:
+
+[MAKEDIRFORM]
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+CAPTION=Neue Ordner
+NEWDIRINFO=Geben Sie die Namen der neuen Ordner an. Sie können auch verschachtelte Pfade eingeben:
+ILLEGAL_NAME=Ein Name enthält das unzulässige Zeichen '%s'.
+ERROR=Fehler
+
+[MESSBOXYNAC]
+YESBTN=Ja
+NOBTN=Nein
+ALLBTN=Alle
+CANCELBTN=Abbrechen
+
+[PASSWCONFIRM]
+CAPTION=Bestätigen
+OKBTN=OK
+CANCELBTN=Abbrechen
+INFO=Geben Sie das Passwort erneut ein:
+BADBIN=Sie haben ungültige Binärsequenzen ("\xx") eingegeben.
+ZEROPASSW=Bitte geben Sie etwas ein.
+ERROR=Fehler
+PASTEANDCLEAR=Einfügen und Zwischenablage leeren
+
+[PASSWORDFORM]
+NOTEQUPASSW=Das bestätigte Passwort ist nicht identisch.
+ZEROPASSW=Bitte geben Sie ein Passwort ein.
+BADBIN=Sie haben eine ungültige Binärsequenz ("\xx") eingegeben.
+ERROR=Fehler
+WARNING=Warnung
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+APPLYBTN=Speichern
+PWUSECACHEDKEYSWITCH=Gespeicherten Schlüssel verwenden
+PWINPUTINFO=Passwort:
+PWINPUTINFO_R1=Altes Passwort:
+PWINPUTINFO_R2=Neues Passwort:
+PWSHOWPASSWORDSWITCH=Passwort anzeigen
+PWAUTOCONFSWITCH=Automatische Bestätigung
+PWCACHEKEYSWITCH=Schlüssel halten
+PWMULTIKEYSWITCH=Mehrfache Schlüssel
+PWUSEKEYDISKSWITCH=Schlüsseldisk verwenden
+TPTARGETPATHSWITCH=Zielpfad:
+TPBROWSEBTN=Suchen...
+TPKEEPDIRECTORIESSWITCH=Pfade erhalten
+TPREMOVESOURCEFILESSWITCH=Quelldateien entfernen
+ENCSTOREPATHNAMESSWITCH=Pfadnamen speichern
+ENCRELATIVEPATHSSWITCH=Relativ zum aktuellen Pfad
+ENCCOMPRESSSWITCH=Daten komprimieren
+ENCRENAMEFILESSWITCH=Dateien umbenennen
+DECRESTOREPATHSWITCH=Pfadnamen wiederherstellen
+TARGETERR=Pfad "%s" kann nicht angelegt werden.
+NOTARGET=Zielpfad "%s" existiert nicht.\0d\0aJetzt anlegen?
+REENC1=Alter Verschlüsselungsalgorithmus:
+REENC2=Neuer Verschlüsselungsalgorithmus:
+PASTEANDCLEAR=Einfügen und Zwischenablage leeren
+
+[PASSWORDINPUT]
+ERROR=Fehler
+CONFIRM=Bestätigen
+MULTIKEYREQ=Wollen Sie ein weiteres Passwort oder eine Schlüsseldisk anhängen?
+CAPTION_ADDON=\20- Schlüssel #%d
+MODE_KEYINPUT=Schlüsseleingabe
+MODE_VIEW=Betrachten
+MODE_WORKWITH=Arbeiten mit
+MODE_SCANNER=Scanner
+MODE_REENCRYPT=Umverschlüsseln
+MODE_ENCRYPT=Verschlüsseln
+MODE_DECRYPT=Entschlüsseln
+DESTSEL=Zielpfad
+
+[PATHINPUTWIN]
+OKBTN=OK
+CANCELBTN=Abbrechen
+SEARCHBTN=Suchen...
+HELPBTN=Hilfe
+ENTERPLEASE=Bitte geben Sie etwas ein.
+ERROR=Fehler
+SELECTPATH=Wählen Sie einen Pfad aus:
+
+[PATHSEARCH]
+000=abgebrochen
+001=Fehler
+002=keine Dateien gefunden
+003=Datei "%s" nicht gefunden
+004=Pfad enthält noch Dateien
+005=Pfad enthält geschützte Dateien
+006=Suchen Dateien in "%s"...
+007=Nehme einzelne Dateien auf...
+
+[PATHSEARCHFORM]
+CAPTION=Dateisuche
+CANCELBTN=Abbrechen
+
+[PROGRESSFORM]
+PAUSEBTN=Pause
+CONTBTN=Fortfahren
+STOPBTN=Stop
+MINIMIZEBTN=Minimieren
+CURRENTFILEINFO=Aktuelle Datei:
+INPUTFILEINFO=Quelldatei:
+OUTPUTFILEINFO=Zieldatei:
+FILESIZEINFO=Dateigröße:
+FILENUMBERINFO=Datei Nr.:
+WIPELOOPINFO=Überschreibzyklus:
+SINGLEPROGRESSBARHINT=Fortschritt aktuelle Datei
+ALLPROGRESSBARHINT=Gesamtfortschritt
+MODE_ENCRYPT=Verschlüsselung
+MODE_DECRYPT=Entschlüsselung
+MODE_WIPE=Vernichtung
+MODE_REENCRYPT=Umverschlüsselung
+MODE_DESLACK=Löschen von freiem Dateispeicher
+CONFIRM=Bestätigen
+BREAKQUEST=Wollen Sie wirklich abbrechen?
+
+[REENCRYPTOR]
+000=Dateiname
+001=Ergebnis
+002=erledigt
+003=Fehler:\20
+004=Übersprungen:\20
+005=abgebrochen
+006=alte Datei kann nicht gelöscht werden
+007=temporäre Datei kann nicht umbenannt werden
+008=temporäre Datei "%s" kann nicht nach "%s" umbenannt werden
+009=Fehler beim Schließen von Dateien nach Benutzerabbruch
+010=Mehr als %d Fehler sind aufgetreten.\0d\0aTrotzdem fortfahren?
+
+[RENAMEFORM]
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+CAPTION=Umbenennen
+OLDNAMEINFO=Alter Name:
+NEWNAMEINFO=Neuer Name:
+ILLEGAL_NAME=Name enthält ungültiges Zeichen '%s'.
+ERROR=Fehler
+
+[SDFCFORM]
+CAPTION=Kindersicherung
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+CHANGE=Passwort ändern:
+ENTER=Passwort eingeben:
+
+[SETTINGSFORM]
+ERROR=Fehler
+YES=ja
+NO=nein
+CONFIRM=Bestätigen
+SUCCESS=Erfolg
+CAPTION=Optionen
+OKBTN=OK
+CANCELBTN=Abbrechen
+HELPBTN=Hilfe
+APPLYBTN=Speichern
+SECURITYSHEET=Sicherheit
+SECURITYCIPHERLISTINFO=Verschlüsselungsalgorithmus:
+SECURITYCOMPRESSINFO=Kompressionsmethode:
+SECURITYWIPEINFO=Vernichtungsmethode:
+SECURITY_KC_GROUP=Schlüsselspeicher
+SECURITY_KC_EXPIRETIME=Haltezeit (in Sekunden) :
+SECURITY_KC_NEVEREXPIRES=Gespeicherter Schlüssel läuft nie ab
+SECURITY_MNCIPHER_SHOW=Information anzeigen
+SECURITY_CPHINF_BLOCKSIZE=Blocklänge:
+SECURITY_CPHINF_KEYSIZE=Schlüssellänge:
+SECURITY_CPHINF_TYPE=Typ:
+SECURITY_CPHINF_BITS=Bits
+COMPRESSNAME_LZSS=LZSS
+COMPRESSNAME_DEFLATE=Deflate
+COMPRESSNAME_BZIP2=BZIP2
+WIPE_DELETEONLY=Nur löschen
+WIPE_SIMPLE=Einfach (1x)
+WIPE_DOD=DoD Methode (3x)
+WIPE_SFS=SFS Methode (35x)
+CONFIGSHEET=Konfiguration
+CFG_SHOWHINTS=Hinweise anzeigen
+CFG_HOTTRACKING=Hot Tracking
+CFG_HTMLSTYLE=Auswahl im Stile eines Webbrowsers
+CFG_GRIDLINES=Gitterlinien
+CFG_NONETWORK=Netzwerk nicht anzeigen
+CFG_AUTOARRANGE=Automatisches Anordnen
+CFG_FLATVIEW=Flache Auswahlansicht
+CFG_SCANBFAFILESONLY=Nur .BFA Dateien scannen
+CFG_REPLACESCANICONS=Symbole (und Typen) von gescannten Dateien ersetzen
+CFG_KEEPDATETIME=Zeitstempel bleiben erhalten
+CFG_KEEPATTRIBUTES=Attribute bleiben erhalten
+CFG_SKIPENCRYPTED=Bereits verschlüsselte Dateien überspringen
+CFG_WRITEPROTECT=Verschlüsselte Dateien schreibschützen
+CFG_TRYRENAME83=Versuchen 8.3 kompatibel umzubenennen
+CFG_ADDEXTENSION=Erweiterung .BFA anhängen
+CFG_IGNORECRC32=CRC32 Fehler ignorieren
+CFG_ACCEPTRUNCATED=Abgeschnittene Dateien akzeptieren
+CFG_REMOVEEMPTYDIRS=Leere Verzeichnisse entfernen
+CFG_OVERWRITEEXISTING=Existierende Dateien überschreiben
+CFG_NOCACHE=Cache-Speicher für Lesen und Schreiben umgehen
+CFG_CONFIRMOPERATIONS=Operationen müssen bestätigt werden
+CFG_SHOWJOBREPORT=Jobreport anzeigen
+CFG_AUTOREFRESH=Automatische Auswahlaktualisierung
+CFG_OVERWRITEVIEWED=Betrachtete Dateien dürfen existierende überschrieben
+CFG_CLOSEAFTERWORK=Beenden nachdem ein Shelljob ausgeführt wurde
+CFG_DOUBLECLICKWORK=Doppelklick entspricht "Arbeiten mit"
+CFG_SAVESENSSETS=Sicherheitsrelevante Informationen speichern
+CFG_PLACEDRIVESFIRST=Laufwerke voranstellen
+CFG_COLORPROGRESS=Farbige Fortschrittsanzeige
+CFG_TRAYICON=In der Taskleiste laufen lassen
+CFG_FORCECOMPRESS=Kompression erzwingen
+FILEHANDLINGSHEET=Dateien
+FH_RENAMESETUP=Umbenennung mit
+FH_RENAMERANDOMSWITCH=zufälligen Zeichen
+FH_RENAMEMASKSWITCH=Benutzermaske
+FH_MASKINFO=Präfix:
+FH_NUMINFO=Nummer.
+FH_EXTINFO=Erweiterung:
+FH_COMPRESSIONSETUP=Kompression
+FH_NOCOMPRESSINFO=Dateien der folgenden Typen nie komprimieren:
+MISCSHEET=Verschiedenes
+MISC_TVP_INFO=Temporärer Pfad zum Betrachten:
+MISC_TVP_BROWSE=Suchen...
+MISC_KD_INFO=Schlüsseldatei:
+MISC_KD_MAKE=Schlüsseldisk erzeugen...
+MISC_CLEARKEYHASHES=Prüfsummen für die Automatische Bestätigung löschen
+MISC_MAXERRORS=Maximale Anzahl von Fehlern:
+MISC_REGGROUP=Systemeinstellungen
+MISC_REGFILEASSOCSWITCH=Dateitypen verwenden
+MISC_REGSHELLEXTSSWITCH=Erweiterungen für Kontextmenü
+MISC_REGUPDATEBTN=Setzen
+REGUPDATEMESS=Systemeinstellungen wurden geändert.
+CLEARKEYHASHESREQ=Wollen Sie die %d gespeicherten Schlüsselprüfsummen jetzt löschen?
+ILLEGALVALUE=Ungültiger Wert für "%s" eingegeben.
+OUTOFRANGE=Wert für "%s" liegt nicht im zulässigen Bereich (%d..%d).
+TVPATHNOTEXISTS=Der temporäre Pfad "%s" für das Betrachten existiert nicht.
+SELECTPATH=Wählen Sie einen Pfad aus:
+
+[STRINGSEARCHFORM]
+OKBTN=OK
+CANCELBTN=Abbrechen
+INFO=Suchbegriff:
+CASESENS=Groß-/Kleinschreibung
+
+[STRPLUSI]
+000=.
+001=dd"."mm"."yyyy" "hh":"mm
+002=.
+003=,
+004=Unbekannter Win32/OLE Fehlercode
+
+[TIPFORM]
+CAPTION=Tip
+NOTAGAINSWITCH=Diesen Tip nicht mehr anzeigen
+TIP0=To change the language please use the menu entry "Extras...Sprache".\0d\0a\0d\0a(Deutschsprachige Benutzer können diese Meldung ignorieren.)
+TIP1=Um die Sprache zu wechseln benutzen Sie bitte den Menüeintrag "Tools...Language".\0d\0a\0d\0a(English speaking users should ignore this message.)
+TIP2=Die Integration der Software in den Windows Explorer können Sie unter "Optionen...Verschiedenes...Systemeinstellungen" aktivieren.
+TIP3=Der Scanner ist nun aktiv (erkennbar an "SCAN" in der Statuszeile). Er kann durch erneutes Anwählen der Menüoption oder durch Drücken der F8-Taste wieder abgeschaltet werden.
+TIP4=Mit der Kindersicherung haben Sie einen simplen Schutz gegen den Start dieses Programms von Personen, die sich nicht bewusst sind daß man damit Daten zerstören kann.
+TIP5=Das Programm wurde in die Taskleiste verkleinert. Dieses Verhalten können Sie unter "Optionen...Konfiguration...In der Taskleiste laufen lassen" ändern.
+TIP6=Sie haben die Grossschreibung aktiviert!\0d\0a\0d\0aNormalerweise ist dies ein Versehen, welches zu einer falschen Eingabe von Passwörtern führt.
+
+[WINDIAG]
+000=(unbekannt)
+001=ja
+002=nein
+003=normal
+004=abgesichert
+005=abgesichert, mit Netzwerk
+006=\20Bytes
+007=vorhanden
+008=nicht vorhanden
+
+[WIPE]
+001=Datei kann nicht gelöscht werden
+002=Fehler beim Öffnen der Datei
+003=Datei konnte nach I/O Fehler nicht geschlossen werden
+004=I/O Fehler
+005=Datei konnte nach Unterbrechung nicht geschlossen werden
+006=Zurücksetzen für einen weiteren Zyklus gescheitert
+007=unterbrochen
+008=Datei konnte nicht geschlossen werden
+
+[WIPEMANAGER]
+COL_NAME=Dateiname
+COL_RESULT=Ergebnis
+SUCCESS=vernichtet
+ERROR=Fehler:\20
+WARNING=Warnung:\20
+OUTOFMEMORY=Speichermangel
+USERBREAK=Benutzerabbruch
+

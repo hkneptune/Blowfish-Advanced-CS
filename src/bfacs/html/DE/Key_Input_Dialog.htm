@@ -1,0 +1,310 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Schlüsseleingabe</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Schlüsseleingabe"></object></p>
+
+<p><a name="dialog_keyinput"></a><font size="3" face="Arial"><b>Schlüsseleingabe</b></font></p>
+
+<p><font size="2" face="Arial">Hier geben Sie Ihren Schlüssel
+ein, der entweder aus einem Passwort oder einer Schlüsseldisk
+besteht, um Ver- und Entschlüsselungsaktionen mit den
+ausgewählten Dateien zu starten.</font></p>
+
+<p><font size="2" face="Arial">Das Passwort kann verschiedenster
+Natur sein: ein einfaches Wort oder auch ein kompletter Satz. Die
+Länge des Passwortes ist nur durch die Eingabebox beschränkt
+(normalerweise ca. 32kB), vorausgesetzt Sie verwenden eine
+registrierte Version (ohne Schlüsselbeschränkungen) von
+Blowfish Advanced CS.</font></p>
+
+<p><font size="2" face="Arial">Sie können ebenso den kompletten
+Satz von ASCII Zeichen eingeben, indem Sie <em>binäre Sequenzen</em>
+verwenden. Wenn Sie z.B. das Zeichen mit dem ASCII-Code Nr. 8
+(repräsentiert die Backspace-Taste) am Ende Ihres Passwortes
+&quot;speziell&quot; haben wollen, so geben Sie einfach
+&quot;speziell\08&quot; ein. Die Sequenz &quot;\08&quot; teilt
+Blowfish Advanced CS mit, den Vorspann &quot;\&quot; zu
+ignorieren und die nächsten zwei Zeichen als hexadezimale
+Darstellung des ASCII-Codes zu verwenden. Falls Sie das
+&quot;\&quot; Zeichen einzeln eingeben wollen, so müssen Sie
+&quot;\\&quot; eintippen. Mit dieser Methode kann das Spektrum
+eines Schlüssels leicht erweitert und Brute-Force-Attacken sehr
+erschwert werden. Sie können selbst Nullbytes in Ihrem Passwort
+verwenden, z.B. &quot;Gehei\00mnis&quot;.</font></p>
+
+<p><font size="2" face="Arial">Sollte das Passwort nicht von der
+Automatischen Bestätigung erkannt worden oder die Automatische
+Bestätigung deaktiviert worden sein, so müssen Sie das Passwort
+(nur bei Verschlüsselung) ein zweites Mal eingeben, um
+Eingabefehler zu verhindern.</font></p>
+
+<p><font size="2" face="Arial">Eine Warnung erscheint falls die
+Tastatur auf <em>Grossschreibung (Caps Lock)</em> umgeschaltet
+ist. Dies schützt Sie vor versehentlicher und unbewusster
+Eingabe von Passwörtern in Grossschreibung, einer der
+häufigsten Eingabefehler überhaupt.</font></p>
+
+<p><font size="2" face="Arial">Bitte lesen Sie die </font><a
+href="Security_aspects.htm"><font size="2" face="Arial">Sicherheitsaspekte</font></a><font
+size="2" face="Arial"> um Fehler bei der Wahl Ihres Passwortes zu
+vermeiden.</font></p>
+
+<p><font size="2" face="Arial">Verwenden Sie die Schaltfläche <em><b>Speichern</b></em>,
+um Änderungen permanent abzuspeichern.</font></p>
+
+<p><font size="2" face="Arial">Die folgenden Elemente sind bei
+jeder Aktion sichtbar:</font></p>
+
+<p><font size="2" face="Arial"><b>Gespeicherten Schlüssel
+verwenden</b></font></p>
+
+<p><font size="2" face="Arial">Wenn ein Schlüssel im </font><a
+href="Key_Cache.htm"><font size="2" face="Arial">Schlüsselspeicher</font></a><font
+size="2" face="Arial"> verfügbar ist und Sie diesen Schlüssel
+verwenden wollen, dann aktivieren Sie diesen Schalter. Alle
+anderen Steuerelemente zur Schlüsseleingabe werden dann
+deaktiviert.</font></p>
+
+<p><font size="2" face="Arial"><b>Passwort anzeigen</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie sicher sind, daß niemand
+(nicht einmal eine versteckte Kamera) die Möglichkeit hat über
+Ihre Schulter zu schauen, so können Sie diesen Schalter
+aktivieren um Ihr Passwort anstelle der ausgegeben Leerzeichen zu
+betrachten. Leerzeichen sind im Gegensatz zu Sternchen die
+bessere Lösung ein Passwort zu verbergen, da es schwieriger ist
+die Länge des Passwortes abzuschätzen, wenn man die
+Möglichkeit hat trotz allem einen Blick darauf zu werfen.</font></p>
+
+<p><font size="2" face="Arial"><b>Automatische Bestätigung</b></font></p>
+
+<p><font size="2" face="Arial">Das Bestätigen von Passwörtern
+kann auf die Dauer recht langweilig werden. Mit der aktivierten
+Automatischen Bestätigung merkt sich Blowfish Advanced CS ein
+eingegebenes und bestätigtes Passwort. Wenn Sie nun das Passwort
+zu einem späteren Zeitpunkt erneut eingeben, so wird es vom
+Programm automatisch erkannt und mit der Verarbeitung ohne
+weitere Nachfragen fortgefahren. Sobald Ihr Passwort erkannt ist
+wird zudem der Dialog zur Passworteingabe geschlossen, so daß
+Sie nicht einmal mehr die Eingabetasten drücken müssen. Dies
+spart eine Menge Zeit und vermeidet Tippfehler. Eben diese
+können bei der konventionellen Bestätigungsmethode auftreten,
+da die wiederholte Eingabe nach einer Zeit dermaßen zur
+Gewohnheit wird, daß man selbst Tippfehler versehentlich
+dupliziert.</font></p>
+
+<p><font size="2" face="Arial"><b>Schlüssel halten</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie den eingegebenen
+Schlüssel in den </font><a href="Key_Cache.htm"><font size="2"
+face="Arial">Schlüsselspeicher</font></a><font size="2"
+face="Arial"> des Programms übernehmen wollen, so aktivieren Sie
+diesen Schalter. Bitte beachten Sie, daß wenn Sie mehrere
+Schlüssel eingeben der resultierende Gesamtschlüssel in den
+Speicher übernommen wird, nicht der einzelne.</font></p>
+
+<p><font size="2" face="Arial"><b>Mehrfache Schlüssel</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS ermöglicht
+es Ihnen mehrere Schlüssel miteinander zu verbinden. Sie können
+Passwörter und Inhalte von Schlüsseldisks in beliebiger
+Reihenfolge kombinieren. Dies erlaubt es z.B. Ihre
+Schlüsseldiskette mit einem zusätzlichen Passwort zu sichern
+(ähnlich einer PIN-Nummer). Wurde die Schlüsseldisk gestohlen,
+so benötigt man immer noch das Passwort, um Zugriff auf Ihre
+Daten zu haben. Ein anderes Beispiel ist wenn zwei Personen
+Zugriff auf ein geheimes Dokument haben sollen: beide besitzen
+ein eigenes Passwort (oder Schlüsseldisk) und können nur
+gemeinsam auf die Daten zugreifen. Mehrfachschlüssel können
+durch Aktivierung des Schalters verwendet werden. Sie werden dann
+nach jedem Schlüssel gefragt, ob weitere Schlüssel eingeben
+werden sollen. Nachdem alle Schlüssel übergeben sind werden sie
+in der Reihenfolge der Eingabe miteinander verbunden und als ein
+großer Schlüssel betrachtet. Wenn z.B. das erste Passwort
+&quot;123&quot; und das zweite &quot;456&quot; war, dann lautet
+der hieraus resultierende Schlüssel &quot;123456&quot;. Zur
+Entschlüsselung können Sie dann anstelle der zwei
+Einzelschlüssel natürlich auch &quot;123456&quot; direkt
+eingeben.</font></p>
+
+<p><font size="2" face="Arial"><b>Schlüsseldisk verwenden</b></font></p>
+
+<p><font size="2" face="Arial">Aktivieren Sie diesen Schalter,
+wenn Sie eine Schlüsseldisk(ette) anstelle eines Passwortes
+verwenden wollen. Eine Schlüsseldiskette ist ein (entfernbares)
+Medium, normalerweise eine 3.5&quot; Diskette, die eine bestimmte
+Schlüsseldatei enthält. Standardmäßig ist diese Datei als
+&quot;A:\BFACSKEY&quot; festgelegt, Sie können jedoch </font><a
+href="Miscellaneous.htm"><font size="2" face="Arial">diese
+Einstellung</font></a><font size="2" face="Arial"> im
+Optionsdialog ändern. Dort können Sie sich ebenso eine sichere
+Schlüsseldisk mit echten Zufallsdaten generieren lassen. Legen
+Sie diese Diskette nur zu dem Zeitpunkt ein wo Blowfish Advanced
+CS sie benötigt. Dies ist der Fall kurz nachdem Sie die
+Schlüsseleingabe mit der Schaltfläche &quot;OK&quot; verlassen
+haben. Die Benutzung von Schlüsseldisketten ist die richtige
+Wahl für jene Benutzer, die Probleme mit Passwörtern haben oder
+sich einfach nicht Ihr Passwort merken wollen. Ebenso ist diese
+Feature für kleine Arbeitsgruppen, die einen gemeinsamen
+Schlüssel nutzen wollen gut einsetzbar. </font><font
+color="#FF0000" size="2" face="Arial"><b>Bitte fertigen Sie von
+Ihren Schlüsseldisketten Backups an!</b></font><font size="2"
+face="Arial"><b> </b>Wenn eine Schlüsseldiskette verloren geht,
+so sind auch die damit verschlüsselten Daten nutzlos. </font><font
+color="#FF0000" size="2" face="Arial"><b>Bewahren Sie
+Schlüsseldisks an einem sicheren Ort auf!</b></font><font
+size="2" face="Arial"> Hat jemand auf sie Zugriff, dann ist
+sie/er in der Lage all Ihre verschlüsselten Daten zu kopieren
+und zu entschlüsseln.</font></p>
+
+<p><font size="2" face="Arial">Diese Elemente sind nur für die
+Verschlüsselung verfügbar:</font></p>
+
+<p><font size="2" face="Arial"><b>Daten komprimieren</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS kann Daten
+vor der Verschlüsselung komprimieren. Durch Setzen dieses
+Schalters können Sie die Datenkompression aktivieren. Sollte
+eine Datei nicht komprimierbar sein, z.B. Multimediadateien wie
+JPEG oder Archive wir ZIP, so wird sie in unkomprimierter Form
+gespeichert, um die Verschwendung von Speicherplatz zu umgehen.
+Bitte beachten Sie dies, da das Programm versucht jede Datei zu
+komprimieren und dann einen zweiten Anlauf unternimmt, diesmal
+mit temporär abgeschalteter Kompression. Sie können der
+Software auch mitteilen, welche </font></p>
+
+<p><a href="File_Handling.htm"><font size="2" face="Arial">Dateitypen
+nicht zu komprimieren sind</font></a><font size="2" face="Arial">.
+Kompression ist zeitaufwendig, dadurch wird der Gesamtprozess
+verlangsamt Bei hochkomprimierbaren Dokumenten allerdings, wie
+z.B. Textdateien oder Tabellenblätter, spart sie nicht nur
+Speicherplatz, sondern erhöht auch die Sicherheit. Cryptoanalyse
+ist bei komprimierten Daten schwieriger als bei nicht
+komprimierten.</font></p>
+
+<p><font size="2" face="Arial"><b>Pfadnamen speichern</b></font></p>
+
+<p><font size="2" face="Arial">Das Speichern von Pfadnamen ist
+nützlich, wenn Sie komplette Verzeichnisstrukturen erhalten, die
+Dateien aber nicht an ihren ursprünglichen Orten aufbewahren
+wollen. Der originale Pfadname wird verschlüsselt im Kopf der
+Datei abgelegt. Wird die Datei entschlüsselt, so wird dieser
+Pfad dann wiederhergestellt. Wenn Sie z.B. die Datei
+&quot;D:\Dokumente\Privat\MeinTagebuch.doc&quot; mit Pfadnamen
+verschlüsseln und Sie diese Datei dann wieder in den Zielpfad
+&quot;E:\Backups&quot; entschlüsseln (mit aktivierter
+Wiederherstellung von Pfaden), so wird die originale Datei als
+&quot;E:\Backups\Dokumente\Privat\MeinTagebuch.doc&quot;
+wiederhergestellt.</font></p>
+
+<p><font size="2" face="Arial"><b>Dateien umbenennen</b></font></p>
+
+<p><font size="2" face="Arial">Durch die Aktivierung dieser
+Option werden alle verschlüsselten Dateien komplett umbenannt.
+Dies ist deshalb nützlich, da nun niemand mehr ahnen kann was
+Ihre Datei im Ansatz enthielt, wenn der originale Name und die
+Erweiterung verschwunden sind. Je nach den </font><a
+href="File_Handling.htm"><font size="2" face="Arial">Einstellungen
+im Optionsdialog</font></a><font size="2" face="Arial"> werden
+die Dateien entweder mit Zufallszeichen oder mit einer
+durchnumerierten Namensmaske umbenannt. Dort können Sie ebenso
+wählen ob das Programm die </font><a href="Configuration.htm"><font
+size="2" face="Arial">.BFA Erweiterung</font></a><font size="2"
+face="Arial"> an verschlüsselte Dateien anhängen soll.</font></p>
+
+<p><font size="2" face="Arial"><b>Relativ zum aktuellen Pfad</b></font></p>
+
+<p><font size="2" face="Arial">Dieser Schalter ist nur dann
+aktiviert, wenn Sie Pfadnamen speichern. Ist er aktiviert, so
+werden Pfadnamen nur relativ zum aktuellen Pfad in der Auswahl
+gespeichert. Wenn Sie sich z.B. in
+&quot;E:\Backups\Dokumente&quot; befinden und die Datei
+&quot;E:\Backups\Dokumente\Privat\MeinTagebuch.doc&quot;
+verschlüsseln, so wird der originale Pfad und Name als
+&quot;Privat\MeinTagebuch.doc&quot; gespeichert. Andernfalls wird
+der komplette Pfad abgelegt, in unserem Beispiel
+&quot;Backups\Dokumente\Privat\MeinTagebuch.doc&quot;.</font></p>
+
+<p><font size="2" face="Arial">Dieses Element ist nur für die
+Entschlüsselung verfügbar:</font></p>
+
+<p><font size="2" face="Arial"><b>Pfadnamen wiederherstellen</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie Dateien mit Ihren
+Pfadnamen verschlüsselt haben (entweder relativ oder nicht), so
+können Sie die ursprünglichen Verzeichnisstrukturen durch
+Aktivierung dieses Schalters wiederherstellen. Ist er
+deaktiviert, so werden Pfadnamen ignoriert.</font></p>
+
+<p><font size="2" face="Arial">Für die Ver- und Entschlüsselung
+sind folgende Elemente verfügbar:</font></p>
+
+<p><font size="2" face="Arial"><b>Pfade erhalten</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie einen Zielpfad angegeben
+haben, so können Sie die Software dazu bringen alle
+Verzeichnisse zu erhalten und an der neuen Stelle
+wiederherzustellen. Wenn Sie z.B. in
+&quot;E:\Backups\Dokumente&quot; sind und Ihr Zielpfad
+&quot;D:\Dokumente&quot; lautet, so wird eine verschlüsselte
+Datei wie
+&quot;E:\Backups\Dokumente\Privat\MeinTagebuch.doc.bfa&quot; nach
+&quot;D:\Dokumente\Privat\MeinTagebuch.doc&quot; entschlüsselt.
+Es wird davon abgeraten, diese Option mit der Wiederherstellung
+von Pfadnamen bei der Entschlüsselung zu kombinieren.</font></p>
+
+<p><font size="2" face="Arial"><b>Zielpfad</b></font></p>
+
+<p><font size="2" face="Arial">Normalerweise werden ver- oder
+entschlüsselte Dateien im selben Pfad wie die originalen Dateien
+erzeugt. Wenn Sie jedoch die Dateien an einem anderen Ort haben
+wollen, z.B. zu Zwecken eines Backups, so können Sie hier bei
+aktiviertem Schalter ein Ziel eingeben. Benutzen Sie die
+Schaltfläche <b>Suchen...</b> um einen bereits zuvor
+eingegebenen Pfadnamen aus der Liste einzugeben (oder um nach
+einem neuen Ordner zu suchen). In Kombination mit dem Speichern
+und Wiederherstellen von Pfadnamen können Sie zudem komplette
+Verzeichnisstrukturen im Pfad Ihrer Wahl wiederherstellen. </font></p>
+
+<p><font size="2" face="Arial"><b>Quelldateien entfernen</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie Dateien in einen anderen
+Zielpfad verschlüsseln oder entschlüsseln, so entspricht dieser
+Prozeß quasi dem eines Kopierens mit zusätzlicher Ver- oder
+Entschlüsselung. Ist dieser Schalter aktiviert, so werden die
+Quelldateien entfernt, was den Prozeß nun dem eines Verschiebens
+der Dateien gleichen läßt.</font></p>
+
+<p><font size="2" face="Arial">Für die Umverschlüsselung sind
+die folgenden Elemente verfügbar:</font></p>
+
+<p><font size="2" face="Arial"><b>Alter/Neuer
+Verschlüsselungsalgorithmus</b></font></p>
+
+<p><font size="2" face="Arial">Sie können hier einen neuen
+Verschlüsselungsalgorithmus bzw. den zuvor gewählten für die
+Dateien angeben. Sie können auch denselben Algorithmus zur
+Umverschlüsselung verwenden, sollten aber dann zumindest den
+Schlüsselt wechseln. Andernfalls wäre es Zeitverschwendung.
+Bitte beachten Sie, daß selbst wenn Sie denselben Schlüssel
+verwenden und den Algorithmus nicht wechseln werden die
+umverschlüsselten Dateien danach einen komplett anderen Inhalt
+haben. Dies basiert auf der Tatsache, daß Ihr Schlüssel jedes
+Mal mit einem Zufallswert (Salz) kombiniert wird. Für weitere
+Informationen lesen Sie bitte in der </font><a
+href="Technical_Reference.htm"><font size="2" face="Arial">Technischen
+Referenz</font></a><font size="2" face="Arial"> nach.</font></p>
+</body>
+</html>

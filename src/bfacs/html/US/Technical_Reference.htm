@@ -1,0 +1,293 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Technical Reference</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Technical Reference"></object></p>
+
+<h1><a name="general_techref"></a><font size="3" face="Arial">Technical
+Reference</font></h1>
+
+<p><font size="2" face="Arial"><b>Encryption Algorithms</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS is currently
+shipped with seven algorithms: </font></p>
+
+<p><font size="2" face="Arial"><em>Blowfish</em></font></p>
+
+<p><font size="2" face="Arial">The algorithm was designed by
+Bruce Schneier. Blowfish is a very fast algorithm, performing
+excellent on modern 32bit processors. Another advantage is its
+variable key size up to 448 bits (56 bytes). It was first
+published in Doctor Dobb's Journal, issue 4/94. After a year of
+intensive cryptanalysis it was still unbroken (as reported in DDJ
+10/95).</font></p>
+
+<p><font size="2" face="Arial"><em>CAST</em></font></p>
+
+<p><font size="2" face="Arial">This cipher was designed by
+Carlisle Adams and Stafford Tavares in Canada 1997. The variant
+implemented is CAST5, also known as CAST-128, using 128bit keys.
+As of today it is known to be safe.</font></p>
+
+<p><font size="2" face="Arial"><em>ARCFOUR</em></font></p>
+
+<p><font size="2" face="Arial">This algorithm is 100% compatible
+to the RC4 stream cipher. RC4 was developed in 1987 by Ron
+Rivest. 1994 someone posted the source code in a mailing list and
+since then was spread around the world. RC4 is a stream cipher,
+handling single bytes. The implementation used by Blowfish
+Advanced CS uses a key size of 160 bits.</font></p>
+
+<p><font size="2" face="Arial"><em>Serpent</em></font></p>
+
+<p><font size="2" face="Arial">One of the AES contest finalist,
+designed by Eli Biham, Ross Anderson and Lars Knudsen. It is
+considered to be even &quot;safer&quot; than the winner Rijndael,
+because of its conservative design. Serpent is implemented as
+Serpent-128 using 256bit keys.</font></p>
+
+<p><font size="2" face="Arial"><em>AES</em></font></p>
+
+<p><font size="2" face="Arial">Originally named Rijndael this is
+the winner of the Advanced Encryption Standard Contest, and since
+then is known simply as AES. Designed by Joan Daemen and Vincent
+Rijmen it is the new industry standard, replacing the outdated
+DES algorithm. The fast, yet reliable AES-128 variant utilizing
+256bit keys is implemented.</font></p>
+
+<p><font size="2" face="Arial"><em>Triple-DES</em></font></p>
+
+<p><font size="2" face="Arial">DES is the standard encryption
+algorithm, designed by IBM in the middle 70es. Although it has
+been cryptanalyzed for more than 20 years no weakness was found.
+The only problem of DES is its short key length of 7bytes (equals
+56 bits). If one has access to very fast computers one can try
+out all possible keys within a few hours. There are some DES
+variants, extending the original algorithm to a new one with a
+larger key. The most common one is triple-DES, where a 64bit data
+block will be encrypted three times with DES, using three
+different keys (or a single key split into three parts).
+Therefore the key length is 21 bytes (168 bits), significantly
+improving the security very much but also slows down the
+algorithm. The triple-DES implementation in Blowfish Advanced CS
+is 100% compatible to the DES standard.</font></p>
+
+<p><font size="2" face="Arial"><em>Twofish</em></font></p>
+
+<p><font size="2" face="Arial">Twofish is the AES candidate from </font><a
+href="http://www.counterpane.com" target="top"><font size="2"
+face="Arial">Counterpane</font></a><font size="2" face="Arial">.
+A new, fast and very flexible encryption algorithm. After
+extensive cryptanalysis there are still no weaknesses known. The
+version of Twofish in Blowfish Advanced CS uses a key size of 256
+bits and a block size of 128 bits.</font></p>
+
+<p><font size="2" face="Arial">All algorithms in Blowfish
+Advanced CS are protected with self tests to ensure compatibility
+to the original specifications and to detect damages which might
+lead to irreversible destruction of data.</font></p>
+
+<p><font size="2" face="Arial"><b>Key Setup</b></font></p>
+
+<p><font size="2" face="Arial">Different encryption algorithms
+require different key lengths. The Blowfish encryption algorithm
+needs e.g. a key of 448 bits (56 bytes). It is very uncomfortable
+to find passwords that have exactly the right length every time,
+so the program converts the password into a key for the
+individual algorithm.</font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS uses a key
+setup in which your password (or key disk content) is hashed with
+SHA-1, the &quot;Secure Hash Algorithm&quot;. One advantage is
+that the key result is in binary form and looks like random data.
+Additionally the length of the password is not restricted to the
+maximum key length of the selected algorithm, so it can be hashed
+up or down to the right size.</font></p>
+
+<p><font size="2" face="Arial">Here are two examples to
+understand the key setup of Blowfish Advanced CS:</font></p>
+
+<p><font size="2" face="Arial">Let our password be
+&quot;helloworld&quot;. We want to create a key of 128 bits (16
+bytes). The SHA-1 allows us to input as much data bytes as we
+want to, and puts out a hash of 160 bits (20 bytes). A hash (also
+called digest) is the same like a CRC32 checksum, but secure for
+encryption purposes.</font></p>
+
+<p><font size="2" face="Arial">To resize the 20 bytes of the hash
+to the required 16 bytes for the key we take the first 16 bytes
+of the hash and XOR the rest of 4 bytes over the beginning of
+these 16 bytes. By this we don't ignore any part of the hash:</font></p>
+
+<blockquote>
+    <pre><font size="3"><code>password:</code><code><b>    </b></code><code>            &quot;helloworld&quot;
+                              |
+                            SHA-1
+                              |
+        a3d4ff09e22710946702eab2cc382596a8</code><code><u>e3197322</u></code><code>
+        a3d4ff09e22710946702eab2cc382596a8
+        ||||||||
+    XOR </code><code><u>e3197322</u></code><code>
+        ||||||||
+key:    40cd8c2be22710946702eab2cc382596a8</code></font></pre>
+</blockquote>
+
+<p><font size="2" face="Arial">In the second example we assume
+that our password is still &quot;helloworld&quot; but we need a
+key for Blowfish which has the required length of 56 bytes.</font></p>
+
+<p><font size="2" face="Arial">As already mentioned SHA-1 only
+returns 20 bytes. So we have to create 36 additional bytes from
+the password by the following way: we hash the password with
+SHA-1 and get 20 bytes. Then we add those 20 bytes to the
+original password and hash the modified password again. The
+result is a new hash which means 20 new bytes for our key. Due to
+the modified password this new hash is completely different from
+the first one. Now we append this second hash to the modified
+password again and rehash it to get the last 20 bytes. Of course
+now we have 4 bytes too much, so we XOR them over the first hash
+as we did in the first example. Now we have the needed 56 bytes
+for the Blowfish encryption algorithm.</font></p>
+
+<p><font size="2" face="Arial">Please remember that your password
+is always combined with 11 bytes of salt.</font></p>
+
+<p><font size="2" face="Arial">SHA-1 is the most secure hash
+algorithm available today.</font></p>
+
+<p><font size="2" face="Arial"><b>Random Number Generation</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS comes with a
+secure pseudo random number generator. PRNGs are used to create
+random data for security purposes, e.g. salt values (which are
+combined with keys), for overwriting (wiping) data or (most
+important) to create key files. The generator method used is
+called Yarrow. This PRNG was designed by Counterpane and can be
+considered the best concept to create random data for security
+purposes. Blowfish Advanced CS uses a Yarrow implementation with
+SHA-1 as the hash algorithm and triple-DES as the block cipher.
+For the latest paper of the Yarrow specifications please visit </font><a
+href="http://www.counterpane.com" target="top"><font size="2"
+face="Arial">Counterpane</font></a><font size="2" face="Arial">.</font></p>
+
+<p><font size="2" face="Arial"><b>Reseeding of the PRNG</b></font></p>
+
+<p><font size="2" face="Arial">Pseudo random number generators
+are only as good as the seed they're fed with. Seed means random
+events of the system (entropy), which makes the random number
+stream unpredictable. The more seed is put into a PRNG, the
+better (and more secure) the output is.</font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS collects
+random seed in the background by recording the mouse moves in the
+file browser. By this way the quality of the random data is
+improved invisibly for the user.</font></p>
+
+<p><font size="2" face="Arial"><b>Key Disk Creation</b></font></p>
+
+<p><font size="2" face="Arial">Besides conventional passwords
+Blowfish Advanced CS is able to use keydisks. A key disk contains
+always one file which binary content is used as the key. If the
+size if the file exceeds the size of 65520 bytes, the rest will
+just be ignored.</font></p>
+
+<p><font size="2" face="Arial">Of course every file can be used a
+key file, but Blowfish Advanced CS offers a smart method to </font><a
+href="Make_Key_Disk.htm"><font size="2" face="Arial">create key
+files</font></a><font size="2" face="Arial"> quickly and safely.
+The necessary data is read from the current pseudo random number
+(Yarrow is strongly recommended for this purpose). To get a
+random key as secure as possible the user is requested for a big
+bunch of random seed, which is provided by recording mouse moves
+and key strokes.</font></p>
+
+<p><font size="2" face="Arial"><b>Data Compression</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS uses the LZSS
+algorithm to compress data. LZSS offers fast data compression,
+which is necessary for bulk data encryption purposes, but also
+provides a good compression ratio, comparable with ZIP
+compressors working in super fast mode.</font></p>
+
+<p><font size="2" face="Arial"><b>Auto Confirmation</b></font></p>
+
+<p><font size="2" face="Arial">Of course your password will not
+be saved in its original form. It is sufficient to save a secure
+checksum of it and to compare this checksum with the one from the
+password just entered.</font></p>
+
+<p><font size="2" face="Arial">If you have a look into the
+configuration file BFACS.INI the following list can be found:</font></p>
+
+<blockquote>
+    <pre><font size="3"><code>[KEYCHECKER]
+COUNT=2
+1=91D07252FA087F779A11D5603A7FDAEEF11429CAFA9D2389D2BAA0
+2=212DD72DC589AF25071358B14032A3282D93F141DA6F254C23EF5E</code></font></pre>
+</blockquote>
+
+<p><font size="2" face="Arial">Here you see the checksums of the
+passwords. They are neither reversible to the original passwords
+nor can anyone get any information out of them.</font></p>
+
+<p><font size="2" face="Arial">The first 23 bytes of an entry
+store a salt value, the rest of it the checksum (4 bytes). The
+checksum is created by hashing the salt and password with MD5.
+All four 32 bit quarters of the 128bit MD5 hash are then XORed
+together, building the checksum.</font></p>
+
+<p><font size="2" face="Arial"><b>Wiping</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS offers three
+file </font><a href="Security.htm"><font size="2" face="Arial">wiping
+methods</font></a><font size="2" face="Arial">, all based on the
+same writing process, just differing in the number of overwrite
+cycles.</font></p>
+
+<p><font size="2" face="Arial">Overwriting files under operating
+systems like Windows 95/98 or NT4 is not as easy as it looks.
+Data is buffered and cached before it is going to be written
+physically to the disk. Especially if a file is deleted soon
+after the data was written nothing or just a small part will be
+really erased.</font></p>
+
+<p><font size="2" face="Arial">The most thorough way for wiping
+is to overwrite the disk sectors directly, but this leads to
+major problems, e.g. different file systems (FAT12, FAT16, FAT32,
+NTFS, etc.) and the high risk of manipulating disks on such a low
+level, not to talk about restriction problems if the user hasn't
+the rights for such a low level access.</font></p>
+
+<p><font size="2" face="Arial">Therefore Blowfish Advanced CS
+uses another method instead, which works on every Win32 system
+properly. By a special Windows API call data is written through
+all caches and buffers directly to disk. You can even listen to
+this process, your hard disk has to work much more than usual.
+After the wiping process is over all buffers are additionally
+flushed. Then files are just closed and then deleted. Setting a
+file length to zero or renaming it before deleting causes
+problems, especially under Windows 95/98.</font></p>
+
+<p><font size="2" face="Arial">With low level disk examination
+utilities you might recognize that files wiped with Blowfish
+Advanced CS might be recoverable. But where the original data had
+its place there are only random numbers now - the data has really
+vanished forever.</font></p>
+
+<p><font size="2" face="Arial"><b>Source code</b></font></p>
+
+<p><font size="2" face="Arial">The source code of Blowfish
+Advanced CS is available under the Apache 2.0 License.</font></p>
+</body>
+</html>

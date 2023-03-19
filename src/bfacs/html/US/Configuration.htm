@@ -1,0 +1,299 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Configuration</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Configuration"></object></p>
+
+<p><a name="options_configuration"></a><font size="3"
+face="Arial"><b>Configuration</b></font></p>
+
+<p><font size="2" face="Arial">The configuration contains all
+uncategorized switches for Blowfish Advanced CS. Instead of being
+spread wildly in different sheets and dialogs you have them all
+in a well sorted list for fast and direct access.</font></p>
+
+<p><font size="2" face="Arial"><b>Accept Truncated Files</b></font></p>
+
+<p><font size="2" face="Arial">If encrypted files are cut off due
+to any reason (e.g. an aborted download) the software will refuse
+to decrypt it. Check this option to force it to decrypt as many
+data as possible anyway.</font></p>
+
+<p><font size="2" face="Arial"><b>Add .BFA Extension</b></font></p>
+
+<p><font size="2" face="Arial">You can associate encrypted files
+with Blowfish Advanced CS. For that the files must have the
+extension .BFA. By activating this switch the extension will be
+added to the name of every encrypted file, independent of if it
+was renamed or not. E.g. a file with the original name
+&quot;MyDiary.txt&quot; will be renamed to
+&quot;MyDiary.txt.bfa&quot;.</font></p>
+
+<p><font size="2" face="Arial"><b>Auto Arrange</b></font></p>
+
+<p><font size="2" face="Arial">Icons will be automatically
+arranged in the browser when the window is resized.</font></p>
+
+<p><font size="2" face="Arial"><b>Automatic Browser Refresh</b></font></p>
+
+<p><font size="2" face="Arial">The software is able to detect if
+files and folders have been deleted, created or changed in the
+current path. It will then update the browser if this switch is
+turned on.</font></p>
+
+<p><font size="2" face="Arial"><b>Browser in Web Style</b></font></p>
+
+<p><font size="2" face="Arial">If you prefer the browser to look
+and act like a web browser you should check this switch. Item
+captions will be underlined and single mouse clicks will be
+treated as double clicks.</font></p>
+
+<p><font size="2" face="Arial"><b>Colored Progress Display</b></font></p>
+
+<p><font size="2" face="Arial">Activate this switch if you want
+the display boxes in the progress dialog be colored. Encryption
+will cause a red, decryption a green, wiping a yellow,
+reencryption a blue and deslacking a teal coloring.</font></p>
+
+<p><font size="2" face="Arial"><b>Doubleclick equals &quot;Work
+With&quot;</b></font></p>
+
+<p><font size="2" face="Arial">If this switch is turned off
+double clicks (including dragging single encrypted files on the
+program's window) will cause an encrypted file to be viewed. If
+you want to work with instead check this option. This will also
+change the behaviour of double clicks on .BFA files in the
+Windows Explorer: instead of the selection dialog the program
+will immediately start to work with a file.</font></p>
+
+<p><font size="2" face="Arial"><b>Exit after a job has been done</b></font></p>
+
+<p><font size="2" face="Arial">If you have started a job (equals
+a jobfile or directly provided objects) via the shell or by
+dragging objects over the program icon you can force the program
+to shutdown after the execution. The only exception is if you
+view an encrypted file (it would vanish at once, leaving the
+application to view the file behind) the program will stay alive.</font></p>
+
+<p><font size="2" face="Arial"><b>Files to view may overwrite
+existing ones</b></font></p>
+
+<p><font size="2" face="Arial">If you view encrypted file they
+will be decrypted in a temporary directory. Although such
+directories usually don't contain any valuable files you can
+avoid overwriting existing files by turning this switch on.
+Please remember that if you view files multiple times such
+overwrite situations will permanently occur and you will get a
+warning every time. If you're not sure what's good or wrong you
+might define your own temporary path for viewing (see </font><a
+href="Miscellaneous.htm"><font size="2" face="Arial">Miscellaneous</font></a><font
+size="2" face="Arial">).</font></p>
+
+<p><font size="2" face="Arial"><b>Flat Browser View</b></font></p>
+
+<p><font size="2" face="Arial">A gimmick to show the file browser
+in the new Windows 98 look-and-feel. May not work propely on
+Windows 95 and NT4 systems.</font></p>
+
+<p><font size="2" face="Arial"><b>Force Compression</b></font></p>
+
+<p><font size="2" face="Arial">If a file turns out to be
+noncompressable the software starts all over again with
+compression turned off. By that the small overhead of the
+compressor is removed. While saving space it takes time of course
+to repeat the whole cycle. By checking this option data will
+always be compressed, even if the final size is actually larger
+than the original one (depending on the compression algorithm
+this can be up to 12.5%) and by that things will speeded up.</font></p>
+
+<p><font size="2" face="Arial"><b>Hot Tracking</b></font></p>
+
+<p><font size="2" face="Arial">The mouse pointer selects the item
+below automatically after a short delay. Surely a questionably
+feature. Like it or not.</font></p>
+
+<p><font size="2" face="Arial"><b>Ignore CRC32 Errors</b></font></p>
+
+<p><font size="2" face="Arial">To check the integrity of
+decrypted data Blowfish Advanced CS calculates a CRC32 checksum
+and compares it with the one that was stored in the cryptfile. If
+these checksums are not equal the original file will not be
+restored to give the user the chance to solve the problem. E.g.
+to fix a disk error or to transmit the file again. You can set
+this switch to pass the integrity check. Then a file will always
+be decrypted, even if the data seems to be damaged. Please use
+this option with care! Backup the encrypted file to have another
+chance for decryption.</font></p>
+
+<p><font size="2" face="Arial"><b>Keep Attributes</b></font></p>
+
+<p><font size="2" face="Arial">If this switch is turned on the
+software won't reset the attributes of encrypted files, but keep
+their original states. So e.g. hidden files will stay hidden.
+Please remember that the original attributes are going to be
+stored in a cryptfile, too.</font></p>
+
+<p><font size="2" face="Arial"><b>Keep Date+Time Stamps</b></font></p>
+
+<p><font size="2" face="Arial">If this switch is turned on the
+software won't change the date and time of encrypted files. Same
+as the attributes the date+time stamps are preserved in the
+cryptfiles, too.</font></p>
+
+<p><font size="2" face="Arial"><b>Operations must be confirmed</b></font></p>
+
+<p><font size="2" face="Arial">If you turn this switch on
+Blowfish Advanced CS will ask explicitly before starting any
+process. This option was implemented for power users to avoid
+unnecessary requests, especially during the execution of multi
+job files. The switch doesn't have any effect for wiping
+operations, because it is just too dangerous to take any risks
+here.</font></p>
+
+<p><font size="2" face="Arial"><b>Overwrite Existing Files</b></font></p>
+
+<p><font size="2" face="Arial">Check this switch if you want the
+software to overwrite existing files without any additional
+confirmations.</font></p>
+
+<p><font size="2" face="Arial"><b>Place Drives First</b></font></p>
+
+<p><font size="2" face="Arial">Drives will appear at the top of
+the browser list.</font></p>
+
+<p><font size="2" face="Arial"><b>Remove Empty Directories</b></font></p>
+
+<p><font size="2" face="Arial">If complete folders are wiped and
+empty afterwards, either during a pure wiping process or e.g. if
+using a target path, you can let them be removed automatically by
+checking this switch. Please remember that if a folder contains
+still any files, for what reasons ever, it will not be deleted at
+all.</font></p>
+
+<p><font size="2" face="Arial"><b>Replace Icons (and Types) of
+Scanned Files</b></font></p>
+
+<p><font size="2" face="Arial">When the scanner was able to gain
+information from an encrypted file it will show you the real file
+name and size in the browser (if in Details style). For better
+overall view you might also desire the original icons and the
+types of the encrypted files by checking this option. Please note
+that the original icons are only shown for documents, not for
+executables or other special files.</font></p>
+
+<p><font size="2" face="Arial"><b>Run in System Tray</b></font></p>
+
+<p><font size="2" face="Arial">For a faster access Blowfish
+Advanced CS is able to run in the system tray. After minimized
+the program will still be active, but you are also able to quit
+it via the tray icon menu. You can deactivate this feature, if
+you don't like it, here.</font></p>
+
+<p><font size="2" face="Arial"><b>Save sensitive Settings</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS keeps its
+configuration in the file BFACS.INI, located in the same
+directory where BFACS.EXE is.</font></p>
+
+<p><font size="2" face="Arial">If you turn off this switch the
+following information will not be stored in BFACS.INI:</font></p>
+
+<ul>
+    <li><font size="2" face="Arial">all paths stored by the
+        browser (cleared)</font></li>
+    <li><font size="2" face="Arial">the last work path (will be
+        set to the temporary directory of Windows)</font></li>
+    <li><font size="2" face="Arial">the key disk path (reset to
+        default)</font></li>
+    <li><font size="2" face="Arial">the last target path
+        (cleared)</font></li>
+    <li><font size="2" face="Arial">the temporary path for
+        viewing files (same as last work path)</font></li>
+    <li><font size="2" face="Arial">all algorithms chosen are
+        reset to the default cipher (Blowfish)</font></li>
+    <li><font size="2" face="Arial">all files of the work list</font></li>
+</ul>
+
+<p><font size="2" face="Arial"><b>Scan .BFA files only</b></font></p>
+
+<p><font size="2" face="Arial">The scanner will by default scan
+all files in the current browser. Usually it makes more sense to
+scan only files with the .BFA extension. Such a behaviour can be
+activated by checking this switch.</font></p>
+
+<p><font size="2" face="Arial"><b>Show Gridlines</b></font></p>
+
+<p><font size="2" face="Arial">Gridlines will be shown if the
+browser is set to Details style.</font></p>
+
+<p><font size="2" face="Arial"><b>Show Hints</b></font></p>
+
+<p><font size="2" face="Arial">Here you decide if the </font><a
+href="Button_Bar_and_Browser_Controls.htm"><font size="2"
+face="Arial">buttons</font></a><font size="2" face="Arial">
+should be explained with hints. </font></p>
+
+<p><font size="2" face="Arial">If you are familiar enough with
+Blowfish Advanced CS you might turn them off.</font></p>
+
+<p><font size="2" face="Arial"><b>Show Job Report</b></font></p>
+
+<p><font size="2" face="Arial">Blowfish Advanced CS logs every
+operation and will show the results in the </font><a
+href="Job_Report.htm"><font size="2" face="Arial">Job Report</font></a><font
+size="2" face="Arial"> window afterwards. If you don't want to
+see such a resume, turn this switch off. Remember that if any
+problem occurred the job report will nevertheless be shown.</font></p>
+
+<p><font size="2" face="Arial"><b>Skip already encrypted files</b></font></p>
+
+<p><font size="2" face="Arial">If this switch is turned on
+Blowfish Advanced CS will check if a file is already encrypted.
+If so it will not be encrypted a second time. By setting the
+switch off you can deactivate this check, forcing the program to
+encrypt every file, whether encrypted or not. Please remember
+that if you encrypt files multiple times you have to decrypt them
+multiple times (in reversed order), too.</font></p>
+
+<p><font size="2" face="Arial"><b>Try to rename 8.3 compatible</b></font></p>
+
+<p><font size="2" face="Arial">When files are encrypted there
+might be the possibility that the desired name for the cryptfile
+is not supported by the underlying file system. E.g. when dealing
+will some servers supporting the DOS namespace only. By setting
+this switch on, the software will try to create filenames
+compatible to the 8.3 (DOS) format. Remember that this will not
+work for decryption. If you don't see any problems with your
+environment, just ignore this option and let it turned off.</font></p>
+
+<p><font size="2" face="Arial"><b>Turn Off file caching</b></font></p>
+
+<p><font size="2" face="Arial">When reading and writing data
+during encryption and decryption data is cached as usual by the
+Windows operation system. Although fine for the daily work it
+might just be overhead when dealing with large amounts of files
+or data respectively. Here you can force the program to write
+through any caches and buffers directly to disk, improving the
+speed of execution. In some cases this might also have a negative
+effect, especially when dealing with many of very small files.</font></p>
+
+<p><font size="2" face="Arial"><b>Write-protect encrypted Files</b></font></p>
+
+<p><font size="2" face="Arial">With this option set all files
+will be write-protected after encryption. This will avoid
+mistakes, e.g. if encrypted files are opened in other
+applications they can only be viewed, not altered (which may
+destroy them).</font></p>
+</body>
+</html>

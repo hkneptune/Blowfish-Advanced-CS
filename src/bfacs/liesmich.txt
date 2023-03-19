@@ -1,0 +1,48 @@
+
+Wie installiere ich Blowfish Advanced CS?
+-----------------------------------------
+
+1. Erzeugen Sie einen eigenen Ordner für die Software, z.B.
+   "C:\Programme\Blowfish Advanced CS"
+
+2. Entpacken Sie alle Dateien vom Archiv BFACSxxx.ZIP in diesen Ordner. Die
+   folgenden Dateien werden benötigt um das Programm einwandfrei laufen zu
+   lassen:
+
+                        BFACS.EXE    - ausführbare Datei
+                        BFACSLIB.DLL - Kernbibliothek für Blowfish Advanced CS
+                        BFACS_US.CHM - englische Hilfe
+                        BFACS_US.SR  - englische Stringressourcen
+                        BFACS_DE.CHM - deutsche Hilfe
+                        BFACS_SR.SR  - deutsche Stringressourcen
+                        README.TXT   - englische Installationsanleitung
+                        LIESMICH.TXT - diese Datei
+                        CHANGES.TXT  - Historie dieser Software (engl.)
+
+3. Erzeugen Sie eine Verknüpfung mit BFACS.EXE an der gewünschten Stelle, z.B.
+   auf dem Desktop.
+
+4. Starten Sie das Programm mit Doppelklick auf die Verknüpfung. Nach dem
+   ersten Start wird die Datei BFACS.INI im gleichen Ordner wie BFACS.EXE
+   angelegt.
+
+5. Durch individuelle Konfigurationsdateien können Sie mehrere Kopien mit
+   verschiedenen Einstellungen in separaten Ordnern installieren. Ebenso
+   können Sie eine beliebige Anzahl von Instanzen von BFACS.EXE starten. Die
+   Einstellungen der zuletzt geschlossenen Instanz wird dann in der Datei
+   BFACS.INI gespeichert.
+
+6. Wenn Sie Dateien mit den Endungen .BFA und .BFJ mit Blowfish Advanced CS
+   verknüpfen und die Shellerweiterungen installieren wollen, so können Sie
+   dies unter "Optionen..Verschiedenes..Systemeinstellungen" erledigen.
+   
+
+Wie deinstalliere ich diese Software?
+-------------------------------------
+
+1. Entfernen Sie Dateiverknüpfungen und Shellerweiterungen im Programm.
+
+2. Löschen Sie den Ordner, wo Blowfish Advanced CS gespeichert ist.
+
+
+Copyright (C) 1997-2005 Markus Hahn

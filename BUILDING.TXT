@@ -1,0 +1,86 @@
+
+PREREQUISITES
+
+- Delphi 5 Professional. Later versions might work and so might even Delphi 4,
+  but I haven't tested this. Make sure that you got the latest fixes, too. The
+  path for the Delphi command line compiler (DCC32.EXE) must be declared in the
+  PATH environment variable.
+
+- Borland C++ 5.5 Compiler. The path to BCC32.EXE, ILINK32.EXE and MAKE.EXE must
+  be declared in the PATH environment variable. Make sure that the right .CFG
+  files for compiler and linker and in this path, too. Also make sure that you
+  have the latest updates. Older versions 5.0 and 4.x might also work, but this
+  hasn't been tested.
+
+- ZIP.EXE, the command line ZIP utility which is available at the InfoZIP site
+  <http://www.info-zip.org/pub/infozip/>. The executable must also be in one of
+  the paths declared by the PATH environment variable.
+
+- UPX executable packer. Available at <http://upx.sourceforge.net/>. Make sure
+  that UPX.XE is in the PATH. The current version used is 1.25 (stable).
+
+- HTML Help workshop. Available at the MSDN website, search for "HTML Help
+  Workshop" at <http://msdn.microsoft.com>. After installation make sure that
+  the HHC.EXE executable is in the PATH.
+
+-------------------------------------------------------------------------------
+
+COMCTRLS FIX
+
+There was a problem with the comctrls unit in Delphi 5, which led to crashes in
+applications running under Windows XP. Unfortunately Borland never fixed the
+problem, so I had to patch the COMCTRLS.PAS file by myself. The file is not
+included for legal reasons in the BFACSxxx.ZIP file, so you need to
+
+1. Copy COMCTRLS from the Delphi installation folder into the VCLfix directory.
+   Notice that only the Professional and the Enterprise version of Delphi 5
+   contains this source code file from the VCL.
+
+2. Look up the implementation of the TCustomListView.UpdateColumn method.
+
+3. Replace the original code
+
+        mask := LVCF_TEXT or LVCF_FMT or LVCF_IMAGE;
+
+   with the following fix
+
+        mask := LVCF_TEXT or LVCF_FMT;
+        if FImageIndex >= 0 then
+          mask := mask or LVCF_IMAGE;
+
+Since BFACS.DPR includes this unit explicitely it be used for compilation
+instead of the original one. If you have problems with this fix please let me
+know, although I still won't be able to send you the file.
+                                                                            
+-------------------------------------------------------------------------------
+
+HOW TO BUILD BLOWFISH ADVANCED CS?
+
+1. Unzip the BFACSxxxSRC.ZIP file. Make sure that folders are getting created.
+
+2. Open a Command Prompt and CD into the bfacs directory.
+
+3. Type "buildall". This batch file will then build everything from scratch.
+   It takes usually around half a minute on a modern machine. At the end you
+   should have all the files of Blowfish Advanced CS in the same directory.
+
+4. Check out this BUILDALL.BAT files for details about the single steps. It's
+   quite straightforward. Only the BFACSLIB.DLL library needs a separate
+   makefile to compile and link all of its different submodules together.
+
+5. Now you might also open BFACS.DPR in the Delphi IDE to browse the source
+   code. There you will also be able to build BFACS.EXE seperately.
+
+-------------------------------------------------------------------------------
+
+LEGAL ASPECTS
+
+The sourcecode of Blowfish Advanced CS is publishes under the Apache 2.0
+License agreement. For details please read the included LICENSE.TXT file.
+
+Any comment is welcome, bug reports or suggestions are highly appreciated.
+
+-------------------------------------------------------------------------------
+
+Copyright 1997-2005 Markus Hahn
+

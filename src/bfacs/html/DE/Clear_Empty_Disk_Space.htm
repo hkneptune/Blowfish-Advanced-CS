@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Freien Speicherplatz löschen</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Freien Speicherplatz löschen"></object></p>
+
+<p><a name="dialog_clearemptydiskspace"></a><font size="3"
+face="Arial"><b>Freien Speicherplatz löschen</b></font></p>
+
+<p><font size="2" face="Arial">Mit diesem Dialog können Sie den
+gesamten freien Speicherplatz auf einem oder auch mehreren
+Laufwerken löschen. Das Programm erzeugt hierzu eine temporäre
+Datei, bis das Laufwerk komplett voll ist. Somit werden alle
+ungenutzten Dateicluster überschrieben.</font></p>
+
+<blockquote>
+    <p><font color="#FF0000" size="2" face="Arial"><strong>Bitte
+    beachten Sie, dass das Löschen von freien Speicherplatz
+    jedliche Versuche zur Wiederherstellung von Dateiinhalten,
+    inklusive regulärer Rettungsmassnahmen, unmöglich macht!</strong></font></p>
+</blockquote>
+
+<p><font size="2" face="Arial">In den <em><b>Einstellungen</b></em>
+können Sie festlegen was und wie Blowfish Advanced CS zu
+löschen hat.</font></p>
+
+<p><font size="2" face="Arial"><b>Nicht verzögertes Schreiben</b></font></p>
+
+<p><font size="2" face="Arial">Das Erzeugen von mehreren GB
+großen Dateien macht jeden Caching-Mechanismus von Windows
+überflüssig. Im Gegenteil kann Caching den Prozess verlangsamen
+oder Ihren Computer vollständig blockieren, bis alle Buffer auf
+die Disk geschrieben wurden. Um solche Probleme zu vermeiden
+können Sie diesen Schalter aktivieren. Dies sollte in den
+allermeisten Fällen die bessere Lösung sein.</font></p>
+
+<p><font size="2" face="Arial"><b>Keine Meldungen</b></font></p>
+
+<p><font size="2" face="Arial">Nachdem der freie Speicher eines
+Laufwerks gelöscht wurde erscheint eine Meldung. Die temporäre
+Datei wird erst nach dem Schließen dieses Dialogs gelöscht.
+Obwohl Blowfish Advanced CS alle Buffer vorher speichert hat kann
+es somit in einigen Fällen helfen, Windows (oder selbst der
+Hardware von Festplatten) etwas zusätzliche Zeit zu geben um den
+Rest der Daten zu schreiben. Wenn Sie jedoch den freien Speicher
+von mehreren Laufwerke löschen wollen können solche Meldungen
+eher lästig werden und eine unbeaufsichtigte Ausführung
+schwierig machen (z.B. während einer Kaffeepause). Durch die
+Aktivierung des Schalter wird dies verhindert.</font></p>
+
+<p><font size="2" face="Arial"><b>Niedere Priorität</b></font></p>
+
+<p><font size="2" face="Arial">Sie können Blowfish Advanced CS
+dazu bewegen während dem Löschprozess seine Priorität zu
+verringern, was es Ihnen ermöglicht mit anderen Applikationen
+(die normalerweise von einer höheren Priorität sind) ohne
+merkbare Verzögerungen zu arbeiten. Bitte beachten Sie, daß am
+Ende des Löschprozesses auf dem jeweiligen Laufwerk kein
+Speicherplatz mehr frei ist, was besonders beim Speichern in
+anderen Applikationen zu Fehlern führen kann.</font></p>
+
+<p><font size="2" face="Arial"><b>Wo löschen?</b></font></p>
+
+<p><font size="2" face="Arial">Sie können der Software
+mitteilen, <em><b>wo</b></em> zu <em><b>löschen</b></em> ist:
+entweder <em><b>auf dem aktuellen Pfad</b></em>, <em><b>auf allen
+Laufwerken</b></em> (CD-ROMs ausgenommen, Wechseldatenträger
+jedoch eingeschlossen) oder <em><b>auf allen Festplatten</b></em>.</font></p>
+
+<p><font size="2" face="Arial"><b>Löschen mit</b></font></p>
+
+<p><font size="2" face="Arial">Eine temporäre Datei kann
+entweder <em><b>Nullen</b></em> oder Zufallsdaten enthalten. Bei
+Zufallsdaten können Sie zwischen der Erzeugung eines einzigen
+Blocks und dessen wiederholter Verwendung (<em><b>statische
+Zufallsdaten</b></em>) oder der Ausgabe von <em><b>kontinuierlichen
+Zufallsdaten</b></em> entscheiden, welches die langsamste Methode
+ist, da das Programm die Daten andauernd erzeugen muss, nicht nur
+während des Startvorgangs. Die Verwendung von Zufallzahlen ist
+bei komprimierten Laufwerken auf jeden Fall zu empfehlen.</font></p>
+
+<p><font size="2" face="Arial">Klicken Sie auf die Schaltfläche <em><b>Start</b></em>
+um mit dem Löschen zu beginnen. Wenn die Größe des freien
+Speichers (auf dem aktuellen Laufwerk) erkannt werden konnte, so
+erscheint auf der rechten Seite ein Fortschrittsbalken.
+Andernfalls wird die Anzahl der geschriebenen Bytes in der
+Statusbar angezeigt. Der Prozess kann jederzeit durch die
+Schaltfläche <em><b>Abbrechen</b></em> beendet werden.</font></p>
+</body>
+</html>

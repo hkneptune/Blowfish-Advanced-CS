@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Sicherheitsaspekte</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Sicherheitsaspekte"></object></p>
+
+<p><a name="general_security"><font size="2" face="Arial"></font></a><font
+size="3" face="Arial"><b>Sicherheitsaspekte</b></font></p>
+
+<p><font size="2" face="Arial">Wenn Sie ein </font><a
+href="Key_Input_Dialog.htm"><font size="2" face="Arial">Passwort</font></a><font
+size="2" face="Arial"> wählen, so müssen Sie sich stets einen
+wichtigen Aspekt vor Augen halten: jedes Passwort kann durch eine
+sogenannte Brute-Force-Attacke herausgefunden werden, was nichts
+anderes bedeutet, daß alle möglichen Passwörter durchprobiert
+werden.</font></p>
+
+<p><font size="2" face="Arial">Wenn Ihr Passwort aus drei
+Buchstaben besteht und man davon ausgeht, daß nur Zeichen von
+&quot;a&quot; bis &quot;z&quot; verwendet wurden, dann gibt es
+maximal 26 * 26 * 26 = 17.576 Möglichkeiten die zur Erkennung
+des Passwortes probiert werden müssen. Mit einem optimierten
+Suchprogramm, auf einem schnellen Computer ausgeführt, würde so
+Ihr Passwort innerhalb weniger Millisekunden gefunden werden.</font></p>
+
+<p><font size="2" face="Arial">Wenn Sie jedoch nur 2 Zeichen mehr
+verwenden, so muß man ca. 11 Millionen Kombinationen testen, was
+um einiges mehr Zeit benötigt, selbst auf einem schnellen
+Rechner. Entspricht das Passwort (selbst wenn nur im Ansatz)
+einem gängigen Wort, so kann es durch eine Wörterbuchattacke
+aber wiederum sehr viel schneller gefunden werden.</font></p>
+
+<p><font size="2" face="Arial">Die Regel ist einfach: je mehr
+Zeichen Sie verwenden, um so mehr Kombinationen bestehen, um so
+schwieriger ist eine verschlüsselte Datei zu brechen. Mit einem
+Schlüssel von 6 Bytes (entspricht 48 Bits), welcher aus einem
+genügend langen Passwort erzeugt wurde, existieren 256 ^ 6 =
+281.474.976.710.700.000.000 (281,5 Trillionen) Kombinationen.
+Nimmt man an, daß ein schneller Computer ungefähr eine Million
+Schlüssel pro Sekunde testen kann, so wird es ca. 9 Jahre dauern
+um alle Kombinationen zu probieren. Noch ein Byte mehr und eine
+Brute-Force-Attacke wird extrem aufwendig.</font></p>
+
+<p><font size="2" face="Arial">Rechenleistung wird natürlich
+billiger mit der Zeit, Mikroprozessoren immer leistungsfähiger,
+so daß jede Sicherheitsrechnung stets von Jahr zu Jahr angepaßt
+werden muss.</font></p>
+
+<p><font size="2" face="Arial"><b>Wie sollten Sie Ihr Passwort
+wählen?</b></font></p>
+
+<p><font size="2" face="Arial">Benutzen Sie keine gebräuchlichen
+Worte, so wie z.B. den Namen Ihres Ehepartners, Tochter, Sohn,
+Hund, Katze, Lover, Ihre Versicherungs-, Haus- oder
+Telefonnummer, die Zahlen Ihres Geburtstages oder -jahrs, nicht
+einmal in umgekehrter Reihenfolge. Sie können sicher sein, daß
+diese </font></p>
+
+<p><font size="2" face="Arial">Passwörter als erstes ausprobiert
+werden.</font></p>
+
+<p><font size="2" face="Arial">Wenn Sie keine Passwörter mit
+extra Zeichen wie z.B. &quot;&amp;%$*&quot; verwenden wollen, so
+benutzen Sie bitte Passwörter, die mindestens 10 Zeichen lang
+sind. Benutzen Sie zudem Zahlen oder binäre Werte. Ein gutes
+Passwort z.B. ist ein Satz ohne Sinn, der aber leicht gemerkt
+werden kann, z.B. &quot;Der Hund ist zu grün?&quot;.</font></p>
+
+<p><font size="2" face="Arial">Bitte erinnern Sie sich immer an
+die goldene Regel:</font></p>
+
+<blockquote>
+    <h1><font color="#FF0000" size="2" face="Arial">Vergessen Sie
+    niemals Ihr Passwort!</font></h1>
+    <h1><font color="#FF0000" size="2" face="Arial">Prägen Sie
+    es sich gut ein!</font></h1>
+    <p><font color="#FF0000" size="2" face="Arial"><b>Wenn Sie
+    sich Passwörter nicht merken können, verwenden Sie
+    Schlüsseldisks.</b></font></p>
+</blockquote>
+
+<p><font size="2" face="Arial">Es gibt keine Möglichkeiten
+Dateien wiederherzustellen, die durch Blowfish Advanced CS mit
+einem vergessenen Schlüssel von ausreichender Länge gesichert
+wurden. Wenn das Passwort oder die Keydisk verloren gehen sind
+Sie nicht mehr in der Lage Ihre Dateien zu entschlüsseln. Das
+Programm speichert die Schlüssel nirgends ab, weder in der
+verschlüsselten Datei noch sonst irgendwo. Die Schlüssel selbst
+werden sogar nach ihrem Gebrauch aus dem Speicher gelöscht.</font></p>
+</body>
+</html>

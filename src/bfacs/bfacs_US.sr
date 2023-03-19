@@ -1,0 +1,840 @@
+
+// US language string resources for Blowfish Advanced CS
+// Copyright (C) 1999-2005 Markus Hahn
+//
+// tips & hints for translation and correction:
+//
+// - do not delete "%d" and "%s" tokens!
+// - "\20" equals space (' ')
+// - "\0d\0a" equals a line break
+// - leading and ending whitespaces will be removed (use "\20" instead)
+// - do not change the "[COUNTRY_CONFIG]" section!
+// - strings too long won't fit in certain controls of the GUI
+// - do not remove any string entry!
+// - adding strings doesn't make sense, the program does not know them!
+// - comments must have the "\\" prefix (guess you already know that)
+// - better to backup the original resource in case of worse errors
+
+[COUNTRY_CONFIG]
+Language=US English
+HelpFile=BFACS_US.CHM
+
+[ABOUTFORM]
+CAPTION=About
+OKBTN=OK
+VERSION=Version %s
+COPYRIGHT=Copyright © 1997-2005 Markus Hahn
+EDITION=Personal Edition
+COL_PRP=Property
+COL_CNT=Content
+CV_BFACSLIB=bfaCS Library Version
+CV_WINVER=Windows Version
+CV_WINPF=Platform
+CV_CNAME=Computer Name
+CV_UNAME=User Name
+CV_NUMOFPR=Number of Processors
+CV_MEMLOAD=Memory Load
+CV_PHMEM=Physical Memory
+CV_FPHMEM=Free Physical Memory
+CV_PFSIZE=Pagefile Size
+CV_FPFSPAC=Free Pagefile Space
+CV_SCRRES=Screen Resolution
+CV_MOUSE=Mouse
+CV_MOUSWH=Mouse Wheel
+
+[BFACSREGISTRYKEYS]
+000=Blowfish Advanced CS encrypted
+001=Blowfish Advanced CS Job
+CAPTION=Blowfish Advanced CS
+ENCRYPT=Encrypt
+DECRYPT=Decrypt
+WIPE=Wipe
+REENCRYPT=Reencrypt
+DESLACK=Deslack
+WORKWITH=Work With
+VIEW=View
+ERRMESS1=Blowfish Advanced CS Shell Extension
+ERRMESS2=Cannot launch "%s" (%s).
+HELPCAPTION=Blowfish Advanced CS Commands
+HELPENCRYPT=Encrypt selected objects.
+HELPDECRYPT=Decrypt selected objects.
+HELPWIPE=Wipe selected objects.
+HELPREENCRYPT=Reencrypt selected objects.
+HELPDESLACK=Deslack selected objects.
+HELPWORKWITH=Work with this encrypted file.
+HELPVIEW=View this encrypted file.
+
+[BFAFILE]
+022=source file access denied
+023=source file not found
+024=source file general open error
+025=cannot close source file after skipping encrypted file
+026=i/o error while checking encryption state
+027=already encrypted
+028="%s" already exists.
+029=cannot get source file size
+030=cannot get source file time
+031=cannot get source file attributes
+032=reset output file attributes failed
+033=cannot delete dead crypt file
+034=writing header failed
+035=used 8.3 renaming
+036=interrupted
+038=fatal error while wiping:\20
+039=cannot delete original file, temporary encrypted file removed
+040=cannot close cryptfile after date+time restore error
+041=unsupported BFA version
+042=unknown compression method
+043=cannot reset source file after compression failed
+044=target file access denied
+045=target file general open error
+049=cryptfile truncated and damaged in the header
+050=disk full
+051=cannot write to target file
+052=CRC32 error
+054=cannot rename temporary to original filename
+055=cannot remove source file
+056=cannot delete dead target file
+065=i/o error while reading from source file
+067=cannot rename temporary file, left as "%s" on disk for recovery
+068=cannot close source file after exception
+080=no warnings
+081=weak wiping
+082=removing failed
+083=cannot set attributes
+084=cannot set date+time stamp
+085=interrupted
+086=file truncated
+087=error while wiping "%s", parts may already have been overwritten, encrypted "%s" counterpart left on disk
+088=unknown format
+
+[BFAMANAGER]
+000=Original File
+001=Size
+002=Encrypted To
+003=Ratio
+004=Errors, Warnings, Hints
+005=Encrypted File
+006=Decrypted to
+007=Original Size
+100=out of memory
+101=interrupted
+102=fatal error:\20
+104=The target drive is full.\0d\0aYou may insert a new data carrier or free some disk space.\0d\0aRetry?
+105=\0d\0aOverwrite this file?
+
+[BFAVIEWER]
+FRMT_WIPECB=Removing %s (%s bytes)...
+FRMT_VIEWCB=Decrypting %s (%s bytes), %d%% done...
+
+[BFAWORKWITH]
+USERBREAK=user break
+OPENERROR=Cannot open "%s" (%s).\0d\0aDo you want to encrypt the file back?
+KEEPWAITING=Are you finished working with "%s"?\0d\0a(If you say no the file will stay unencrypted.)
+FRMT_DECCB=Decrypting "%s" (%s bytes), %d%% done...
+FRMT_ENCCB=Encrypting "%s" (%s bytes) back, %d%% done...
+FRMT_WIPCB=Wiping "%s", please wait...
+RMFROMFAV=The file "%s" was not found,\0d\0abut it's stored in the file list.\0d\0aShould it be removed from the list?
+
+[BFJOB]
+SEARCHERR=Error while searching (%s).
+NUMOFSINGLEFILE=1 file (%s bytes)
+NUMOFSINGLEFILE_DSL=1 file
+NUMOFFILES=%s files (%s bytes together)
+NUMOFFILES_DSL=%s files
+SKIPPED=Operation skipped by user.
+USERBREAK=User Break
+FATALERR=Fatal error (%s) occured.
+GHOSTFILES=%d files are missing:
+NOFILES=No files found.
+ERROR_ENC=Error during encryption (%s).
+ERROR_DEC=Error during decryption (%s).
+ERROR_WIPE=Error during wiping (%s).
+ERROR_REENC=Error during reencryption (%s).
+ERRORS=There are errors.
+WARNINGS=There are warnings.
+ALLSUCCESS=Operation complete.
+CONFIRMMESS=Found %s.\0d\0aStart the %s now?
+DOING_ENC=encryption
+DOING_DEC=decryption
+DOING_WIPE=wiping
+DOING_DESL=deslacking
+DOING_REENC=reencryption
+UNCONFKEYWARN=The key (or parts of it) was not confirmed during input.\0d\0aContinue anyway?
+FMT_SUM=Operation: %s\0d\0aStatus: %s\0d\0aTime needed: %s\0d\0a%s\0d\0a
+FMT_TITLE=Title: %s\0d\0a
+OP_ENC=Encryption
+OP_DEC=Decryption
+OP_WIPE=Wiping
+OP_REENC=Reencryption
+OP_DSLK=Deslacking
+OP_VIEW=View
+OP_WWITH=Work With
+BATCH_APPENDLOADERR=error loading existing file: %s
+BATCH_CANNOTSAVE=Cannot store job file.
+BATCH_LOADERR=Error loading the job file.
+BATCH_NOTAJOBFILE=File is not a job file.
+BATCH_INVALIDERR=Job file is invalid.
+DEFJOBTITLE=%s Job
+
+[BFMANAGER]
+MAXERR=More than %d error(s) occured.\0d\0aContinue anyway?
+
+[CIPHERSERVERTOOLS]
+ETS01=no error
+ETS02=general error
+ETS03=algorithm not found
+ETS04=invalid algorithm
+ETS05=out of memory
+ETS06=weak key detected
+ETS07=self test failed
+ETS08=session still active
+ETS09=no active session
+ETS10=wrong session type
+ETSUNKNOWN=unknown error
+
+[CLEANERS]
+ERR_UNEXPECTED=unexpected API behavior
+ERR_OUTOFMEM=out of memory
+
+
+[CRPTFILE]
+000=general error
+001=fatal error
+002=algorithm not found
+003=selftest failed
+004=invalid algorithm
+005=out of memory
+006=key setup failed
+007=file not found
+008=access denied
+009=file is read only
+010=disk full
+011=weak key detected
+012=i/o error
+013=wrong algorithm type
+014=no cryptfile
+015=wrong key
+016=unsupported format
+017=file truncated
+018=general open error
+019=mode conflict
+020=internal error
+021=end of file
+022=unknown error
+023=invalid open mode
+024=unknown return code #
+025=file already opened
+026=zero key
+027=key too large
+028=no file opened
+
+[DESLACKER]
+000=File Name
+001=Result
+002=Done.
+003=Error:\20
+004=Not processed:\20
+005=User Break
+010=More than %d error(s) occured.\0d\0aContinue anyway?
+ERR_01=cannot get attributes
+ERR_02=cannot reset attributes
+ERR_03=cannot open file
+ERR_04=cannot get file size
+ERR_05=cannot seek to file end
+ERR_06=cannot write to file
+ERR_07=cannot reset file length
+ERR_08=cannot restore file length
+ERR_09=cannot restore date+time stamp
+ERR_10=cannot close file after error
+ERR_11=cannot close file
+ERR_12=cannot restore attributes
+FMT_ERR=Error: %s (%s)
+TOOMANYERRS=interrupted after too many errors
+
+[DESTSELECTWIN]
+REMOVEBTN=Remove
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+INPUTBOXINFO=Destination Path:
+BROWSEBTN=Browse...
+000=Error
+001=Path "%s" doesn't exist.\0d\0aCreate it now?
+002=Cannot create path "%s".
+003=Select a path:
+
+[DISKCLEAR]
+OUTOFMEM=out of memory
+DONEMESS=Empty disk space of %s cleared.
+ERR_OPEN=cannot create the temporary file "%s" (%s)
+ERR_IO=i/o error (%s)
+ERR_CLOSE=cannot close the temporary file "%s" (%s)
+ERR_DEL=deleting at least one temporary file
+CONT_AFTER_ERR=There is a problem: %s.\0d\0aContinue anyway?
+
+[DISKCLEARFORM]
+DRIVEPREFIX=Drive\20
+SHOWPROG0=%s of %s bytes
+SHOWPROG1=%s bytes
+CAPTION=Clear Empty Disk Space
+STARTBTN=Start
+CANCELBTN=Cancel
+HELPBTN=Help
+MINIMIZEBTN=Minimize
+SETUPGROUP=Setup
+HOWTOSELECT=Clear
+HTS_CURRDRV=The Current Location
+HTS_ALLDRIVES=All Drives
+HTS_ALLFIXEDDRIVES=All Fixed Drives
+NOBUFFERSWITCH=Write through Buffers
+SILENTSWITCH=No Messages
+LOWPRIOSWITCH=Low Priority
+METHODINFO=Clear with:
+MSEL_ZEROS=Zero Bytes
+MSEL_RNDBLOCK=Static Random Data
+MSEL_RNDSTREAM=Continuous Random Data
+ERRORMESS=Error while clearing "%s" : %s.
+REALLYBREAK=Do you really want to break?
+ACTION_CLEAR=Clearing empty space
+
+[EXECUTOR]
+FATAL=A fatal error has occured:\0d\0a%s
+ERROR=Error: %s
+ACTION_ENCRYPT=Encrypting
+ACTION_DECRYPT=Decrypting
+ACTION_WIPE=Wiping
+ACTION_REENCRYPT=Reencrypting
+ACTION_DESLACK=Deslacking
+ACTION_WORKWITH=Working
+ACTION_ERR=Busy
+CONFJOBEXEC=Execute job "%s" now?
+VW_ERROR=Error while viewing:\20
+VW_WRONGKEY=Wrong key, file cannot be viewed.
+JOBERROR=Error executing job "%s" : %s
+
+[FAVORITESWIN]
+CAPTION=Favorites Manager
+FAVLISTINFO=Favorites:
+REMOVEBTN=Remove
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+
+[FILEBROWSER]
+FF_INFO=%s folder(s), %s file(s)
+SEL_INFO=%s object(s) selected (%s bytes together)
+SORTING=Sorting...
+BROWSING=Found %d object(s)...
+ST_INFO=%s bytes (%s bytes free space)
+DUNNO=???
+NETWORK=Network
+EXEC=Opening "%s" ...
+MSG_COPY=Copying %s
+MSG_MOVE=Moving %s
+MSG_DELETE=Deleting %s
+ERR00=Cannot change to "%s".
+ERR01=Problem occured while searching for files.
+ERR02=Cannot search through the network path.
+ERR20=Source and destination path are equal.
+ERR21=User break detected.\0d\0a%d file(s) were copied.
+ERR22=Replace file "%s" (%s bytes) with "%s" (%s bytes)?
+ERR23=%d file(s) couldn't be copied.
+ERR24=Cannot move folders to other (network) drives.
+ERR25=User break detected.\0d\0a%d object(s) were moved.
+ERR26=%d object(s) couldn't be moved.
+ERR27=User break detected.\0d\0a%d object(s) were completely removed.
+ERR28=%d object(s) couldn't be removed.
+ERR40=Internal error occured.
+ERR41=Object "%s" already exists.\0d\0aDo you want to try another name?
+ERR42=Cannot rename "%s" in "%s".\0d\0aContinue?
+ERR50=Cannot create the folder(s) "%s".
+ERR51=Couldn't create all folders of "%s".
+INTERRUPT=User interrupted the search process.
+COLNAME=Name
+COLREALNAME=Real Name
+COLSIZE=Size
+COLREALSIZE=Real Size
+COLTIME=Time
+COLTYPE=(Original) Type
+COLATTR=Attributes
+NOFILES=No files found.
+SCANERR01=Wrong Key
+SCANERR02=Wrong Algorithm
+SCANERR03=File not found
+SCANERR04=Unknown Format (wrong algorithm?)
+SCANERR05=Error (%s)
+SCANFATAL=Fatal error occured while scanning "%s": %s.\0d\0aScan process aborted.
+USERBREAK=User Break
+
+[FILESUPP]
+000=file not found
+001=cannot detect free (extended) disk space
+002=cannot detect free disk space
+SHEX000=The operating system is out of memory or resources.
+SHEX001=The specified file was not found.
+SHEX002=The specified path was not found.
+SHEX003=The .EXE file is invalid (non-Win32 .EXE or error in .EXE image).
+SHEX004=The operating system denied access to the specified file.
+SHEX005=The filename association is incomplete or invalid.
+SHEX006=The DDE transaction could not be completed because other DDE transactions were being processed.
+SHEX007=The DDE transaction failed.
+SHEX008=The DDE transaction could not be completed because the request timed out.
+SHEX009=The specified dynamic-link library was not found.
+SHEX010=There is no application associated with the given filename extension.
+SHEX011=There was not enough memory to complete the operation.
+SHEX012=A sharing violation occurred.
+
+[GLOBALS]
+000=Saving configuration...
+001=Cannot save configuration to "%s".
+002=\20- Shutdown Problem
+
+[JOBCHOOSERFORM]
+CAPTION=What to do now?
+OKBTN=OK
+CANCELBTN=Cancel
+ACTION=Action
+SEL_ENCRYPT=Encrypt
+SEL_DECRYPT=Decrypt
+SEL_WIPE=Wipe
+SEL_REENCRYPT=Reencrypt
+SEL_DESLACK=Deslack
+SEL_VIEW=View
+SEL_WORKWITH=Work With
+
+[KEYDISK]
+OUTOFMEM=out of memory
+IOERR=i/o problem
+DUNNO=unknown problem
+ERRMESS=Cannot read the key file "%s" (%s).\0d\0aRetry?
+KEYFILETOOLARGE=The key file "%s" (%s bytes) is larger than the max. allowed size.\0d\0aThe first %s bytes will be used, the rest ignored.\0d\0aDo you want to continue?
+
+[LOGFORM]
+CAPTION=Job Report
+OKBTN=OK
+HELPBTN=Help
+SAVEBTN=Save...
+MAKEJOBFILEBTN=Create Job File...
+ERRWAR=\20- %d errors, %d warnings
+SD_REP_TITLE=Save Report
+SD_REP_FILTER=Text Files (*.txt)|*.TXT|All Files (*.*)|*.*
+CONFIRM=Confirm
+ERROR=Error
+REPCREATERR=Cannot create report file "%s".
+ALREADYEXISTS="%s" already exists.\0d\0aAppend the report to this file?
+SD_JOB_TITLE=Saving Job, Step 1/2
+SD_JOB_FILTER=Job Files (*.bfj)|*.BFJ
+JOBFILEEXISTS=The job file "%s" already exists.\0d\0aDo you want to append the current job?
+TITLEREQ_CAPTION=Saving Job, Step 2/2
+TITLEREQ_PROMPT=Please enter a title for this job:
+JOBFILESAVED=Job "%s" was successfully stored in\0d\0a"%s".
+LM_SORT=Sort by Exceptions
+
+[MAINFORM]
+COPYING=Copying
+MOVING=Moving
+DELETING=Deleting
+ABORTED=Aborted
+CONFIRM=Confirm
+WARNING=Warning
+ERROR=Error
+SCANERR=Cannot start the scanner (%s).
+SCAN=SCAN
+PRESS_ESC=Press ESC to Abort
+ESC_DETECT=ESC key was pressed
+CP_CAPTION=Change Path
+CP_PROMPT=Enter the new Location:
+COPYDESTCAPTION=Copy
+MOVEDESTCAPTION=Move
+CONF_DELETE=Do you really want to delete those objects?
+NO_WWW=Couldn't open the default Web browser.
+000=Initializing controls...
+MN_FILE=File
+MN_FILE_ENCRYPT=Encrypt...
+MN_FILE_DECRYPT=Decrypt...
+MN_FILE_VIEW=View...
+MN_FILE_WORKWITH=Work With...
+MN_FILE_REENCRYPT=Reencrypt...
+MN_FILE_WIPE=Wipe
+MN_FILE_DESLACK=Deslack
+MN_FILE_EXIT=Exit
+MN_BROWSER=Browser
+MN_BROWSER_BROWSE=Browse...
+MN_BROWSER_CHANGEPATH=Change Path...
+MN_BROWSER_UPONELEVEL=Up One Level
+MN_BROWSER_REFRESH=Refresh
+MN_BROWSER_NEWFOLDER=New Folders...
+MN_BROWSER_ICONS=Icons
+MN_BROWSER_SMALLICONS=Small Icons
+MN_BROWSER_LIST=List
+MN_BROWSER_REPORT=Details
+MN_BROWSER_EXCLUDE=Exclude...
+MN_BROWSER_EXCLUDE_ARCHIVE=Archive Files
+MN_BROWSER_EXCLUDE_READONLY=Readonly Files
+MN_BROWSER_EXCLUDE_HIDDEN=Hidden Files
+MN_BROWSER_EXCLUDE_SYSTEM=System Files
+MN_BROWSER_SCANNER=Scanner
+MN_BROWSER_CHOOSEFONT=Choose Font...
+MN_TOOLS=Tools
+MN_TOOLS_OPTIONS=Options...
+MN_TOOLS_SHOWBUTTONS=Show Button Bar
+MN_TOOLS_SHOWBROWSERTOOLS=Show Browser Tool Bar
+MN_TOOLS_SHOWSEEDINFO=Show Random Seed Info...
+MN_TOOLS_EXPIREKEYCACHE=Expire Key Cache
+MN_TOOLS_CLEARWORKWITHFAVS=Empty Last Workfiles List
+MN_TOOLS_SDFC=Safety Device for Children...
+MN_TOOLS_LANGUAGE=Language
+MN_TOOLS_CLEARDISKSPACE=Clear Empty Disk Space...
+MN_FAVORITES=Favorites
+MN_FAVORITES_ADDPATH=Add Current Path
+MN_FAVORITES_MANAGE=Organize...
+MN_HELP=Help
+MN_HELP_HELP=Contents
+MN_HELP_WEB=To the Website...
+MN_HELP_ABOUT=About
+PM_ENCRYPT=Encrypt...
+PM_DECRYPT=Decrypt...
+PM_WIPE=Wipe
+PM_COPY=Copy...
+PM_MOVE=Move...
+PM_WORKWITH=Work With...
+PM_RENAME=Rename...
+PM_DELETE=Delete
+PM_SELECT=Select
+PM_SELECT_ALL=All
+PM_SELECT_FILES=Files
+PM_SELECT_FOLDERS=Folders
+PM_SELECT_ENCRYPTED=Encrypted Files
+PM_SELECT_DECRYPTED=Unencrypted Files
+PM_SELECT_BYSTRING=Files Containing String...
+PM_FORMAT=Format...
+TM_SHOW=Show
+TM_EXIT=Exit
+SELSEARCHCAPT=Select Files Containing String
+HINT_ENCRYPT=Encrypt (Ctrl+E)
+HINT_DECRYP=Decrypt (Ctrl+D)
+HINT_WIPE=Wipe (Ctrl+W)
+HINT_WORKWITH=Work With (Ctrl+O)
+HINT_OPTIONS=Options (Ctrl+T)
+HINT_EXIT=Exit (Ctrl+Q)
+HINT_ABOUT=About
+HINT_HELP=Help (F1)
+HINT_BT_UPONELEVEL=Up One Level (Ctrl+L)
+HINT_BT_REFRESH=Refresh (F5)
+HINT_BT_BROWSE=Browse (F3)
+HINT_BT_NEWFOLDER=New Folders
+HINT_BT_ICONS=Large Icons
+HINT_BT_SMALLICONS=Small Icons
+HINT_BT_LIST=List
+HINT_BT_REPORT=Details
+HINT_BT_HISTBACK=Backward
+HINT_BT_HISTFORWARDS=Forward
+SELECTPATH=Select a path:
+
+[MAKEDIRFORM]
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+CAPTION=New Folders
+NEWDIRINFO=Enter the names of the new folders. You may also declare nested directory paths:
+ILLEGAL_NAME=Name contains the illegal '%s' character.
+ERROR=Error
+
+[MAKEKEYDISKFORM]
+CAPTION=Make Key Disk
+CANCELBTN=Cancel
+HELPBTN=Help
+SIZEINFO=Size of Key (in bits):
+HOWTOINFO=Before the key file can be created you must provide some random seed. Just move the mouse or type around.
+SELFILENAME=Select Key File Name
+OVERWRITE="%s" already exists.\0d\0aIf it's a keyfile and you overwrite it,\0d\0athe data encrypted with it cannot be restored!\0d\0aProceed anyway?
+WARNING=Warning
+ERROR=Error
+CANNOTCREATE=Cannot create the key file "%s".
+FILTER=All Files (*.*)|*.*
+CREATED=File "%s" with %d bytes (%d bits) of random key data was generated.
+SUCCESS=Success
+
+[MESSBOXYNAC]
+YESBTN=Yes
+NOBTN=No
+ALLBTN=All
+CANCELBTN=Cancel
+
+[PASSWCONFIRM]
+CAPTION=Confirm
+OKBTN=OK
+CANCELBTN=Cancel
+INFO=Reenter the password:
+BADBIN=You entered illegal binary sequences ("\xx").
+ZEROPASSW=Please enter something.
+ERROR=Error
+PASTEANDCLEAR=Paste and empty Clipboard
+
+[PASSWORDFORM]
+NOTEQUPASSW=The confirmed password is not equal.
+ZEROPASSW=Please enter a password.
+BADBIN=You entered illegal binary sequences ("\xx").
+ERROR=Error
+WARNING=Warning
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+APPLYBTN=Apply
+PWUSECACHEDKEYSWITCH=Use Cached Key
+PWINPUTINFO=Password:
+PWINPUTINFO_R1=Old Password:
+PWINPUTINFO_R2=New Password:
+PWSHOWPASSWORDSWITCH=Show Password
+PWAUTOCONFSWITCH=Auto Confirmation
+PWCACHEKEYSWITCH=Cache Key
+PWMULTIKEYSWITCH=Multi Key Input
+PWUSEKEYDISKSWITCH=Use Key Disk
+TPTARGETPATHSWITCH=Use Destination Path:
+TPBROWSEBTN=Browse...
+TPKEEPDIRECTORIESSWITCH=Keep Directories
+TPREMOVESOURCEFILESSWITCH=Remove Source Files
+ENCSTOREPATHNAMESSWITCH=Store Original Pathnames
+ENCRELATIVEPATHSSWITCH=Relative to Current Path
+ENCCOMPRESSSWITCH=Compress Data
+ENCRENAMEFILESSWITCH=Rename Files
+DECRESTOREPATHSWITCH=Restore Original Pathnames
+TARGETERR=Cannot create path "%s".
+NOTARGET=Target path "%s" does not exist.\0d\0aCreate it now?
+REENC1=Old Encryption Algorithm:
+REENC2=New Encryption Algorithm:
+PASTEANDCLEAR=Paste and empty Clipboard
+
+[PASSWORDINPUT]
+ERROR=Error
+CONFIRM=Confirm
+MULTIKEYREQ=Do you want to append another password or key disk?
+CAPTION_ADDON=\20- Key #%d
+MODE_KEYINPUT=Key Input
+MODE_VIEW=View
+MODE_WORKWITH=Work With
+MODE_SCANNER=Scanner
+MODE_REENCRYPT=Reencrypt
+MODE_ENCRYPT=Encrypt
+MODE_DECRYPT=Decrypt
+DESTSEL=Target Path
+
+[PATHINPUTWIN]
+OKBTN=OK
+CANCELBTN=Cancel
+SEARCHBTN=Search...
+HELPBTN=Help
+ENTERPLEASE=Please enter something.
+ERROR=Error
+SELECTPATH=Select a path:
+
+[PATHSEARCH]
+000=interrupted
+001=error
+002=no files found
+003=file "%s" not found
+004=path still contains files
+005=path contains protected files
+006=Searching files in "%s"...
+007=Registering single files...
+
+[PATHSEARCHFORM]
+CAPTION=Searching Files
+CANCELBTN=Abort
+
+[PROGRESSFORM]
+PAUSEBTN=Pause
+CONTBTN=Continue
+STOPBTN=Stop
+MINIMIZEBTN=Minimize
+CURRENTFILEINFO=Current File:
+INPUTFILEINFO=Input File:
+OUTPUTFILEINFO=Output File:
+FILESIZEINFO=File Size:
+FILENUMBERINFO=File Number:
+WIPELOOPINFO=Wipe Loop:
+SINGLEPROGRESSBARHINT=Current File Progress
+ALLPROGRESSBARHINT=Over All Progress
+MODE_ENCRYPT=Encryption
+MODE_DECRYPT=Decryption
+MODE_WIPE=Wiping
+MODE_REENCRYPT=Reencryption
+MODE_DESLACK=Deslacking
+CONFIRM=Confirm
+BREAKQUEST=Do you really want to break?
+
+[REENCRYPTOR]
+000=File Name
+001=Result
+002=success
+003=Error:\20
+004=skipped:\20
+005=interrupted
+006=cannot delete the old file
+007=cannot rename temporary file
+008=cannot rename temporary file "%s" to "%s"
+009=error closing files after user break
+010=More than %d error(s) occured.\0d\0aContinue anyway?
+
+[RENAMEFORM]
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+CAPTION=Rename
+OLDNAMEINFO=Old Name:
+NEWNAMEINFO=New Name:
+ILLEGAL_NAME=Name contains the illegal '%s' character.
+ERROR=Error
+
+[SDFCFORM]
+CAPTION=Safety Device for Children
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+CHANGE=Change the password:
+ENTER=Enter the password:
+
+[SETTINGSFORM]
+ERROR=Error
+YES=yes
+NO=no
+CONFIRM=Confirm
+SUCCESS=Success
+CAPTION=Options
+OKBTN=OK
+CANCELBTN=Cancel
+HELPBTN=Help
+APPLYBTN=Apply
+SECURITYSHEET=Security
+SECURITYCIPHERLISTINFO=Encryption Algorithm:
+SECURITYCOMPRESSINFO=Compression Method:
+SECURITYWIPEINFO=Wipe Method:
+SECURITY_KC_GROUP=Key Cache
+SECURITY_KC_EXPIRETIME=Expiration Time (in secs) :
+SECURITY_KC_NEVEREXPIRES=Cached key never expires
+SECURITY_MNCIPHER_SHOW=Show Info
+SECURITY_CPHINF_BLOCKSIZE=Block Length:
+SECURITY_CPHINF_KEYSIZE=Key Length:
+SECURITY_CPHINF_TYPE=Type:
+SECURITY_CPHINF_BITS=bits
+COMPRESSNAME_LZSS=LZSS
+COMPRESSNAME_DEFLATE=Deflate
+COMPRESSNAME_BZIP2=BZIP2
+WIPE_DELETEONLY=Delete Only
+WIPE_SIMPLE=Simple (1x)
+WIPE_DOD=DoD Method (3x)
+WIPE_SFS=SFS Method (35x)
+CONFIGSHEET=Configuration
+CFG_SHOWHINTS=Show Hints
+CFG_HOTTRACKING=Hot Tracking
+CFG_HTMLSTYLE=Browser in Web Style
+CFG_GRIDLINES=Show Gridlines
+CFG_NONETWORK=No Network View
+CFG_AUTOARRANGE=Auto Arrange
+CFG_FLATVIEW=Flat Browser View
+CFG_SCANBFAFILESONLY=Scan .BFA Files Only
+CFG_REPLACESCANICONS=Replace Icons (and Types) of Scanned Files
+CFG_KEEPDATETIME=Keep Date+Time Stamps
+CFG_KEEPATTRIBUTES=Keep Attributes
+CFG_SKIPENCRYPTED=Skip already encrypted files
+CFG_WRITEPROTECT=Write-protect Encrypted Files
+CFG_TRYRENAME83=Try to rename 8.3 compatible
+CFG_ADDEXTENSION=Add .BFA Extension
+CFG_IGNORECRC32=Ignore CRC32 Errors
+CFG_ACCEPTRUNCATED=Accept Truncated Files
+CFG_REMOVEEMPTYDIRS=Remove Empty Directories
+CFG_OVERWRITEEXISTING=Overwrite Existing Files
+CFG_NOCACHE=Turn Off File Caching
+CFG_CONFIRMOPERATIONS=Operations must be confirmed
+CFG_SHOWJOBREPORT=Show Job Report
+CFG_AUTOREFRESH=Automatic Browser Refresh
+CFG_OVERWRITEVIEWED=Files to view may overwrite existing ones
+CFG_CLOSEAFTERWORK=Exit after a shell job has been done
+CFG_DOUBLECLICKWORK=Doubleclick equals "Work With"
+CFG_SAVESENSSETS=Save sensitive Settings
+CFG_PLACEDRIVESFIRST=Place drives first
+CFG_COLORPROGRESS=Colored Progress Display
+CFG_TRAYICON=Run in System Tray
+CFG_FORCECOMPRESS=Force Compression
+FILEHANDLINGSHEET=File Handling
+FH_RENAMESETUP=Rename Method
+FH_RENAMERANDOMSWITCH=Random Characters
+FH_RENAMEMASKSWITCH=User Defined Mask
+FH_MASKINFO=Prefix:
+FH_NUMINFO=Number.
+FH_EXTINFO=Extension:
+FH_COMPRESSIONSETUP=Compression
+FH_NOCOMPRESSINFO=Don't compress files of type:
+MISCSHEET=Miscellaneous
+MISC_TVP_INFO=Temporary Path for Viewing:
+MISC_TVP_BROWSE=Browse...
+MISC_KD_INFO=Key Disk File:
+MISC_KD_MAKE=Make Key Disk...
+MISC_CLEARKEYHASHES=Clear Key Hashes for the Auto Confirmation
+MISC_MAXERRORS=Maximum Number of Errors:
+MISC_REGGROUP=Registry Setup
+MISC_REGFILEASSOCSWITCH=Associate File Types
+MISC_REGSHELLEXTSSWITCH=Context Menu Extensions
+MISC_REGUPDATEBTN=Update
+REGUPDATEMESS=Registry settings have been changed.
+CLEARKEYHASHESREQ=Do you really want to clear the %d key hash(es) stored?
+ILLEGALVALUE=Illegal value entered for "%s".
+OUTOFRANGE=Value entered for "%s" is out of range (%d..%d).
+TVPATHNOTEXISTS=The temporary path "%s" for viewing does not exist.
+SELECTPATH=Select a path:
+
+[STRINGSEARCHFORM]
+OKBTN=OK
+CANCELBTN=Cancel
+INFO=Search String:
+CASESENS=Case Sensitive
+
+[STRPLUSI]
+000=,
+001=mm"/"dd"/"yyyy" "hh":"mma/p
+002=,
+003=.
+004=Unknown Win32/OLE Error
+
+[TIPFORM]
+CAPTION=Tip
+NOTAGAINSWITCH=Do not show this tip again
+TIP0=To change the language please use the menu entry "Extras...Sprache".\0d\0a\0d\0a(Deutschsprachige Benutzuer können diese Meldung ignorieren.)
+TIP1=Um die Sprache zu wechseln benutzen Sie bitte den Menüeintrag "Tools...Language".\0d\0a\0d\0a(English speaking users should ignore this message.)
+TIP2=The integration into the Windows Explorer can be enabled under "Options...Miscellaneous...Registry Setup".
+TIP3=The scanner is now activated (look at the "SCAN" in the status bar). It can be turned off by clicking on the menu option again, or by pressing the F8 key.
+TIP4=With the Safety Device for Children you have a simple protection against the program being started by persons, who are unware that it is capable to destroy data.
+TIP5=The program was minimized to the system tray. To change this behaviour check out "Options...Configuration...Run in System Tray".
+TIP6=The Caps Lock Key is pressed!\0d\0a\0d\0aThis is usually done by mistake and might lead to a passphrase you don't intend to use.
+
+[WINDIAG]
+000=(unknown)
+001=yes
+002=no
+003=normal
+004=fail-safe
+005=fail-safe with network
+006=\20bytes
+007=present
+008=not present
+
+[WIPE]
+001=cannot delete the file
+002=error opening file
+003=closing file failed after i/o error
+004=i/o error
+005=closing file failed after interruption
+006=reseting for another pass failed
+007=interrupted
+008=closing file failed
+
+[WIPEMANAGER]
+COL_NAME=File Name
+COL_RESULT=Result
+SUCCESS=wiped out
+ERROR=Error:\20
+WARNING=Warnung:\20
+OUTOFMEMORY=out of memory
+USERBREAK=user break
+

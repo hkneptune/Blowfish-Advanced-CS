@@ -1,0 +1,102 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Introduction">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="html/US/Introduction.htm">
+			</OBJECT>
+			<A HREF="html/Introduction.htm">Introduction</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="How to use Blowfish Advanced CS">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Button Bar and Browser Controls">
+			<param name="Local" value="html/US/Button_Bar_and_Browser_Controls.htm">
+			</OBJECT>
+			<A HREF="html/Button_Bar_and_Browser_Controls.htm">Button Bar and Browser Controls</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Browser">
+			<param name="Local" value="html/US/Browser.htm">
+			</OBJECT>
+			<A HREF="html/Browser.htm">Browser</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Encrypt Files">
+			<param name="Local" value="html/US/Encrypt.htm">
+			</OBJECT>
+			<A HREF="html/Encrypt.htm">Encrypt Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Decrypt Files">
+			<param name="Local" value="html/US/Decrypt.htm">
+			</OBJECT>
+			<A HREF="html/Decrypt.htm">Decrypt Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Wipe Files">
+			<param name="Local" value="html/US/Wipe.htm">
+			</OBJECT>
+			<A HREF="html/Wipe.htm">Wipe Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Reencrypt Files">
+			<param name="Local" value="html/US/Reencrypt.htm">
+			</OBJECT>
+			<A HREF="html/Reencrypt.htm">Reencrypt Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View Files">
+			<param name="Local" value="html/US/View.htm">
+			</OBJECT>
+			<A HREF="html/View.htm">View Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Work with Files">
+			<param name="Local" value="html/US/Work_With.htm">
+			</OBJECT>
+			<A HREF="html/Work_With.htm">Work with Files</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Options">
+			<param name="Local" value="html/US/Options.htm">
+			</OBJECT>
+			<A HREF="html/Options.htm">Options</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Jobs">
+			<param name="Local" value="html/US/Job_Files.htm">
+			</OBJECT>
+			<A HREF="html/Job_Files.htm">Jobs</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Infos">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Security Tips">
+			<param name="Local" value="html/US/Security_aspects.htm">
+			</OBJECT>
+			<A HREF="html/Security_aspects.htm">Security Tips</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Technical Reference">
+			<param name="Local" value="html/US/Technical_Reference.htm">
+			</OBJECT>
+			<A HREF="html/Technical_Reference.htm">Technical Reference</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copyright, Warranty and Contacting the Author">
+			<param name="Local" value="html/US/Copyright_Warranty_and_Contacting_the_author.htm">
+			</OBJECT>
+			<A HREF="html/Copyright_Warranty_and_Contacting_the_author.htm">Copyright, Warranty and Contacting the Author</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Credits">
+			<param name="Local" value="html/US/Credits.htm">
+			</OBJECT>
+			<A HREF="html/Credits.htm">Credits</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Where to get Blowfish Advanced CS">
+			<param name="Local" value="html/US/Where_to_get_Blowfish_Advanced_CS.htm">
+			</OBJECT>
+			<A HREF="html/Where_to_get_Blowfish_Advanced_CS.htm">Where to get Blowfish Advanced CS</A><BR>
+	</UL>
+</UL>
+</HTML>

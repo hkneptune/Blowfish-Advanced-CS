@@ -1,0 +1,74 @@
+[OPTIONS]
+Auto Index=Yes
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=bfacs_DE.chm
+Contents file=bfacs_de.hhc
+Default topic=html\DE\Introduction.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=bfacs_de.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+html\DE\Work_With.htm
+html\DE\About.htm
+html\DE\Browse.htm
+html\DE\Browser.htm
+html\DE\Browser_Styles.htm
+html\DE\Button_Bar_and_Browser_Controls.htm
+html\DE\Change_Path.htm
+html\DE\Choose_Font.htm
+html\DE\Clear_Empty_Disk_Space.htm
+html\DE\Configuration.htm
+html\DE\Copyright_Warranty_and_Contacting_the_author.htm
+html\DE\Credits.htm
+html\DE\Decrypt.htm
+html\DE\Deslack.htm
+html\DE\Destination_Dialog.htm
+html\DE\Drap_and_Drop_Capabilities.htm
+html\DE\Empty_Last_Workfiles_List.htm
+html\DE\Encrypt.htm
+html\DE\Exclude_Files.htm
+html\DE\Exit.htm
+html\DE\Expire_Key_Cache.htm
+html\DE\Favorites.htm
+html\DE\File_Handling.htm
+html\DE\Help.htm
+html\DE\Introduction.htm
+html\DE\Job_Files.htm
+html\DE\Job_Report.htm
+html\DE\Key_Cache.htm
+html\DE\Key_Input_Dialog.htm
+html\DE\Language.htm
+html\DE\Make_Key_Disk.htm
+html\DE\Miscellaneous.htm
+html\DE\New_Folders.htm
+html\DE\Options.htm
+html\DE\Path_Input.htm
+html\DE\Popup_Menu.htm
+html\DE\Progress_Dialog.htm
+html\DE\Reencrypt.htm
+html\DE\Refresh.htm
+html\DE\Safety_Device_for_Children.htm
+html\DE\Scanner.htm
+html\DE\Security.htm
+html\DE\Security_aspects.htm
+html\DE\Show_Browser_Tools.htm
+html\DE\Show_Button_Bar.htm
+html\DE\Technical_Reference.htm
+html\DE\TOPIC_NOT_FOUND.htm
+html\DE\Up_One_Level.htm
+html\DE\View.htm
+html\DE\Where_to_get_Blowfish_Advanced_CS.htm
+html\DE\Wipe.htm
+
+[ALIAS]
+#include bfacsali_DE.h
+
+[MAP]
+#include bfacs.h
+
+[INFOTYPES]
+

@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Security</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Security"></object></p>
+
+<p><a name="options_security"></a><font size="3" face="Arial"><b>Security</b></font></p>
+
+<h2><font size="2" face="Arial">Encryption Algorithm</font></h2>
+
+<p><font size="2" face="Arial">Select your favorite cipher here.
+Currently seven algorithms are supported: Blowfish, CAST,
+ARCFOUR, Serpent, AES, Triple-DES and Twofish. Basic information
+(e.g. the key length) for each algorithm can be viewed via a
+contex menu. For more information about them please read the </font><a
+href="Technical_Reference.htm"><font size="2" face="Arial">technical
+reference</font></a><font size="2" face="Arial">.</font></p>
+
+<p><font size="2" face="Arial">If you have files encrypted with a
+certain algorithm you must activate it again for decryption
+(which includes viewing and working with files), too.</font></p>
+
+<p><font size="2" face="Arial"><strong>Compression Method</strong></font></p>
+
+<p><font size="2" face="Arial">When using data compression you
+can select what algorithm should be used. The following
+candidates are available:</font></p>
+
+<p><font size="2" face="Arial"><em>LZSS</em></font></p>
+
+<p><font size="2" face="Arial">The original compression method
+used in older version (2.13 and below) of Blowfish Advanced CS.
+Reasonably fast, but with only average compression ratios. Only
+recommended if data exchange needs to be done with legacy
+software.</font></p>
+
+<p><font size="2" face="Arial"><em>DEFLATE</em></font></p>
+
+<p><font size="2" face="Arial">The recommended compression
+algorithm. Offers good compression result, equal to ZIP file
+compression, while performing usually faster than LZSS.</font></p>
+
+<p><font size="2" face="Arial"><em>BZIP2</em></font></p>
+
+<p><font size="2" face="Arial">The most efficient compressor.
+Quite slow and memory intensive, but offers the best compression
+ratio. Best used on highly redundant data like large XML files or
+giant files like (uncompressed) TAR archives. If your CPU can
+handle it this might be a good choice.</font></p>
+
+<h2><font size="2" face="Arial">Wipe Method</font></h2>
+
+<p><font size="2" face="Arial">Here you can select from four
+methods you prefer for wiping your data. Please note that wiping
+on network drives may not lead to the same results as on local
+disks. Network drives might be pure virtual on a large server
+with uncontrollable caching and buffering (even if the network
+claims to have a cluster like file system).</font></p>
+
+<p><font size="2" face="Arial"><em>Delete Only</em></font></p>
+
+<p><font size="2" face="Arial">Files will only be deleted, not
+overwritten. Due to the fact that if files are deleted, their
+original content remain unerased on the hard disk for an
+uncertain time, this method is not recommended.</font></p>
+
+<p><font size="2" face="Arial"><em>Simple</em></font></p>
+
+<p><font size="2" face="Arial">Files will be overwritten once
+with static random data.</font></p>
+
+<p><font size="2" face="Arial">Useful for wiping huge amounts of
+data very quick.</font></p>
+
+<p><font size="2" face="Arial"><em>DoD Method</em></font></p>
+
+<p><font size="2" face="Arial">The original data will be deleted
+by overwriting it three times according to the NTSC-TG-025
+regulations (Version 2, Sep 1991). This is the recommended wiping
+method.</font></p>
+
+<p><font size="2" face="Arial"><em>SFS Method</em></font></p>
+
+<p><font size="2" face="Arial">This method overwrites 35 times
+with special patterns killing every information on a magnetic
+storage. SFS wiping was developed by Peter C. Gutmann. Please
+remember that wiping files with this method will take much time,
+even on fast SCSI drives. Recommended for top level security.</font></p>
+
+<h2><font size="2" face="Arial">Key Cache</font></h2>
+
+<p><font size="2" face="Arial">Here you can change the behaviour
+of the </font><a href="Key_Cache.htm"><font size="2" face="Arial">key
+cache</font></a><font size="2" face="Arial"> memory in which keys
+are stored to avoid unnecessary reentering. For further
+information have a look at the explanations about the </font><a
+href="Key_Cache.htm"><font size="2" face="Arial">key cache</font></a><font
+size="2" face="Arial">.</font></p>
+
+<p><font size="2" face="Arial">The <em><b>Expiration Time</b></em>
+is the number of seconds a key is cached until it becomes invalid
+and is removed from memory.</font></p>
+
+<p><font size="2" face="Arial">If you want a key to be hold back
+in memory until the application is finished, check the <em><b>Cached
+key never expires</b></em> switch.</font></p>
+</body>
+</html>

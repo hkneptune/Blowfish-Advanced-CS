@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Sicherheit</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000"
+vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Sicherheit"></object></p>
+
+<p><a name="options_security"></a><font size="3" face="Arial"><b>Sicherheit</b></font></p>
+
+<h2><font size="2" face="Arial">Verschlüsselungsalgorithmus</font></h2>
+
+<p><font size="2" face="Arial">Suchen Sie sich hier den
+Verschlüsselungsalgorithmus Ihrer Wahl aus. Augenblicklich
+werden sieben Algorithmen unterstützt: Blowfish, CAST, ARCFOUR,
+Serpent, AES, Triple-DES und Twofish. Basisinformationen (z.B.
+die Schlüssellänge) für jeden Algorithmus sind über ein
+Kontextmenü einsehbar. Für weitere Informationen lesen Sie
+bitte in der </font><a href="Technical_Reference.htm"><font
+size="2" face="Arial">Technischen Referenz</font></a><font
+size="2" face="Arial"> nach.</font></p>
+
+<p><font size="2" face="Arial">Wenn Sie Dateien mit einem
+bestimmten Algorithmus verschlüsselt haben, so müssen Sie
+diesen zur Entschlüsselung gegebenenfalls wieder aktivieren (was
+auch das Arbeiten und Betrachten von Dateien beinhaltet).</font></p>
+
+<h2><font size="2" face="Arial">Kompressionsmethode</font></h2>
+
+<p><font size="2" face="Arial">Wenn Datenkomprimierung verwendet
+werden soll können Sie den Algorithmus hierbei auswählen. Die
+folgenden Kandidaten sind verfügbar:</font></p>
+
+<p><font size="2" face="Arial"><em>LZSS</em></font></p>
+
+<p><font size="2" face="Arial">Die ursprüngliche
+Kompressionsmethode, welche in älteren Versionen (2.13 und
+darunter) von Blowfish Advanced CS eingesetzt wurde.
+Einigermassen schnell, bietet allerdings nur durchnschnittliche
+Kompressionraten. Nur bei Datenaustausch mit älterer Software zu
+empfehlen.</font></p>
+
+<p><font size="2" face="Arial"><em>DEFLATE</em></font></p>
+
+<p><font size="2" face="Arial">Der empfohlene
+Kompressionsalgorithmus. Bietet die besten Resultate, identisch
+mit denen der ZIP Kompression. Und zudem normalerweise auch
+schneller als LZSS.</font></p>
+
+<p><font size="2" face="Arial"><em>BZIP2</em></font></p>
+
+<p><font size="2" face="Arial">Der effizienteste Kompressor.
+Recht langsam und speicherintensiv, hat jedoch die höchste
+Kompressionsrate. Am vorteilhaftesten zu verwenden bei
+hochredundanten Daten wie z.B. XML Dateien oder (unkomprimierten)
+TAR Archiven. Die beste Wahl, wenn Ihr Prozessor mitmacht.</font></p>
+
+<h2><font size="2" face="Arial">Vernichtungsmethode</font></h2>
+
+<p><font size="2" face="Arial">Hier können Sie unter vier
+verschiedenen Methoden wählen, wie Ihre Daten vernichtet werden
+sollen. Bitte beachten Sie, daß Vernichten auf Netzlaufwerken
+unter Umständen nicht zu den gleichen Ergebnissen führt wie auf
+lokalen Laufwerken. Netzwerklaufwerke können komplett virtuell
+auf einem großen Server liegen, wobei Caching und das
+Zwischenspeichern nicht kontrolliert werden können (selbst wenn
+das Netzwerk vorgibt, ein cluster-ähnliches Dateisystem zu
+besitzen).</font></p>
+
+<p><font size="2" face="Arial"><b>Nur löschen</b></font></p>
+
+<p><font size="2" face="Arial">Dateien werden nur gelöscht,
+jedoch nicht überschrieben. Dadurch, daß die originalen Inhalte
+auf der Platte für eine ungewisse Zeit erhalten bleiben, wird
+diese Methode nicht empfohlen.</font></p>
+
+<p><font size="2" face="Arial"><b>Einfach</b></font></p>
+
+<p><font size="2" face="Arial">Dateien werden einmal mit
+Zufallsdaten überschrieben.</font></p>
+
+<p><font size="2" face="Arial">Nützlich zur schnellen
+Vernichtung großer Datenmengen.</font></p>
+
+<p><font size="2" face="Arial"><b>DoD-Methode</b></font></p>
+
+<p><font size="2" face="Arial">Die originalen Daten werden durch
+dreifaches Überschreiben nach den Bestimmungen NTSC-TG-025
+(Version 2, Sept. 1991) des US-amerikanischen
+Verteidigungsministeriums vernichtet. Dies ist die empfohlene
+Methode.</font></p>
+
+<p><font size="2" face="Arial"><b>SFS-Methode</b></font></p>
+
+<p><font size="2" face="Arial">Hier werden Daten 35 Mal mit
+speziellen Mustern überschrieben, um alle Informationen auf
+jedem denkbar möglichen magnetischen Datenträger zu entfernen.
+Die SFS Vernichtung wurde von Peter C. Gutmann entwickelt. Bitte
+beachten Sie, daß das Vernichten von Dateien mit dieser Methode
+sehr viel Zeit in Anspruch nimmt, selbst auf schnellen
+SCSI-Laufwerken. Empfohlen für die absolute Sicherheit.</font></p>
+
+<h2><font size="2" face="Arial">Schlüsselspeicher</font></h2>
+
+<p><font size="2" face="Arial">Hier können Sie das Verhalten des
+</font><a href="Key_Cache.htm"><font size="2" face="Arial">Schlüsselspeichers</font></a><font
+size="2" face="Arial"> beeinflussen, in welchem Schlüssel
+abgelegt werden, um unnötige Neueingaben zu vermeiden. Für
+weitere Informationen lesen Sie bitte die Ausführungen über den
+</font><a href="Key_Cache.htm"><font size="2" face="Arial">Schlüsselspeicher</font></a><font
+size="2" face="Arial">.</font></p>
+
+<p><font size="2" face="Arial">Die <b>Haltezeit</b> ist die
+Anzahl der Sekunden, in der denen ein Schlüssel gespeichert
+bleibt. Danach wird er ungültig und aus dem Speicher gelöscht.</font></p>
+
+<p><font size="2" face="Arial">Wenn Sie einen Schlüssel bis zur
+Beendigung der Applikation im Speicher halten wollen, so
+aktivieren Sie den Schalter <em><b>Gespeicherter Schlüssel
+läuft nie ab</b></em>.</font></p>
+</body>
+</html>

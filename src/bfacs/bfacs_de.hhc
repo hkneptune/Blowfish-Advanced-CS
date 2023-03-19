@@ -1,0 +1,102 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Einleitung">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Einleitung">
+			<param name="Local" value="html/DE/Introduction.htm">
+			</OBJECT>
+			<A HREF="html/Introduction.htm">Einleitung</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Wie verwende ich Blowfish Advanced CS?">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Schaltflächen und Wekzeugleiste für die Auswahl">
+			<param name="Local" value="html/DE/Button_Bar_and_Browser_Controls.htm">
+			</OBJECT>
+			<A HREF="html/Button_Bar_and_Browser_Controls.htm">Schaltflächen und Wekzeugleiste für die Auswahl</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Auswahl">
+			<param name="Local" value="html/DE/Browser.htm">
+			</OBJECT>
+			<A HREF="html/Browser.htm">Auswahl</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Dateien verschlüsseln">
+			<param name="Local" value="html/DE/Encrypt.htm">
+			</OBJECT>
+			<A HREF="html/Encrypt.htm">Dateien verschlüsseln</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Dateien entschlüsseln">
+			<param name="Local" value="html/DE/Decrypt.htm">
+			</OBJECT>
+			<A HREF="html/Decrypt.htm">Dateien entschlüsseln</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Dateien vernichten">
+			<param name="Local" value="html/DE/Wipe.htm">
+			</OBJECT>
+			<A HREF="html/Wipe.htm">Dateien vernichten</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Dateien umverschlüsseln">
+			<param name="Local" value="html/DE/Reencrypt.htm">
+			</OBJECT>
+			<A HREF="html/Reencrypt.htm">Dateien umverschlüsseln</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Dateien betrachten">
+			<param name="Local" value="html/DE/View.htm">
+			</OBJECT>
+			<A HREF="html/View.htm">Dateien betrachten</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Mit Dateien arbeiten">
+			<param name="Local" value="html/DE/Work_With.htm">
+			</OBJECT>
+			<A HREF="html/Work_With.htm">Mit Dateien arbeiten</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Optionen">
+			<param name="Local" value="html/DE/Options.htm">
+			</OBJECT>
+			<A HREF="html/Options.htm">Optionen</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Jobs">
+			<param name="Local" value="html/DE/Job_Files.htm">
+			</OBJECT>
+			<A HREF="html/Job_Files.htm">Jobs</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Infos">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Sicherheitsaspekte">
+			<param name="Local" value="html/DE/Security_aspects.htm">
+			</OBJECT>
+			<A HREF="html/Security_aspects.htm">Sicherheitsaspekte</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Technische Referenz">
+			<param name="Local" value="html/DE/Technical_Reference.htm">
+			</OBJECT>
+			<A HREF="html/Technical_Reference.htm">Technische Referenz</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copyright, Garantie und Kontakt zum Autor">
+			<param name="Local" value="html/DE/Copyright_Warranty_and_Contacting_the_author.htm">
+			</OBJECT>
+			<A HREF="html/Copyright_Warranty_and_Contacting_the_author.htm">Copyright, Garantie und Kontakt zum Autor</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Danksagung">
+			<param name="Local" value="html/DE/Credits.htm">
+			</OBJECT>
+			<A HREF="html/Credits.htm">Danksagung</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Woher bekomme ich Blowfish Advanced CS?">
+			<param name="Local" value="html/DE/Where_to_get_Blowfish_Advanced_CS.htm">
+			</OBJECT>
+			<A HREF="Where_to_get_Blowfish_Advanced_CS.htm">Woher bekomme ich Blowfish Advanced CS?</A><BR>
+	</UL>
+</UL>
+</HTML>

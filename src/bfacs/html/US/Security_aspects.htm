@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Security aspects</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+
+<p><object classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e"
+align="baseline" border="0" width="50" height="50"
+type="application/x-oleobject"><param name="Keyword"
+value="Security aspects"></object></p>
+
+<p><a name="general_security"><font size="2" face="Arial"></font></a><font
+size="3" face="Arial"><b>Security Aspects</b></font></p>
+
+<p><font size="2" face="Arial">If you choose a </font><a
+href="Key_Input_Dialog.htm"><font size="2" face="Arial">password</font></a><font
+size="2" face="Arial"> there is one important thing you must
+think about first: every password can be broken using the brute
+force attack, which means that one will try out every possible
+combination.</font></p>
+
+<p><font size="2" face="Arial">If your password is three letters
+long and one estimates that you have only used characters from
+&quot;a&quot; to &quot;z&quot; then there are 26 * 26 * 26 =
+17,576 possibilities for choosing a password. In the worst case
+one will have to try out 17,575 combinations to find out the
+correct one. With a well optimized key search program running on
+fast computer your password will be broken within just a
+millisecond.</font></p>
+
+<p><font size="2" face="Arial">But if you are using only 2
+letters more, one must try out about 11 million combinations,
+which takes much more time, even with a fast computer. But if
+your password is some kind of a normal word which can be found in
+a dictionary the amount of combinations which will be tried by an
+smart attacker will decrease a lot again.</font></p>
+
+<p><font size="2" face="Arial">The rule is simple: the more
+letters you use, the more combinations exist, the harder is an
+encrypted file to break. With a key of 6 bytes (equals 48 bits)
+created from a long enough password by a hash function there are
+256 ^ 6 = 281,474,976,710,700,000,000 combinations. Let us assume
+a fast computer can try out one million keys per second, then it
+will take about 9 years to test all possible combinations. Using
+just one byte more and a brute force attack really gets
+difficult. </font></p>
+
+<p><font size="2" face="Arial">Computing power gets of course
+cheaper and cheaper while time passes, microprocessors get more
+powerful, so every calculation of what is secure must be adjusted
+from year to year.</font></p>
+
+<p><font size="2" face="Arial"><b>How should you choose a
+password?</b></font></p>
+
+<p><font size="2" face="Arial">Do not use common words, such as
+the name of your husband, wife, daughter, son, dog, cat, lover,
+your insurance, house or telephone number, the numbers of your
+birthday or year, not even in reversed order. You can be sure
+these passwords will be tried out first.</font></p>
+
+<p><font size="2" face="Arial">If you don't want to use passwords
+with extra characters like &quot;&amp;%$*&quot; then use
+passwords at least 12 letters long. Use numbers or binary values.
+E.g. a good password is a sentence with no sense, but which can
+be remembered, e.g. &quot;The dog is too green?&quot;.</font></p>
+
+<p><font size="2" face="Arial">Please follow always the golden
+rule:</font></p>
+
+<blockquote>
+    <h1><font size="2" face="Arial"><u>Do not forget your
+    password!</u></font></h1>
+    <h1><font size="2" face="Arial"><u>Remember it!</u></font></h1>
+    <h1><font size="2" face="Arial"><b><u>Use key disks, if you
+    cannot remember passwords.</u></b></font></h1>
+</blockquote>
+
+<p><font size="2" face="Arial">There are no possibilities to
+restore files encrypted by Blowfish Advanced CS with an unknown
+password or keydisk file of a sufficient length. If the password
+or the key disk is lost or damaged respectively, you will never
+be able to decrypt your files. The program does not store the
+keys, neither in an encrypted file nor anywhere else. The
+password is even deleted in memory after its usage.</font></p>
+</body>
+</html>
