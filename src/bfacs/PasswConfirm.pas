@@ -82,7 +82,7 @@ uses
   ShortcutChecker,
   Options,
   HtmlHelpAPI,
-  Globals,
+  GlobalsGUI,
   TipWin;
 
 {$R *.DFM}

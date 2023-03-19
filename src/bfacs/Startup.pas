@@ -16,6 +16,8 @@
 
 {
   the startup module
+
+  25.7.04 Pamp001 build in due to correct commandline with spaces
 }
 
 unit Startup;
@@ -93,7 +95,7 @@ uses
   ShellAPI,
   FileCtrl,
   SysUtils,
-  Globals,
+  GlobalsGUI,
   StringPlus,
   BFAFile,
   General,
@@ -156,7 +158,6 @@ var
   jobEnv         : TBFJobEnvironment;
   nameBuf        : array[0..MAX_PATH] of Char;
   opts           : TOptions;
-
 begin
 
   // create a job env.
@@ -216,9 +217,10 @@ begin
 
     // get the objects
     objects:=TStringList.Create;
-    for nI:=1 to nNumOfObjects do
-      objects.Add(TStrPlus.LongFileName(ParamStr(nI)));
 
+    for nI:=1 to nNumOfObjects do begin
+      objects.Add(TStrPlus.LongFileName(ParamStr(nI)));
+    end;
   end
   else begin
 

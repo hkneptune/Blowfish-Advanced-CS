@@ -84,7 +84,7 @@ type
 implementation
 uses
   CallBack,
-  Globals,
+  GlobalsGUI,
   Options,
   StringRes,
   ShortCutChecker;

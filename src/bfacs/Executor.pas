@@ -25,7 +25,7 @@ interface
 uses
   Forms,
   Classes,
-  Globals,
+  GlobalsGUI,
   PasswordWin,
   ProgressWin,
   MessBoxYNAC,
@@ -39,7 +39,7 @@ type
   TExecutor = class
   private
     // members
-    m_globals      : TGlobals;
+    m_globals      : TGlobalsGUI;
     m_parentForm   : TForm;
     m_progressForm : TProgressForm;
     m_logForm      : TLogForm;
@@ -69,7 +69,7 @@ type
     // -> the YNAC message box
     // -> display of the pat search progress
     // -> simple callback (for progress reporting)
-    constructor Create(globals : TGlobals;
+    constructor Create(globals : TGlobalsGUI;
                        parentForm : TForm;
                        progressForm : TProgressForm;
                        logForm : TLogForm;
@@ -142,7 +142,7 @@ const
   STRRES_ID = 'EXECUTOR';
 
 
-constructor TExecutor.Create(globals : TGlobals;
+constructor TExecutor.Create(globals : TGlobalsGUI;
                              parentForm : TForm;
                              progressForm : TProgressForm;
                              logForm : TLogForm;

@@ -74,7 +74,7 @@ var
 implementation
 uses
   WorkResults,
-  Globals,
+  GlobalsGUI,
   StringRes,
   StringPlus,
   General,
@@ -233,7 +233,7 @@ begin
     end;
   end;
 
-  // don't waist any memory
+  // don't waste any memory
   ClearViews;
 end;
 
@@ -408,6 +408,7 @@ begin
         SetLength(rows, nDim);
         nUpIdx:=actRes.GetCount - 1;
         actList.Items.BeginUpdate;
+
         for nJ:=0 to nUpIdx do begin
           newItem:=actList.Items.Add;
           if (blConflicts) then begin
@@ -436,9 +437,6 @@ begin
 
         // create columns
         nClientWidth:=actList.ClientWidth;
-
-     //   debd('actList.VisibleRowCount', actList.VisibleRowCount);
-     //   debd('actRes.GetCount', actRes.GetCount);
 
         if (actList.VisibleRowCount <= actRes.GetCount) then begin
           // (perhaps a scrollbar is visible, reducing the client width)
@@ -484,9 +482,6 @@ begin
   // job files can only be created with a single result
   MakeJobFileBtn.Enabled:=(job <> Nil);
 end;
-
-
-
 
 procedure TLogForm.FormKeyPress(Sender: TObject; var Key: Char);
 begin

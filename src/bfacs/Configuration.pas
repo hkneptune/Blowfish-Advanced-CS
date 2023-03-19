@@ -255,9 +255,6 @@ type
   end;
 
 
-
-
-
 // section container class with file load and save capabilities
 type
   TConfigurationCensor = class;
@@ -293,9 +290,10 @@ type
 
     // save the configuration to a file
     // -> name of the configuration file
+    // -> true: throw error if saving failed / false: do not
     // exception:
     // EConfigurationError - failed to save
-    procedure SaveToFile(sConfigFile : String);
+    procedure SaveToFile(sConfigFile : String; blWarnings : Boolean);
 
     // get the reference of an existing section (even if it doesn't exists
     // a new and empty section will be delivered)
@@ -325,20 +323,19 @@ type
 
   end;
 
-// a censor filters out informtaions not wanted to be stored an is called
+// a censor filters out information not wanted to be stored an is called
 // every time before a configuration is stored physically
   TConfigurationCensor = class
   public
-    // censors
+    // apply censorship
     // -> the configuration to censor
-    procedure Censor(cfg : TConfiguration); virtual; abstract;
+    procedure Apply(cfg : TConfiguration); virtual; abstract;
   end;
 
 
 
 implementation
-uses StringRes,
-     General;
+uses Windows, StringRes, General;
 
 
 /////////////////////// EConfigurationError ///////////////////////
@@ -894,26 +891,52 @@ begin
 end;
 
 
-procedure TConfiguration.SaveToFile(sConfigFile : String);
+procedure TConfiguration.SaveToFile(
+        sConfigFile : String;
+        blWarnings : Boolean);
 var
   nI, nJ     : Integer;
   nNumOfOpts : Integer;
   blWasError : Boolean;
   sActLine   : String;
-  cfgFile    : TextFile;
+  hCfgFile   : THandle;
   actSection : TConfigurationSection;
+
+procedure WriteLine(const sText : String = '');
+var
+  dwWritten : DWORD;
+begin
+  blWasError:=(FALSE = Windows.WriteFile(
+        hCfgFile, PChar(sText)^, Length(sText), dwWritten, Nil));
+  if (blWasError) then Exit;
+  blWasError:=(FALSE = Windows.WriteFile(
+        hCfgFile, #13#10, 2, dwWritten, Nil));
+end;
+
 begin
 
-{$I-}
   // create the file
-  AssignFile(cfgFile, sConfigFile);
-  Rewrite(cfgFile);
-  if (IOResult <> 0) then
-    raise EConfigurationError.Create;
+  hCfgFile:=Windows.CreateFile(
+        PChar(sConfigFile),
+        GENERIC_WRITE,
+        FILE_SHARE_WRITE,
+        Nil,
+        CREATE_ALWAYS,
+        FILE_ATTRIBUTE_NORMAL,
+        0);
+
+  if (INVALID_HANDLE_VALUE = hCfgFile) then begin
+    // if the file is readonly we won't warn
+    if (blWarnings) then begin
+      raise EConfigurationError.Create
+    end
+    else
+      Exit;
+  end;
 
   // let the censor check the configuration
   if (m_censor <> Nil) then
-    m_censor.Censor(Self);  
+    m_censor.Apply(Self);
 
   // put out all sections
   blWasError:=False;
@@ -925,8 +948,7 @@ begin
 
     // write section header
     sActLine:=SHT_INTRO + actSection.GetID + SHT_OUTRO;
-    WriteLn(cfgFile, sActLine);
-    blWasError:=(IOResult <> 0);
+    WriteLine(sActLine);
 
     // write section options (idents and fixed contents)
     if (not blWasError) then begin
@@ -939,8 +961,7 @@ begin
                   actSection.GetFixedContents.Strings[nJ];
 
         // put out the option
-        WriteLn(cfgFile, sActLine);
-        blWasError:=(IOResult <> 0);
+        WriteLine(sActLine);
 
         // next option
         Inc(nJ);
@@ -949,8 +970,7 @@ begin
 
     // put out empty line to seperate the sections
     if (not blWasError) then begin
-      WriteLn(cfgFile);
-      blWasError:=(IOResult <> 0);
+      WriteLine;
     end;
 
     // next section
@@ -958,17 +978,16 @@ begin
   end;
 
   // close the configuration file
-  CloseFile(cfgFile);
-
-  if (IOResult <> 0) then
-    raise EConfigurationError.Create;
+  if (FALSE = Windows.CloseHandle(hCfgFile)) then blWasError:=True;
 
   // i/o error occured?
   if (blWasError) then begin
     // yes, try to remove the invalid configuration file
-    DeleteFile(sConfigFile);
-    raise EConfigurationError.Create;
+    Windows.DeleteFile(PChar(sConfigFile));
+    if (blWarnings) then
+      raise EConfigurationError.Create;
   end;
+
 end;
 
 

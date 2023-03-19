@@ -93,7 +93,7 @@ var
 implementation
 uses
   StringRes,
-  Globals,
+  GlobalsGUI,
   HtmlHelpAPI,
   KeyDisk,
   Options,

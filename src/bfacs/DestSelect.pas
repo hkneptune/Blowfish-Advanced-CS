@@ -72,7 +72,7 @@ var
 
 implementation
 uses FileCtrl,
-     Globals,
+     GlobalsGUI,
      HtmlHelpAPI,
      Options,
      StringRes,

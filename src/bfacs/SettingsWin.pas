@@ -183,7 +183,7 @@ implementation
 uses
   MakeKeyDiskWin,
   General,
-  Globals,
+  GlobalsGUI,
   Options,
   FileBrowser,
   CipherServer,
@@ -245,7 +245,7 @@ const
 // and the option ID (both stored and linked via a TStringKeeper to each item)
 // plus an string resource ID to load the right caption
 const
-  CONFIG_LOOKUP_COUNT = 30;
+  CONFIG_LOOKUP_COUNT = 32;
   CONFIG_IDX_MODULE = 0;  // (just to access the array)
   CONFIG_IDX_OPTION = 1;
   CONFIG_IDX_STRRES = 2;
@@ -272,6 +272,7 @@ const
     (OPTS_CFG_ID, OPTIONS_CFGID_COLORPROGRESS,      'CFG_COLORPROGRESS'),
     (OPTS_CFG_ID, OPTIONS_CFGID_TRAYICON,           'CFG_TRAYICON'),
     (OPTS_CFG_ID, OPTIONS_CFGID_FORCECOMPRESS,      'CFG_FORCECOMPRESS'),
+    (OPTS_CFG_ID, OPTIONS_CFGID_SHOWCFGFILEERRORS,  'CFG_SHOWCFGFILEERRORS'),
 
     (FB_CFG_ID, FB_CFGID_HOTTRACKING,      'CFG_HOTTRACKING'),
     (FB_CFG_ID, FB_CFGID_HTMLSTYLE,        'CFG_HTMLSTYLE'),
@@ -281,7 +282,8 @@ const
     (FB_CFG_ID, FB_CFGID_SCANBFAFILESONLY, 'CFG_SCANBFAFILESONLY'),
     (FB_CFG_ID, FB_CFGID_REPLACESCANICONS, 'CFG_REPLACESCANICONS'),
     (FB_CFG_ID, FB_CFGID_AUTOREFRESH,      'CFG_AUTOREFRESH'),
-    (FB_CFG_ID, FB_CFGID_PLACEDRIVESFIRST, 'CFG_PLACEDRIVESFIRST')
+    (FB_CFG_ID, FB_CFGID_PLACEDRIVESFIRST, 'CFG_PLACEDRIVESFIRST'),
+    (FB_CFG_ID, FB_CFGID_HIDEDRIVES,       'CFG_HIDEDRIVES')
   );
 
 

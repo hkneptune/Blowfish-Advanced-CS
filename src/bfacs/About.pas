@@ -57,7 +57,7 @@ var
 implementation
 uses
   ShortcutChecker,
-  Globals,
+  GlobalsGUI,
   Options,
   bfacslib,
   StringPlus,

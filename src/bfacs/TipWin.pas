@@ -67,7 +67,7 @@ uses
   Options,
   HtmlHelpAPI,
   ShortcutChecker,
-  Globals;
+  GlobalsGUI;
 
 {$R *.DFM}
 

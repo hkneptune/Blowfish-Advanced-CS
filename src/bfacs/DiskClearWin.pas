@@ -59,6 +59,7 @@ type
       var CallHelp: Boolean): Boolean;
     procedure MinimizeBtnClick(Sender: TObject);
     procedure Launch(parent : TMainForm);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   protected
     m_config     : TConfigurationSection;
     m_sr         : TStrRes;
@@ -71,6 +72,7 @@ type
     procedure ReloadOptions;
     procedure Working(blState : Boolean);
     procedure Exec;
+    function RequestClose : Boolean;
   end;
 
 var
@@ -78,7 +80,7 @@ var
 
 implementation
 uses
-  Globals,
+  GlobalsGUI,
   General,
   HtmlHelpAPI,
   Options,
@@ -248,17 +250,7 @@ end;
 
 procedure TDiskClearForm.CancelBtnClick(Sender: TObject);
 begin
-  if (m_blRunning) then begin
-    with m_msgCB do begin
-      SetStyle(MCB_STYLE_YESNO);
-      SetKindOf(MCB_KINDOF_QUESTION);
-      SetMessage(m_sr.Get(CONFIG_ID, 'REALLYBREAK'));
-      CallBack;
-      m_blWasBreak:=(GetResult = MCB_RES_YES);
-    end;
-  end
-  else
-    Close;
+  if RequestClose then Close;
 end;
 
 procedure TDiskClearForm.FormShow(Sender: TObject);
@@ -510,7 +502,27 @@ begin
   Show;
 end;
 
+procedure TDiskClearForm.FormCloseQuery(Sender: TObject;
+  var CanClose: Boolean);
+begin
+  CanClose:=RequestClose;
+end;
 
+function TDiskClearForm.RequestClose : Boolean;
+begin
+  Result:=not m_blRunning;
+
+  if (m_blRunning) then begin
+    with m_msgCB do begin
+      SetStyle(MCB_STYLE_YESNO);
+      SetKindOf(MCB_KINDOF_QUESTION);
+      SetMessage(m_sr.Get(CONFIG_ID, 'REALLYBREAK'));
+      CallBack;
+      m_blWasBreak:=(GetResult = MCB_RES_YES);
+    end;
+  end;
+end;
+    
 end.
 
 

@@ -31,14 +31,6 @@ const
   PROGRAM_NAME      = 'Blowfish Advanced CS';
   PROGRAM_SHORTNAME = 'bfaCS';
 
-  (*
-  // the program version (string format will be "x.xx.xxx")
-  APPLICATION_VERSION_MAJOR = 2;
-  APPLICATION_VERSION_MINOR = 11;
-  APPLICATION_VERSION_BUILT = 101;
-  APPLICATION_VERSION_ADDONSTR = '';
-  *)
-  
 // runtime errors
 const
   RUNERROR_KEYCACHE_INVALIDKEY    = 10;

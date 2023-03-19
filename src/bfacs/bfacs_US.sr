@@ -295,7 +295,7 @@ MSEL_ZEROS=Zero Bytes
 MSEL_RNDBLOCK=Static Random Data
 MSEL_RNDSTREAM=Continuous Random Data
 ERRORMESS=Error while clearing "%s" : %s.
-REALLYBREAK=Do you really want to break?
+REALLYBREAK=Do you really want to stop?
 ACTION_CLEAR=Clearing empty space
 
 [EXECUTOR]
@@ -385,10 +385,10 @@ SHEX010=There is no application associated with the given filename extension.
 SHEX011=There was not enough memory to complete the operation.
 SHEX012=A sharing violation occurred.
 
-[GLOBALS]
+[GLOBALSGUI]
 000=Saving configuration...
 001=Cannot save configuration to "%s".
-002=\20- Shutdown Problem
+002=\20- Exit Problem
 
 [JOBCHOOSERFORM]
 CAPTION=What to do now?
@@ -662,7 +662,7 @@ MODE_WIPE=Wiping
 MODE_REENCRYPT=Reencryption
 MODE_DESLACK=Deslacking
 CONFIRM=Confirm
-BREAKQUEST=Do you really want to break?
+BREAKQUEST=Do you really want to stop?
 
 [REENCRYPTOR]
 000=File Name
@@ -737,7 +737,7 @@ CFG_SCANBFAFILESONLY=Scan .BFA Files Only
 CFG_REPLACESCANICONS=Replace Icons (and Types) of Scanned Files
 CFG_KEEPDATETIME=Keep Date+Time Stamps
 CFG_KEEPATTRIBUTES=Keep Attributes
-CFG_SKIPENCRYPTED=Skip already encrypted files
+CFG_SKIPENCRYPTED=Skip already Encrypted Files
 CFG_WRITEPROTECT=Write-protect Encrypted Files
 CFG_TRYRENAME83=Try to rename 8.3 compatible
 CFG_ADDEXTENSION=Add .BFA Extension
@@ -754,8 +754,10 @@ CFG_CLOSEAFTERWORK=Exit after a shell job has been done
 CFG_DOUBLECLICKWORK=Doubleclick equals "Work With"
 CFG_SAVESENSSETS=Save sensitive Settings
 CFG_PLACEDRIVESFIRST=Place drives first
+CFG_HIDEDRIVES=Hide Drives
 CFG_COLORPROGRESS=Colored Progress Display
 CFG_TRAYICON=Run in System Tray
+CFG_SHOWCFGFILEERRORS=Show Configuration File Errors
 CFG_FORCECOMPRESS=Force Compression
 FILEHANDLINGSHEET=File Handling
 FH_RENAMESETUP=Rename Method

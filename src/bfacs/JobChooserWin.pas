@@ -79,7 +79,7 @@ uses
   HtmlHelpAPI,
   StringRes,
   ShortcutChecker,
-  Globals,
+  GlobalsGUI,
   callBack,
   Options,
   BFJob;

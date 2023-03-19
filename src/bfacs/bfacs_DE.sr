@@ -367,10 +367,10 @@ SHEX010=Es existiert keine Applikation, die mit dieser Dateiendung verknüpft ist
 SHEX011=Die Operation konnte augrund von Speichermangel nicht abgeschlossen werden.
 SHEX012=Eine Verletzung beim gemeinsamen Zugriff ist aufgetreten.
 
-[GLOBALS]
+[GLOBALSGUI]
 000=Speichere Konfiguration...
 001=Die Konfiguration konnte nicht nach "%s" gespeichert werden.
-002=\20- Problem beim Herunterfahren
+002=\20- Problem beim Verlassen
 
 [JOBCHOOSERFORM]
 CAPTION=Was ist zu tun?
@@ -736,8 +736,10 @@ CFG_CLOSEAFTERWORK=Beenden nachdem ein Shelljob ausgeführt wurde
 CFG_DOUBLECLICKWORK=Doppelklick entspricht "Arbeiten mit"
 CFG_SAVESENSSETS=Sicherheitsrelevante Informationen speichern
 CFG_PLACEDRIVESFIRST=Laufwerke voranstellen
+CFG_HIDEDRIVES=Laufwerke nicht anzeigen
 CFG_COLORPROGRESS=Farbige Fortschrittsanzeige
 CFG_TRAYICON=In der Taskleiste laufen lassen
+CFG_SHOWCFGFILEERRORS=Konfigurationsdateikonflikte anzeigen
 CFG_FORCECOMPRESS=Kompression erzwingen
 FILEHANDLINGSHEET=Dateien
 FH_RENAMESETUP=Umbenennung mit

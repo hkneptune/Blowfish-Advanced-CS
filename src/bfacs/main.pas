@@ -214,6 +214,7 @@ type
     MN_Help_Web: TMenuItem;
     PM_N16: TMenuItem;
     PM_Format: TMenuItem;
+    MN_Language_XT: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BrowserDblClick(Sender: TObject);
@@ -313,6 +314,7 @@ type
       var CallHelp: Boolean): Boolean;
     procedure MN_Help_WebClick(Sender: TObject);
     procedure PM_FormatClick(Sender: TObject);
+    procedure MN_Language_XTClick(Sender: TObject);
 
   private
     // tray icon visible and active?
@@ -508,6 +510,7 @@ uses ShellAPI,
      FileSupp,
      General,
      Globals,
+     GlobalsGUI,
      LogWin,
      MakeDirWin,
      MessBoxYNAC,
@@ -1165,8 +1168,9 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 var
-  loaderCB : TLoaderCallBack;
-  listener : TMainFormStrResListener;
+  loaderCB   : TLoaderCallBack;
+  listener   : TMainFormStrResListener;
+  srExtended : TStrRes;
 begin
 
   // attach some handlers
@@ -1214,12 +1218,14 @@ begin
 
   // launch the globals
   try
-    _globals:=TGlobals.Create(Browser,
-                              m_passwInput,
-                              m_sbcb,
-                              m_kccb,
-                              m_gmcb,
-                              loaderCB);
+    _globals:=TGlobalsGUI.Create(
+        '',
+        Browser,
+        m_passwInput,
+        m_sbcb,
+        m_kccb,
+        m_gmcb,
+        loaderCB);
   except
     // launch failed?
     on ge : EGlobalsError do begin
@@ -1255,10 +1261,21 @@ begin
   listener:=TMainFormStrResListener.Create;
   _globals.GetSr.AddListener(listener);
 
+  // check if an (valid) extended language is available
+  srExtended:=_globals.LoadStringResources(LANGUAGE_XT);
+  if (Nil <> srExtended) then begin
+    MN_Language_XT.Caption:=srExtended.GetCountryConfig.GetCountry;
+    MN_Language_XT.Visible:=True;
+    srExtended.Destroy;
+  end
+  else begin
+    MN_Language_XT.Visible:=False;
+  end;
+
   // call this listener directly
   listener.ChangeStrings(_globals.GetSr);
 
-  // set the favorites menue
+  // set the favorites menu
   SetFavoritesToMenu;
 
   // init. the history buttons
@@ -2086,20 +2103,22 @@ end;
 
 procedure TMainForm.MN_Tools_OptionsClick(Sender: TObject);
 var
-  blSaveTrayIcon    : Boolean;
-  blSaveHotTracking : Boolean;
-  blSaveHTMLStyle   : Boolean;
-  blSaveGridLines   : Boolean;
-  blSaveAutoArrange : Boolean;
-  blSaveFlatView    : Boolean;
-  blSaveShowHints   : Boolean;
-  blSaveAutoRefresh : Boolean;
-  sSaveFontName     : String;
-  nSaveFontColor    : Integer;
-  nSaveFontStyle    : Integer;
-  nSaveFontSize     : Integer;
-  blFlatViewChanged : Boolean;
-  fbCfgSect         : TConfigurationSection;
+  blSaveTrayIcon         : Boolean;
+  blSaveHotTracking      : Boolean;
+  blSaveHTMLStyle        : Boolean;
+  blSaveGridLines        : Boolean;
+  blSaveAutoArrange      : Boolean;
+  blSaveFlatView         : Boolean;
+  blSaveShowHints        : Boolean;
+  blSaveAutoRefresh      : Boolean;
+  blSavePlaceDrivesFirst : Boolean;
+  blSaveHideDrives       : Boolean;
+  sSaveFontName          : String;
+  nSaveFontColor         : Integer;
+  nSaveFontStyle         : Integer;
+  nSaveFontSize          : Integer;
+  blFlatViewChanged      : Boolean;
+  fbCfgSect              : TConfigurationSection;
 
 begin
   if (IsGUILocked) then Exit;
@@ -2108,16 +2127,18 @@ begin
   // necessary browser updates: save options and look for changes after
   fbCfgSect:=_globals.GetCfg.GetSection(FB_CFG_ID);
   with fbCfgSect do begin
-    blSaveHotTracking:=GetBooleanOption(FB_CFGID_HOTTRACKING);
-    blSaveHTMLStyle  :=GetBooleanOption(FB_CFGID_HTMLSTYLE);
-    blSaveGridLines  :=GetBooleanOption(FB_CFGID_GRIDLINES);
-    blSaveAutoArrange:=GetBooleanOption(FB_CFGID_AUTOARRANGE);
-    blSaveFlatView   :=GetBooleanOption(FB_CFGID_FLATVIEW);
-    blSaveAutoRefresh:=GetBooleanOption(FB_CFGID_AUTOREFRESH);
-    sSaveFontName    :=GetStringOption (FB_CFGID_FONTNAME);
-    nSaveFontColor   :=GetIntegerOption(FB_CFGID_FONTCOLOR);
-    nSaveFontStyle   :=GetIntegerOption(FB_CFGID_FONTSTYLE);
-    nSaveFontSize    :=GetIntegerOption(FB_CFGID_FONTSIZE);
+    blSaveHotTracking     :=GetBooleanOption(FB_CFGID_HOTTRACKING);
+    blSaveHTMLStyle       :=GetBooleanOption(FB_CFGID_HTMLSTYLE);
+    blSaveGridLines       :=GetBooleanOption(FB_CFGID_GRIDLINES);
+    blSaveAutoArrange     :=GetBooleanOption(FB_CFGID_AUTOARRANGE);
+    blSaveFlatView        :=GetBooleanOption(FB_CFGID_FLATVIEW);
+    blSaveAutoRefresh     :=GetBooleanOption(FB_CFGID_AUTOREFRESH);
+    blSavePlaceDrivesFirst:=GetBooleanOption(FB_CFGID_PLACEDRIVESFIRST);
+    blSaveHideDrives      :=GetBooleanOption(FB_CFGID_HIDEDRIVES);
+    sSaveFontName         :=GetStringOption (FB_CFGID_FONTNAME);
+    nSaveFontColor        :=GetIntegerOption(FB_CFGID_FONTCOLOR);
+    nSaveFontStyle        :=GetIntegerOption(FB_CFGID_FONTSTYLE);
+    nSaveFontSize         :=GetIntegerOption(FB_CFGID_FONTSIZE);
   end;
   with _globals.GetOpts.GetCfg do
   begin
@@ -2137,17 +2158,23 @@ begin
       VisualizeToolbars;  // (the only way for a proper on/off)
 
     if (blFlatViewChanged or
-       (blSaveHotTracking <> GetBooleanOption(FB_CFGID_HOTTRACKING)) or
-       (blSaveHTMLStyle   <> GetBooleanOption(FB_CFGID_HTMLSTYLE)) or
-       (blSaveGridLines   <> GetBooleanOption(FB_CFGID_GRIDLINES)) or
-       (blSaveAutoArrange <> GetBooleanOption(FB_CFGID_AUTOARRANGE)) or
-       (sSaveFontName     <> GetStringOption (FB_CFGID_FONTNAME)) or
-       (nSaveFontColor    <> GetIntegerOption(FB_CFGID_FONTCOLOR)) or
-       (nSaveFontStyle    <> GetIntegerOption(FB_CFGID_FONTSTYLE)) or
-       (nSaveFontSize     <> GetIntegerOption(FB_CFGID_FONTSIZE))) then
+       (blSaveHotTracking     <> GetBooleanOption(FB_CFGID_HOTTRACKING)) or
+       (blSaveHTMLStyle       <> GetBooleanOption(FB_CFGID_HTMLSTYLE)) or
+       (blSaveGridLines       <> GetBooleanOption(FB_CFGID_GRIDLINES)) or
+       (blSaveAutoArrange     <> GetBooleanOption(FB_CFGID_AUTOARRANGE)) or
+       (sSaveFontName         <> GetStringOption (FB_CFGID_FONTNAME)) or
+       (nSaveFontColor        <> GetIntegerOption(FB_CFGID_FONTCOLOR)) or
+       (nSaveFontStyle        <> GetIntegerOption(FB_CFGID_FONTSTYLE)) or
+       (nSaveFontSize         <> GetIntegerOption(FB_CFGID_FONTSIZE))) then
     begin
       _globals.GetFileBrowser.Layout;
       Browser.Refresh;
+    end
+    else if (
+       (blSavePlaceDrivesFirst<> GetBooleanOption(FB_CFGID_PLACEDRIVESFIRST)) or
+       (blSaveHideDrives      <> GetBooleanOption(FB_CFGID_HIDEDRIVES))) then
+    begin
+      BrowserReload;
     end;
   end;
 
@@ -2156,7 +2183,7 @@ begin
       blSaveAutoRefresh) then begin
     // (FIXME: this is some kind of a design flaw: we have to turn on/off the
     //         auto refresh manually, although the browser is able to do that
-    //         almost on its one)
+    //         almost on its own)
     with _globals.GetFileBrowser do begin
       if (not blSaveAutoRefresh) then Update;
       DoAutoRefresh(not blSaveAutoRefresh);
@@ -2701,8 +2728,9 @@ begin
 
   if (not MN_Language_DE.Checked) then begin
     _globals.ChangeStringResources(LANGUAGE_DE);
-    MN_Language_DE.Checked:=True;
     MN_Language_US.Checked:=False;
+    MN_Language_DE.Checked:=True;
+    MN_Language_XT.Checked:=False;
     MN_Browser_RefreshClick(Sender);
     _globals.GetFileBrowser.MakeColumns;
   end;
@@ -2716,6 +2744,21 @@ begin
     _globals.ChangeStringResources(LANGUAGE_US);
     MN_Language_US.Checked:=True;
     MN_Language_DE.Checked:=False;
+    MN_Language_XT.Checked:=False;
+    MN_Browser_RefreshClick(Sender);
+    _globals.GetFileBrowser.MakeColumns;
+  end;
+end;
+
+procedure TMainForm.MN_Language_XTClick(Sender: TObject);
+begin
+  if (IsGUILocked) then Exit;
+
+  if (not MN_Language_XT.Checked) then begin
+    _globals.ChangeStringResources(LANGUAGE_XT);
+    MN_Language_US.Checked:=False;
+    MN_Language_DE.Checked:=False;
+    MN_Language_XT.Checked:=True;
     MN_Browser_RefreshClick(Sender);
     _globals.GetFileBrowser.MakeColumns;
   end;
@@ -3045,7 +3088,7 @@ begin
   if (32 >= ShellAPI.ShellExecute(
     THandle(0),
     'open',
-    'http://bfacs.sf.net',
+    'http://maakus.dyndns.org',
     Nil,
     '',
     SW_SHOW)) then begin
