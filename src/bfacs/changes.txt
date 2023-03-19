@@ -1,5 +1,43 @@
 
-2005-03-30	Version	2.55.00.109
+2005-09-11  Version 2.57.00.122
+
+FIXED:
+
+- files and/or directories with names containing spaces weren't found when
+  dropped onto the bfaCS icon from the explorer; the same happened for job files
+
+--------
+
+2005-09-05  Version 2.56.00.430
+
+NEW:
+
+- "Options..Configuration..Hide Drives" allows the exclusion of drives in the
+  file browser for people who don't need to see them
+- "Options..Configuration..Show Configuration File Errors" can suppress error
+  messages if the configuration file cannot be stored; useful if the software
+  runs from readonly devices (like CD-ROMs)
+- easy way for third party localization by providing a resource file with the
+  name BFACS_XT.SR in the same folder as BFACS.EXE; the new language will then
+  be displayed in the menu
+
+CHANGED:
+
+- temporary files for clearing empty disk space are now prefixed with '[-]' to
+  allow easier identification in case they didn't get deleted for whatever
+  reason
+- minor internal (user transparent) changes to prepare the code for the command
+  line version
+
+FIXED:
+
+- pressing (Esc or) Alt+F4 during regular file processing or clearing empty disk
+  space closed the (progess) window, but left the task running, which made it
+  impossible to close the application and usally left temporary files behind)
+
+--------
+
+2005-03-30  Version 2.55.00.109
 
 NEW:
 
@@ -8,12 +46,10 @@ NEW:
 CHANGED:
 
 - Blowfish Advanced CS is now officially released under the Apache 2.0 license
-- there is now a new home both for the source and the binaries at SourceForge,
-  with the homepage set to <http://bfacs.sf.net>
 
 --------
 
-2005-03-27	Version	2.54.00.133
+2005-03-27  Version 2.54.00.133
 
 NEW:
 
@@ -21,237 +57,237 @@ NEW:
 
 FIXED:
 
-- Force	Compression	option wasn't documented in	the	help files
-- on some Win95/98/Me systems the switch to	new	folders	was	delayed	by a couple
-  of seconds; this has been	fixed -	the	new	solution should	also fix some other
-  problems with	the	automatic browser refresh
+- Force Compression option wasn't documented in the help files
+- on some Win95/98/Me systems the switch to new folders was delayed by a couple
+  of seconds; this has been fixed - the new solution should also fix some other
+  problems with the automatic browser refresh
 
 --------
 
-2005-02-09	Version	2.53.00.023
+2005-02-09  Version 2.53.00.023
 
 NEW:
 
-- menu item	for	Blowfish Advanced CS homepage
+- menu item for Blowfish Advanced CS homepage
 
 FIXED:
 
-- Job files	couldn't be	created	at all (embarassing, really), also note	that
-  versions of bfaCS	older than 2.50	cannot process the new ones	anymore
-- the Windows Explorer status bar showed the selected file/folder names	in
-  nonprintable characters under	WinNT+ (and	some misprints also	on Win9x/Me)
-- Edit field in	the	New	Folders	dialog didn't offer	a horizontal scrollbar
+- Job files couldn't be created at all (embarassing, really), also note that
+  versions of bfaCS older than 2.50 cannot process the new ones anymore
+- the Windows Explorer status bar showed the selected file/folder names in
+  nonprintable characters under WinNT+ (and some misprints also on Win9x/Me)
+- Edit field in the New Folders dialog didn't offer a horizontal scrollbar
 
 --------
 
-2005-02-06	Version	2.52.00.122
+2005-02-06  Version 2.52.00.122
 
 NEW:
 
-- Browse (for Folder) dialogs are now in the modern	style (wherever	available),
-  which	mainly means that they are resizable and do	support	some drag and drop
+- Browse (for Folder) dialogs are now in the modern style (wherever available),
+  which mainly means that they are resizable and do support some drag and drop
 
 CHANGED:
 
-- the installer	I used was an old InstallShield	Express	from 1998, which seems
-  to have caused problems; I purchased the latest version and I	hope it	now
-  should all work out well;	it also	saves around 250kB per download
-- improved wiping: user	breaks won't discard data which	hasn't been	overriden
+- the installer I used was an old InstallShield Express from 1998, which seems
+  to have caused problems; I purchased the latest version and I hope it now
+  should all work out well; it also saves around 250kB per download
+- improved wiping: user breaks won't discard data which hasn't been overriden
   so far (led to truncated files) 
-- more transparency	in the Progress	dialog:	wipe cycle progress	is displayed as
-  well as repeated encryption operations in	case a file	cannot be compressed
+- more transparency in the Progress dialog: wipe cycle progress is displayed as
+  well as repeated encryption operations in case a file cannot be compressed
   
 FIXED:
 
-- some minor flicker in	the	Progress dialog
+- some minor flicker in the Progress dialog
 
 --------
 
-2005-02-04	Version	2.51.00.203
+2005-02-04  Version 2.51.00.203
 
 CHANGED:
 
-- destination path is now copied from the Key Input	to the Destination dialog
+- destination path is now copied from the Key Input to the Destination dialog
 
 FIXED:
 
-- the maximized	main window, if	mazimized, was set back	to its original	size
-  after	any	kind of	action (encryption,	wiping,	...)
+- the maximized main window, if mazimized, was set back to its original size
+  after any kind of action (encryption, wiping, ...)
 
 --------
 
-2005-02-02	Version	2.50.00.042
+2005-02-02  Version 2.50.00.042
 
 NEW:
 
-- better compression methods are now available:	deflate	(ZIP) and the even
-  better (well,	in most	cases) BZIP2 algorithm;	note that such files can't be
-  decrypted	by older versions of bfaCS (2.13 and below)	or BFA97!
-- changed the layout of	the	progress bars in the Progress dialog and the Clear
-  Empty	Disk Space dialog
-- updated control layout in	Progress dialog, looks better now IMHO
-- a	regular	install/uninstall distribution is now available
-- Windows Server 2003 and Longhorn get detected	(in	the	About dialog)
-- support for native Windows XP	controls
-- new option in	the	Configuration: "Force Compression" avoids startover	if
-  files	are	not	compressable - with	a slight increase of the output	file sizes
-- Caps Lock	warning	in the password	dialog,	implemented	as a tip
-- the Clear	Empty Disk Space dialog	can	be minimized at	runtime
-- all the executables are now shipped in a compressed format, which	lets the
-  whole	distibution	fit	on an ancient 720kB	floppy disk!
+- better compression methods are now available: deflate (ZIP) and the even
+  better (well, in most cases) BZIP2 algorithm; note that such files can't be
+  decrypted by older versions of bfaCS (2.13 and below) or BFA97!
+- changed the layout of the progress bars in the Progress dialog and the Clear
+  Empty Disk Space dialog
+- updated control layout in Progress dialog, looks better now IMHO
+- a regular install/uninstall distribution is now available
+- Windows Server 2003 and Longhorn get detected (in the About dialog)
+- support for native Windows XP controls
+- new option in the Configuration: "Force Compression" avoids startover if
+  files are not compressable - with a slight increase of the output file sizes
+- Caps Lock warning in the password dialog, implemented as a tip
+- the Clear Empty Disk Space dialog can be minimized at runtime
+- all the executables are now shipped in a compressed format, which lets the
+  whole distibution fit on an ancient 720kB floppy disk!
 
 CHANGED:
 
-- switched password	input hiding style to use asterisks
-- updated extension	list of	noncompressable	files
-- only one external	DLL	(bfacslib) is now required to run BFACS.EXE; CryptPak
-  stays	internal and has also been updated (cipher cleanup)	for	the	future
-- Help system has been updated to HTML help, requires the presence of IE to	run
-  (only	a matter if	you	have older versions	of Windows 95)
-- Yarrow is	the	only random	number generator now, made more	sense
+- switched password input hiding style to use asterisks
+- updated extension list of noncompressable files
+- only one external DLL (bfacslib) is now required to run BFACS.EXE; CryptPak
+  stays internal and has also been updated (cipher cleanup) for the future
+- Help system has been updated to HTML help, requires the presence of IE to run
+  (only a matter if you have older versions of Windows 95)
+- Yarrow is the only random number generator now, made more sense
 - transparent window support have been removed (wasn't stable/good enough)
-- the license model	back is	back to	commercial,	yet	the	one	and	only kind is the
-  Personal Edition,	so it is and will stay free	- and the source stays public,
-  however development is now done with a Delphi	5 Professional
+- the license model back is back to commercial, yet the one and only kind is the
+  Personal Edition, so it is and will stay free - and the source stays public,
+  however development is now done with a Delphi 5 Professional
 
 FIXED:
 
-- Unicode filenames	have never been	stored (NT wasn't detected correctly)
-- removed a	couple of memory and resource leaks, thanks	to MemChk
-- reencryption sometimes produced new files	with readonly/hidden attributes
-- status bar kept saying "wiping" even after the end of	a "work	with" cycle
+- Unicode filenames have never been stored (NT wasn't detected correctly)
+- removed a couple of memory and resource leaks, thanks to MemChk
+- reencryption sometimes produced new files with readonly/hidden attributes
+- status bar kept saying "wiping" even after the end of a "work with" cycle
 
 --------
 
-2002-08-05	Version	2.13.00.001
+2002-08-05  Version 2.13.00.001
 
 NEW:
 
-- bfaCS	compiles now completely	with freeware, Borland Delphi 6
-  (Personal	Edition) and the Borland C/C++ Compiler	5.5	(BCC55)
+- bfaCS compiles now completely with freeware, Borland Delphi 6
+  (Personal Edition) and the Borland C/C++ Compiler 5.5 (BCC55)
 
 CHANGED:
 
-- bundled with now with	the	latest CryptPak	4.06
+- bundled with now with the latest CryptPak 4.06
 
 FIXES:
 
 - icon in "Yes No All Cancel" (YNAC) message box was not opaque
-- Rename Dialog	and	(YNAC) message box could not be	made transparent
-- task bar icon	menu was not inactive during Decryption	work
-- triple-DES bug in	the	key	setup (WARNING:	files encrypted
-  with triple-DES of older versions	will _not_ decrypt with
-  this fix anymore,	reencryption is	recommended)
+- Rename Dialog and (YNAC) message box could not be made transparent
+- task bar icon menu was not inactive during Decryption work
+- triple-DES bug in the key setup (WARNING: files encrypted
+  with triple-DES of older versions will _not_ decrypt with
+  this fix anymore, reencryption is recommended)
 
 --------
 
-2001-04-03	Version	2.12.00.011
+2001-04-03  Version 2.12.00.011
 
 NEW:
 
-- transparent windows (Windows 2000	and	higher,	not	every control could	be
-  made transparent yet,	I hope for better support in Windows XP	or Delphi 6)
+- transparent windows (Windows 2000 and higher, not every control could be
+  made transparent yet, I hope for better support in Windows XP or Delphi 6)
 - recognizes Windows 2000/Me/XP
 - includes the latest CryptPak DLL 4.02
 
 FIXES:
 
-- crashed during the execution of programs and documents in	the	browser
-- problems and/or (internal) exceptions	with multiple folder creation
+- crashed during the execution of programs and documents in the browser
+- problems and/or (internal) exceptions with multiple folder creation
 
 CHANGES:
 
-- the software reads out its version number	directly form the EXE file
-  and now uses the standard	x.xx.xx.xxx	format
+- the software reads out its version number directly form the EXE file
+  and now uses the standard x.xx.xx.xxx format
 - browser in details mode allows now row selection
 
 --------
 
-2000-11-02	Version	2.11.101
+2000-11-02  Version 2.11.101
 
 FIXES:
 
-- shortcut CTRL+V for viewing now works	(changed CTRL+N	to select 
-  encrypted	files)
-- update of	help files (addresses, added credits to	the	menu)
+- shortcut CTRL+V for viewing now works (changed CTRL+N to select 
+  encrypted files)
+- update of help files (addresses, added credits to the menu)
 
 CHANGES:
 
-- new CryptPak API (uses now Yarrow	internally)
+- new CryptPak API (uses now Yarrow internally)
 
 
-2000-04-03	Version	2.10.204
+2000-04-03  Version 2.10.204
 
 FIXES:
 
 - it was possible to shutdown the program via the system tray
-  during a disk	clear process
-- list in the about	box	was	not	readonly
+  during a disk clear process
+- list in the about box was not readonly
 - increase of performance of the file browser and the job report
 
 CHANGES:
 
-- Blowfish Advanced	CS is now freeware/open	source!
+- Blowfish Advanced CS is now freeware/open source!
 
 --------
 
-2000-03-02	Version	2.09.077
+2000-03-02  Version 2.09.077
 
 NEW:
 
-- popup	menu contains now entries for the most common operations
+- popup menu contains now entries for the most common operations
 
 FIXES:
 
-- popup	menu didn't	support	help requests
-- minor	internal changes
+- popup menu didn't support help requests
+- minor internal changes
 
 --------
 
-2000-02-09	Version	2.08.048
+2000-02-09  Version 2.08.048
 
 FIXES:
 
 - program is now able to clear unlimited disk space, even on FAT32
-- the mouse	cursor still stuck as an hour glass
-- maximized	main window	was	still resized by the progress window
+- the mouse cursor still stuck as an hour glass
+- maximized main window was still resized by the progress window
 
 --------
 
-2000-02-08	Version	2.07.027
+2000-02-08  Version 2.07.027
 
 FIXES:
 
-- the mouse	cursor stuck as	an hour	glass occasionally
-- maximized	main window	was	resized	by the progress	window (weird Delphi!)
-- minor	bug	in the wiping routine caused problems on non-disk volumes
-- internal error fixed (access violations sometimes	during shutdown)
+- the mouse cursor stuck as an hour glass occasionally
+- maximized main window was resized by the progress window (weird Delphi!)
+- minor bug in the wiping routine caused problems on non-disk volumes
+- internal error fixed (access violations sometimes during shutdown)
 
 --------
 
-2000-01-31	Version	2.06.008
+2000-01-31  Version 2.06.008
 
 FIXES:
 
-- key disks	could not be read at all, heavy	bug	and	thus
-  a	quick fix is essential (thanks Lasse, for the hint)
-- the overwrite	warning	dialog for moving files	just
-  showed an	OK button instead of Yes/All/No/Cancel
+- key disks could not be read at all, heavy bug and thus
+  a quick fix is essential (thanks Lasse, for the hint)
+- the overwrite warning dialog for moving files just
+  showed an OK button instead of Yes/All/No/Cancel
 
 --------
 
-2000-01-30	Version	2.05.017
+2000-01-30  Version 2.05.017
 
 FIXES:
 
-- i/o problem after	the	end	of a disk clear	process
-- auto confirmation	didn't work	if a new charater was not entered
-  at the end of	the	current	password
-- new folders are now placed directly after	already	existing folders
-- wipe loop	boxes appeared sometimes unnecessarily in the progress dialog
-- the caption of the icon in the tray icon was not remaned properly	if
-  an action	was	started	e.g. out of	the	Windows	shell
-- weak keys	now	lead to	an automatic retry,	not	an error
+- i/o problem after the end of a disk clear process
+- auto confirmation didn't work if a new charater was not entered
+  at the end of the current password
+- new folders are now placed directly after already existing folders
+- wipe loop boxes appeared sometimes unnecessarily in the progress dialog
+- the caption of the icon in the tray icon was not remaned properly if
+  an action was started e.g. out of the Windows shell
+- weak keys now lead to an automatic retry, not an error
 - file wiping goes now through all caches and buffers
 
 CHANGES:
@@ -260,26 +296,26 @@ CHANGES:
 
 --------
 
-1999-12-06	Version	2.04.066
+1999-12-06  Version 2.04.066
 
 FIXES:
-- due to changes in	Delphi 5 the favorites and work	files
+- due to changes in Delphi 5 the favorites and work files
   entries were accidentially equipped with shortcuts,
-  unacceptable flaw	and	thus worth to patch	straightaway
-- the history stored equal paths unnecessarily multiple	times
+  unacceptable flaw and thus worth to patch straightaway
+- the history stored equal paths unnecessarily multiple times
 
 --------
 
-1999-12-05	Version	2.03.103
+1999-12-05  Version 2.03.103
 
 FIXES:
-- multiple renaming	was	implemented	but	locked by the GUI
-- disk clearing	hung in	special	situations at the end of the
-  process (but was able	to be interrupted)
-- the job report items could be	edited
-- 100% processor load with the auto	refresh	turned on (on
-  a	pure network paths and only	under Windows NT4)
-- some minor flaws in the string resources and the help	files
+- multiple renaming was implemented but locked by the GUI
+- disk clearing hung in special situations at the end of the
+  process (but was able to be interrupted)
+- the job report items could be edited
+- 100% processor load with the auto refresh turned on (on
+  a pure network paths and only under Windows NT4)
+- some minor flaws in the string resources and the help files
 
 NEW:
 
@@ -287,7 +323,7 @@ NEW:
 
 --------
 
-1999-11-14	Version	2.02.456
+1999-11-14  Version 2.02.456
 
 NEW:
 
@@ -296,39 +332,39 @@ NEW:
 
 FIXES:
 
-- although a key was cached	the	enabling switch	was	deactivated	in the key input 
+- although a key was cached the enabling switch was deactivated in the key input 
   dialog sometimes
-- progress dialog: problems	showing	the	filenames (unnecessary cut offs)
-- disk clearing: cleared size wasn't shown correctly (fixed	also a minor i/o problem)
-- nasty	bug: program couldn't exit when	a viewed file was removed manually
-- if the program was active	during a windows shutdown it was terminated
-  the hard way (no configuration saved,	no viewed files	wiped. etc.)
+- progress dialog: problems showing the filenames (unnecessary cut offs)
+- disk clearing: cleared size wasn't shown correctly (fixed also a minor i/o problem)
+- nasty bug: program couldn't exit when a viewed file was removed manually
+- if the program was active during a windows shutdown it was terminated
+  the hard way (no configuration saved, no viewed files wiped. etc.)
 
 --------
 
-1999-11-08	Version	2.01.355
+1999-11-08  Version 2.01.355
 
 FIXES:
 
-- nonexisting paths	led	to jobfile abortion	without	any	message
-- fixed	problems when browsing the network
-- the password input box was selected when setting the focus to	it via 
+- nonexisting paths led to jobfile abortion without any message
+- fixed problems when browsing the network
+- the password input box was selected when setting the focus to it via 
   the key shortcut
-- browser items	were editable
-- auto confirmation	and	some other options weren't stored in a jobfile
-- slow refresh on paths	with many files
-- the never	expire switch for the key cache	didn't work	every time
-- checking of correct value	ranges in the options dialog was buggy
-- no compression types:	check for the extension	was	case sensitive
+- browser items were editable
+- auto confirmation and some other options weren't stored in a jobfile
+- slow refresh on paths with many files
+- the never expire switch for the key cache didn't work every time
+- checking of correct value ranges in the options dialog was buggy
+- no compression types: check for the extension was case sensitive
 - corrections in the help files
 
 CHANGES:
 
-- the update button	for	registry settings will be (initially) deactivated
+- the update button for registry settings will be (initially) deactivated
 
 --------
 
-1999-11-01	Version	2.00.360
+1999-11-01  Version 2.00.360
 
 (First Release)
 

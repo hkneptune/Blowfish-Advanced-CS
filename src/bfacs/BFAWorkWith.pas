@@ -104,7 +104,7 @@ type
 
 implementation
 uses
-  Globals,
+  GlobalsGUI,
   BFAFile,
   FileSupp,
   SecureMem,

@@ -102,6 +102,7 @@ const
   OPTIONS_CFGID_SAVESENSSETS        = 'SaveSensSets';
   OPTIONS_CFGID_COLORPROGRESS       = 'ColorProgress';
   OPTIONS_CFGID_TRAYICON            = 'TrayIcon';
+  OPTIONS_CFGID_SHOWCFGFILEERRORS   = 'ShowCfgFileErrors';
 
 
 // the option class itself is rather simple
@@ -234,6 +235,7 @@ begin
     CheckBool(section, OPTIONS_CFGID_COLORPROGRESS, True);
 
     CheckBool(section, OPTIONS_CFGID_TRAYICON, True);
+    CheckBool(section, OPTIONS_CFGID_SHOWCFGFILEERRORS, True);
 
   end;
 end;

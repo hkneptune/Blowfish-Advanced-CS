@@ -59,7 +59,7 @@ implementation
 uses
   HtmlHelpAPI,
   StringRes,
-  Globals,
+  GlobalsGUI,
   ShortcutChecker,
   FileSupp;
 

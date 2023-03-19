@@ -67,7 +67,8 @@ uses
   MemCheck in 'MemCheck.pas',
   RandomPool in 'RandomPool.pas',
   HtmlHelpAPI in 'HtmlHelpAPI.pas',
-  ComCtrls in 'VCLfix\comctrls.pas';
+  ComCtrls in 'VCLfix\comctrls.pas',
+  GlobalsGUI in 'GlobalsGUI.pas';
 
 {$R *.RES}
 {$R winxp.res}

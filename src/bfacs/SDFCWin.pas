@@ -59,7 +59,7 @@ var
 
 implementation
 uses
-  Globals,
+  GlobalsGUI,
   Options,
   HtmlHelpAPI,
   ShortcutChecker,

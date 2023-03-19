@@ -57,7 +57,7 @@ var
   FavoritesWin: TFavoritesWin;
 
 implementation
-uses Globals,
+uses GlobalsGUI,
      HtmlHelpAPI,
      StringRes,
      ShortcutChecker,

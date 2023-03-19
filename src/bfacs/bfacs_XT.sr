@@ -1,0 +1,838 @@
+
+// test file for extended language resources, based on the original translation
+// into French from www.manuelsdaide.com (thanks!); serves also as a record of
+// what has changed and needs to be (re)translated
+
+[COUNTRY_CONFIG]
+Language=Français
+HelpFile=BFACS_XT.CHM
+
+[ABOUTFORM]
+CAPTION=A Propos de
+OKBTN=OK
+VERSION=Version %s
+COPYRIGHT=Copyright © 1997-2005 Markus Hahn
+EDITION=Edition Personnelle
+COL_PRP=Propriété
+COL_CNT=Contenu
+CV_BFACSLIB=Version de la Bibliothèque de bfaCS
+CV_WINVER=version de Windows
+CV_WINPF=Plate-forme
+CV_CNAME=Nom de l'Ordinateur
+CV_UNAME=Nom de l'Utilisateur
+CV_NUMOFPR=Nombre de Processeurs
+CV_MEMLOAD=Mémoire Chargée
+CV_PHMEM=Mémoire Physique
+CV_FPHMEM=Mémoire Physique Libre
+CV_PFSIZE=Taille du Fichier d'Echange
+CV_FPFSPAC=Espace du Fichier d'Echange Libre
+CV_SCRRES=Résolution de l'Ecran
+CV_MOUSE=Souris
+CV_MOUSWH=Molette de Souris
+
+[BFACSREGISTRYKEYS]
+000=Cryptage Blowfish Advanced CS
+001=Tâche Blowfish Advanced CS 
+CAPTION=Blowfish Advanced CS
+ENCRYPT=Crypter
+DECRYPT=Décrypter
+WIPE=Nettoyer
+REENCRYPT=Recrypter
+DESLACK=Décharger de la mémoire libre
+WORKWITH=Travailler Avec
+VIEW=Affichage
+ERRMESS1=Extension Shell Blowfish Advanced CS
+ERRMESS2=Impossible de lancer "%s" (%s).
+HELPCAPTION=Commandes de Blowfish Advanced CS
+HELPENCRYPT=Crypter les objets sélectionnés.
+HELPDECRYPT=Décrypter les objets sélectionnés.
+HELPWIPE=Nettoyer les objets sélectionnés.
+HELPREENCRYPT=Recrypter les objets sélectionnés.
+HELPDESLACK=Décharger la mémoire libre des objets sélectionnés.
+HELPWORKWITH=Travailler avec ces fichiers cryptés.
+HELPVIEW=Afficher ces fichiers cryptés.
+
+[BFAFILE]
+022=accès au fichier source refusé
+023=fichier source introuvable
+024=erreur d'ouverture générale de fichier source
+025=impossible de fermer le fichier source après avoir ignoré le fichier crypté
+026=erreur e/s lors de la vérification de l'état du cryptage
+027=déjà crypté
+028="%s" existe déjà.
+029=impossible d'obtenir la taille du fichier source
+030=impossible d'obtenir la date du fichier source
+031=impossible d'obtenir les attributs du fichier source
+032=echec de la réinitialisation des attributs du fichier sortant
+033=impossible de supprimer le fichier crypté erroné
+034=echec d'écriture de l'en-tête
+035=renommage 8.3 utilisé
+036=interrompu
+038=erreur fatale lors de l'effacement:\20
+039=impossible de supprimer le fichier original, fichier crypté temporaire supprimé
+040=impossible de fermer le fichier crypté après erreur de la restauration date+heure
+041=version BFA non prise en charge
+042=méthode de compression inconnue
+043=impossible de réinitialiser le fichier source après échec de la compression
+044=accès au fichier cible refusé
+045=erreur d'ouverture générale du fichier cible
+049=en-tête du fichier crypté tronqué et endommagé
+050=disque plein
+051=impossible d'écrire dans la fichier cible
+052=erreur CRC32
+054=impossible de renommer temporairement le nom du fichier original
+055=impossible de supprimer le fichier source
+056=impossible de supprimer le fichier cible mort
+065=erreur e/s lors de la lecture du fichier source
+067=impossible de renommer le fichier temporaire, laissé à "%s" sur le disque pour 
+récupération
+068=impossible de fermer le fichier source après exception
+080=aucune alerte
+081=effacement superficiel
+082=echec de suppression
+083=impossible de régler les attributs
+084=impossible de régler l'horodatage
+085=interrompu
+086=fichier tronqué
+087=erreur d'effacement "%s", des parties peuvent déjà avoir été remplacées, 
+correspondances "%s" cryptées sur le disque
+088=format inconnu
+
+[BFAMANAGER]
+000=Fichier Original
+001=Taille
+002=Crypté Vers
+003=Ratio
+004=Erreur, Alertes, Conseils
+005=Fichier Crypté
+006=Décrypter vers
+007=Taille Originale
+100=mémoire insuffisante
+101=interrompu
+102=erreur fatale:\20
+104=Le lecteur cible est plein.\0d\0aVous pouvez insérer un nouvel opérateur de donnée ou 
+libérer de l'espace disque.\0d\0aRéessayer?
+105=\0d\0aRemplacer ce fichier?
+
+[BFAVIEWER]
+FRMT_WIPECB=Suppression %s (%s octets)...
+FRMT_VIEWCB=Décryptage %s (%s octets), %d%% fait...
+
+[BFAWORKWITH]
+USERBREAK=arrêt utilisateur
+OPENERROR=Impossible d'ouvrir "%s" (%s).\0d\0aVoulez-vous recrypter le fichier?
+KEEPWAITING=Avez-vous fini de travailler avec "%s"?\0d\0a(Si vous répondez non le fichier 
+restera non crypté).
+FRMT_DECCB=Décryptage "%s" (%s octets), %d%% fait...
+FRMT_ENCCB=ReCryptage "%s" (%s octets), %d%% fait...
+FRMT_WIPCB=Effacement "%s", veuillez patienter...
+RMFROMFAV=Le fichier "%s" n'a pas été trouvé,\0d\0amais il est enregistré dans la liste 
+des fichiers.\0d\0aLe supprimer de la liste?
+
+[BFJOB]
+SEARCHERR=Erreur lors de la recherche (%s).
+NUMOFSINGLEFILE=1 fichier (%s octets)
+NUMOFSINGLEFILE_DSL=1 fichier
+NUMOFFILES=%s fichiers (%s octets en tout)
+NUMOFFILES_DSL=%s fichiers
+SKIPPED=Opération ignorée par l'utilisateur.
+USERBREAK=Arrêt Utilisateur
+FATALERR=Une erreur fatale (%s) s'est produite.
+GHOSTFILES=%d fichiers sont manquants:
+NOFILES=Aucun fichier trouvé.
+ERROR_ENC=Erreur au cours du cryptage (%s).
+ERROR_DEC=Erreur au cours du décryptage (%s).
+ERROR_WIPE=Erreur au cours de l'effacement (%s).
+ERROR_REENC=Erreur au cours du récryptage (%s).
+ERRORS=Il existe des erreurs.
+WARNINGS=Il existe des alertes.
+ALLSUCCESS=Opération terminée.
+CONFIRMMESS=%s trouvé.\0d\0aLancer l'%s maintenant?
+DOING_ENC=cryptage
+DOING_DEC=décryptage
+DOING_WIPE=effacement
+DOING_DESL=déchargement de la mémoire libre
+DOING_REENC=recryptage
+UNCONFKEYWARN=La clé (ou une de ses parties) n'a pas été confirmée au cours de la saisie.
+\0d\0aContinuer quand même?
+FMT_SUM=Operation: %s\0d\0aStatus: %s\0d\0aTime needed: %s\0d\0a%s\0d\0a
+FMT_TITLE=Title: %s\0d\0a
+OP_ENC=Cryptage
+OP_DEC=Décryptage
+OP_WIPE=Effacement
+OP_REENC=Reencryption
+OP_DSLK=Déchargement de la mémoire libre
+OP_VIEW=Afficher
+OP_WWITH=Travailler Avec
+BATCH_APPENDLOADERR=erreur de chargement du fichier existant: %s
+BATCH_CANNOTSAVE=Impossible d'enregistrer le fichier de travail.
+BATCH_LOADERR=Erreur de chargement du fichier de travail.
+BATCH_NOTAJOBFILE=Le fichier n'est pas un fichier de travail.
+BATCH_INVALIDERR=Fichier de travail non valide.
+DEFJOBTITLE=Travail %s 
+
+[BFMANAGER]
+MAXERR=Il s'est produit plus de %d erreur(s).\0d\0aContinuer tout de même?
+
+[CIPHERSERVERTOOLS]
+ETS01=aucune erreur
+ETS02=erreur générale
+ETS03=algorithme non trouvé
+ETS04=algorithme non valide
+ETS05=mémoire insuffisante
+ETS06=clé faible détectée
+ETS07=échec de l'auto-test
+ETS08=session encore active
+ETS09=aucune session active
+ETS10=type de session erroné
+ETSUNKNOWN=erreur inconnue
+
+[CLEANERS]
+ERR_UNEXPECTED=comportement API inattendu
+ERR_OUTOFMEM=mémoire insuffisante
+
+[CRPTFILE]
+000=erreur générale
+001=erreur fatale
+002=algorithm not found
+003=echec de l'auto-test
+004=algorithme non valide
+005=mémoire insuffisante
+006=échec de création de la clé
+007=fichier introuvable
+008=accès refusé
+009=le fichier est en lecture seule
+010=disque plein
+011=clé faible détectée
+012=erreur e/s
+013=mauvais type d'algorithme 
+014=aucun fichier crypté
+015=mauvaise clé
+016=format non pris en charge
+017=fichier tronqué
+018=erreur d'ouverture générale
+019=conflit de mode
+020=erreur interne
+021=fin du fichier
+022=erreur inconnue
+023=mode d'ouverture non valide
+024=renvoi du code # inconnu
+025=fichier déjà ouvert
+026=aucune clé
+027=clé trop grande
+028=aucun fichier ouvert
+
+[DESLACKER]
+000=Nom du Fichier
+001=Résultat
+002=Fait.
+003=Erreur:\20
+004=Non traité:\20
+005=Arrêt Utilisateur
+010=Il s'est produit plus de %d erreur(s).\0d\0aContinuer tout de même?
+ERR_01=impossible d'obtenir les attributs
+ERR_02=impossible de réinitialiser les attributs
+ERR_03=impossible d'ouvrir le fichier
+ERR_04=impossible d'obtenir la taille du fichier
+ERR_05=impossible de chercher à la fin du fichier
+ERR_06=impossible d'écrire dans le fichier
+ERR_07=impossible de réinitialiser la longueur du fichier
+ERR_08=impossible de restaurer la longueur du fichier
+ERR_09=impossible de restaurer l'horodatage
+ERR_10=impossible de fermer le fichier après l'erreur
+ERR_11=impossible de fermer le fichier
+ERR_12=impossible restaurer les attributs
+FMT_ERR=Erreur: %s (%s)
+TOOMANYERRS=interrompu après trop d'erreurs
+
+[DESTSELECTWIN]
+REMOVEBTN=Supprimer
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+INPUTBOXINFO=Chemin de Destination:
+BROWSEBTN=Parcourir...
+000=Error
+001=Path "%s" n'existe pas.\0d\0aLe créer maintenant?
+002=Impossible de créer le chemin "%s".
+003=Sélectionner un chemin:
+
+[DISKCLEAR]
+OUTOFMEM=mémoire insuffisante
+DONEMESS=Espace disque libre de %s effacé.
+ERR_OPEN=impossible de créer le fichier temporaire "%s" (%s)
+ERR_IO=erreur e/s (%s)
+ERR_CLOSE=impossible de fermer le fichier temporaire "%s" (%s)
+ERR_DEL=supprimer au moins un fichier temporaire
+CONT_AFTER_ERR=Un problème s'est produit: %s.\0d\0aContinuer tout de même?
+
+[DISKCLEARFORM]
+DRIVEPREFIX=Lecteur\20
+SHOWPROG0=%s sur %s octets
+SHOWPROG1=%s octets
+CAPTION=Effacer l'Espace Disque Vide
+STARTBTN=Démarrer
+CANCELBTN=Annuler
+HELPBTN=Aide
+MINIMIZEBTN=Réduire
+SETUPGROUP=Réglage
+HOWTOSELECT=Effacer
+HTS_CURRDRV=L'Emplacement Actuel
+HTS_ALLDRIVES=Tous les Lecteurs
+HTS_ALLFIXEDDRIVES=Tous les Lecteurs Fixes
+NOBUFFERSWITCH=Ecrire via les Tampons
+SILENTSWITCH=Aucun Message
+LOWPRIOSWITCH=Basse Priorité
+METHODINFO=Effacer avec:
+MSEL_ZEROS=Zéro Octets
+MSEL_RNDBLOCK=Donnée Aléatoire Statique
+MSEL_RNDSTREAM=Donnée Aléatoire Continue
+ERRORMESS=Erreur en effaçant "%s" : %s.
+REALLYBREAK=Voulez-vous vraiment arrêter?
+ACTION_CLEAR=Effacement de l'espace vide
+
+[EXECUTOR]
+FATAL=Une erreur fatale s'est produite:\0d\0a%s
+ERROR=Erreur: %s
+ACTION_ENCRYPT=Cryptage
+ACTION_DECRYPT=Décryptage
+ACTION_WIPE=Effacement
+ACTION_REENCRYPT=Recryptage
+ACTION_DESLACK=Déchargement de la mémoire libre
+ACTION_WORKWITH=Traitement
+ACTION_ERR=En activité
+CONFJOBEXEC=Exécuter la tâche "%s" maintenant?
+VW_ERROR=Erreur lors de l'affichage:\20
+VW_WRONGKEY=Mauvaise clé, impossible d'afficher le fichier.
+JOBERROR=Erreur d'exécution de la tâche "%s" : %s
+
+[FAVORITESWIN]
+CAPTION=Gestionnaire des Favoris
+FAVLISTINFO=Favoris:
+REMOVEBTN=Supprimer
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+
+[FILEBROWSER]
+FF_INFO=%s dossier(s), %s fichier(s)
+SEL_INFO=%s objet(s) sélectionné(s) (%s octets en tout)
+SORTING=Trier...
+BROWSING= %d Objet(s) trouvé(s)...
+ST_INFO=%s octets (%s octets d'espace libre)
+DUNNO=???
+NETWORK=Réseau
+EXEC=Ouverture "%s" ...
+MSG_COPY=Copie %s
+MSG_MOVE=Déplacement %s
+MSG_DELETE=Suppression %s
+ERR00=Impossible de changer pour "%s".
+ERR01=Un problème s'est produit en recherchant les fichiers.
+ERR02=Impossible de chercher via le chemin du réseau.
+ERR20=Les chemins de la source et de la destination sont identiques.
+ERR21=Arrêt utilisateur détecté.\0d\0a%d fichier(s) copié(s).
+ERR22=Remplacer le fichier "%s" (%s octets) par "%s" (%s octets)?
+ERR23=%d fichier(s) n'ont pu être copié(s).
+ERR24=Impossible de déplacer les dossiers vers d'autres lecteurs (réseau).
+ERR25=Arrêt utilisateur détecté.\0d\0a%d objet(s) déplacé(s).
+ERR26=%d object(s) n'ont pu être déplacé(s).
+ERR27=Arrêt utilisateur détecté.\0d\0a%d objet(s) complètement supprimé(s).
+ERR28=%d objet(s) n'ont pu être supprimé(s).
+ERR40=Une erreur interne s'est produite.
+ERR41=L'objet "%s" existe déjà.\0d\0aVoulez-vous essayer un autre nom?
+ERR42=Impossible de renommer "%s" pour "%s".\0d\0aContinuer?
+ERR50=Impossible de créer le(s) dossiers(s) "%s".
+ERR51=Impossible de créer tous les dossiers de "%s".
+INTERRUPT=Processus de recherche interrompu par l'utilisateur.
+COLNAME=Nom
+COLREALNAME=Nom Réel
+COLSIZE=Taille
+COLREALSIZE=Taille Réelle
+COLTIME=Heure
+COLTYPE=Type (Original)
+COLATTR=Attributs
+NOFILES=Aucun fichier trouvé.
+SCANERR01=Mauvaise Clé
+SCANERR02=Mauvais Algorithme
+SCANERR03=Fichier non trouvé
+SCANERR04=Format Inconnu (mauvais algorithme?)
+SCANERR05=Erreur (%s)
+SCANFATAL=Une erreur fatale s'est produite au cours de l'examen "%s": %s.\0d\0aProcessus d'examen abandonné.
+USERBREAK=Arrêt Utilisateur
+
+[FILESUPP]
+000=fichier non trouvé
+001=impossible de détecter l'espace disque (étendu) libre
+002=impossible de détecter l'espace disque libre
+SHEX000=Le système d'exploitation manque de mémoire ou de ressources.
+SHEX001=Le fichier spécifié est introuvable.
+SHEX002=Le chemin spécifié est introuvable.
+SHEX003=Le fichier .EXE n'est pas valide (.EXE non Win32 ou erreur d'image .EXE).
+SHEX004=Le système d'exploitation refuse d'accéder au fichier spécifié.
+SHEX005=L'association de nom de fichier est incomplète ou non valide.
+SHEX006=La transaction DDE n'a pu se terminer car d'autres transactions DDE étaient traitées.
+SHEX007=La transaction DDE a échouée.
+SHEX008=La transaction DDE n'a pu se terminer car la requête était hors délai.
+SHEX009=La bibliothèque de lien dynamique spécifiée est introuvable.
+SHEX010=Aucune application n'est associée à l'extension du nom de fichier donné.
+SHEX011=Mémoire insuffisante pour terminer l'opération.
+SHEX012=Une violation de partage s'est produite.
+
+[GLOBALSGUI]
+000=Enregistrer la configuration...
+001=Impossible d'enregistrer la configuration vers "%s".
+002=\20- Problème de Fermeture
+
+[JOBCHOOSERFORM]
+CAPTION=Que faire maintenant?
+OKBTN=OK
+CANCELBTN=Annuler
+ACTION=Action
+SEL_ENCRYPT=Crypter
+SEL_DECRYPT=Décrypter
+SEL_WIPE=Effacer
+SEL_REENCRYPT=Recrypter
+SEL_DESLACK=Décharger la Mémoire Libre
+SEL_VIEW=Afficher
+SEL_WORKWITH=Travailler Avec
+
+[KEYDISK]
+OUTOFMEM=mémoire insuffisante
+IOERR=problème e/s
+DUNNO=problème inconnu
+ERRMESS=Impossible de lire le fichier clé "%s" (%s).\0d\0aRéessayer?
+KEYFILETOOLARGE=Le fichier clé "%s" (%s octets) est plus grand que la taille max. autorisée.\0d
+\0aLes premiers %s octets seront utilisés, le rest ignoré.\0d\0aVoulez-vous poursuivre?
+
+[LOGFORM]
+CAPTION=Rapport des Tâches
+OKBTN=OK
+HELPBTN=Aide
+SAVEBTN=Enregistrer...
+MAKEJOBFILEBTN=Créer Fichier de Tâche...
+ERRWAR=\20- %d erreurs, %d alertes
+SD_REP_TITLE=Enregistrer le Rapport
+SD_REP_FILTER=Fichiers Texte (*.txt)|*.TXT|Tous les Fichiers (*.*)|*.*
+CONFIRM=Confirmer
+ERROR=Erreur
+REPCREATERR=Impossible de créer le fichier de rapport "%s".
+ALREADYEXISTS="%s" existe déjà.\0d\0aAjouter le rapport à ce fichier?
+SD_JOB_TITLE=Enregistrer la Tâche, Etape 1/2
+SD_JOB_FILTER=Fichiers de Tâche (*.bfj)|*.BFJ
+JOBFILEEXISTS=Le fichier de tâche "%s" existe déjà.\0d\0aVoulez-vous ajouter la tâche en cours?
+TITLEREQ_CAPTION=Enregistrer la Tâche, Etape 2/2
+TITLEREQ_PROMPT=Veuillez entrer un titre pour cette tâche:
+JOBFILESAVED=La tâche "%s" a été enregistrée avec succès dans\0d\0a"%s".
+LM_SORT=Trier par Exceptions
+
+[MAINFORM]
+COPYING=Copie
+MOVING=Déplacement
+DELETING=Suppression
+ABORTED=Abandonné
+CONFIRM=Confirmer
+WARNING=Attention
+ERROR=Erreur
+SCANERR=Impossible de lancer l'examen (%s).
+SCAN=EXAMINER
+PRESS_ESC=Appuyez sur Echap pour Abandonner
+ESC_DETECT=La touche Echap a été utilisée
+CP_CAPTION=Changer le Chemin
+CP_PROMPT=Entrer un nouvel emplacement:
+COPYDESTCAPTION=Copier
+MOVEDESTCAPTION=Déplacer
+CONF_DELETE=Voulez-vous vraiment supprimer ces objets?
+NO_WWW=Impossible d'ouvrir le navigateur Web par défaut.
+000=Initialisation des contrôles...
+MN_FILE=Fichier
+MN_FILE_ENCRYPT=Crypter...
+MN_FILE_DECRYPT=Décrypter...
+MN_FILE_VIEW=Afficher...
+MN_FILE_WORKWITH=Travailler Avec...
+MN_FILE_REENCRYPT=Recrypter...
+MN_FILE_WIPE=Effacer
+MN_FILE_DESLACK=Décharger la mémoire libre
+MN_FILE_EXIT=Quitter
+MN_BROWSER=Parcourir
+MN_BROWSER_BROWSE=Parcourir...
+MN_BROWSER_CHANGEPATH=Changer le Chemin...
+MN_BROWSER_UPONELEVEL=Dossier Parent
+MN_BROWSER_REFRESH=Rafraîchir
+MN_BROWSER_NEWFOLDER=Nouveaux Dossiers...
+MN_BROWSER_ICONS=Icônes
+MN_BROWSER_SMALLICONS=Petites Icônes
+MN_BROWSER_LIST=Liste
+MN_BROWSER_REPORT=Détails
+MN_BROWSER_EXCLUDE=Exclure...
+MN_BROWSER_EXCLUDE_ARCHIVE=Fichiers Archives
+MN_BROWSER_EXCLUDE_READONLY=Fichiers en Lecture Seule
+MN_BROWSER_EXCLUDE_HIDDEN=Fichiers Cachés
+MN_BROWSER_EXCLUDE_SYSTEM=Fichiers Système
+MN_BROWSER_SCANNER=Examen
+MN_BROWSER_CHOOSEFONT=Choisir la Police...
+MN_TOOLS=Outils
+MN_TOOLS_OPTIONS=Options...
+MN_TOOLS_SHOWBUTTONS=Afficher la Barre des Boutons
+MN_TOOLS_SHOWBROWSERTOOLS=Afficher la Barre d'Outils d'Exploration
+MN_TOOLS_SHOWSEEDINFO=Afficher les Info des Nombres Aléatoire...
+MN_TOOLS_EXPIREKEYCACHE=Vider le Cache de Clé
+MN_TOOLS_CLEARWORKWITHFAVS=Vider la Liste des Derniers Fichiers de Tâche
+MN_TOOLS_SDFC=Dispositif de Sécurité pour les Enfants...
+MN_TOOLS_LANGUAGE=Langue
+MN_TOOLS_CLEARDISKSPACE=Effacer l'Espace Disque Vide...
+MN_FAVORITES=Favoris
+MN_FAVORITES_ADDPATH=Ajouter le Chemin en Cours
+MN_FAVORITES_MANAGE=Organiser...
+MN_HELP=Aide
+MN_HELP_HELP=Sommaire
+MN_HELP_WEB=Site Web...
+MN_HELP_ABOUT=A Propos de
+PM_ENCRYPT=Crypter...
+PM_DECRYPT=Décrypter...
+PM_WIPE=Effacer
+PM_COPY=Copier...
+PM_MOVE=Déplacer...
+PM_WORKWITH=Travailler Avec...
+PM_RENAME=Renommer...
+PM_DELETE=Supprimer
+PM_SELECT=Sélectionner
+PM_SELECT_ALL=Tout
+PM_SELECT_FILES=les Fichiers
+PM_SELECT_FOLDERS=les Dossiers
+PM_SELECT_ENCRYPTED=les Fichiers Cryptés
+PM_SELECT_DECRYPTED=les Fichiers Non Cryptés
+PM_SELECT_BYSTRING=les Fichiers Contenant la Chaîne...
+PM_FORMAT=Formater...
+TM_SHOW=Afficher
+TM_EXIT=Quitter
+SELSEARCHCAPT=Sélectionner les Fichiers Contenant la Chaîne
+HINT_ENCRYPT=Crypter (Ctrl+E)
+HINT_DECRYP=Décrypter (Ctrl+D)
+HINT_WIPE=Effacer (Ctrl+W)
+HINT_WORKWITH=Travailler Avec (Ctrl+O)
+HINT_OPTIONS=Options (Ctrl+T)
+HINT_EXIT=Quitter (Ctrl+Q)
+HINT_ABOUT=A Propos de
+HINT_HELP=Aide (F1)
+HINT_BT_UPONELEVEL=Dossier Parent (Ctrl+L)
+HINT_BT_REFRESH=Rafraîchir (F5)
+HINT_BT_BROWSE=Parcourir (F3)
+HINT_BT_NEWFOLDER=Nouveaux Dossiers
+HINT_BT_ICONS=Grandes Icônes
+HINT_BT_SMALLICONS=Petites Icônes
+HINT_BT_LIST=Liste
+HINT_BT_REPORT=Détails
+HINT_BT_HISTBACK=Précédent
+HINT_BT_HISTFORWARDS=Suivant
+SELECTPATH=Sélectionner un chemin:
+
+[MAKEDIRFORM]
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+CAPTION=Nouveaux Dossiers
+NEWDIRINFO=Entrez le nom des nouveaux dossiers. Vous pouvez aussi déclarer les chemins des répertoires imbriqués:
+ILLEGAL_NAME=Le nom contient le caractère illégal '%s'.
+ERROR=Erreur
+
+[MAKEKEYDISKFORM]
+CAPTION=Créer un Disque Clé
+CANCELBTN=Annuler
+HELPBTN=Aide
+SIZEINFO=Taille de la Clé (en bits):
+HOWTOINFO=Avant de pouvoir créer le fichier clé, vous devez fournir un certain départ aléatoire. Déplacez simplement la souris ou appuyez sur une touche.
+SELFILENAME=Sélectionnez un Nom du Fichier Clé
+OVERWRITE="%s" existe déjà.\0d\0aS'il s'agit d'un fichier clé et que vous le remplacez,\0d\0ales données cryptées avec lui ne pourront pas être restaurées!\0d\0aContinuer tout de même?
+WARNING=Attention
+ERROR=Erreur
+CANNOTCREATE=Impossible de créer le fichier clé "%s".
+FILTER=Tous les Fichiers (*.*)|*.*
+CREATED=Le fichier "%s" avec %d octets (%d bits) de donnée de clé aléatoire a été généré.
+SUCCESS=Réussi
+
+[MESSBOXYNAC]
+YESBTN=Oui
+NOBTN=Non
+ALLBTN=Tous
+CANCELBTN=Annuler
+
+[PASSWCONFIRM]
+CAPTION=Confirmer
+OKBTN=OK
+CANCELBTN=Annuler
+INFO=Entrez à nouveau le mot de passe:
+BADBIN=Vous avez entré des séquences binaires illégales ("\xx").
+ZEROPASSW=Veuillez entrer quelque chose.
+ERROR=Erreur
+PASTEANDCLEAR=Coller et vider le Presse-papiers
+
+[PASSWORDFORM]
+NOTEQUPASSW=Le mot de passe confirmé n'est pas identique.
+ZEROPASSW=Veuillez entrer un mot de passe.
+BADBIN=Vous avez entré des séquences binaires illégales ("\xx").
+ERROR=Erreur
+WARNING=Attention
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+APPLYBTN=Appliquer
+PWUSECACHEDKEYSWITCH=Utiliser la Clé en Cache
+PWINPUTINFO=Mot de Passe:
+PWINPUTINFO_R1=Ancien Mot de Passe:
+PWINPUTINFO_R2=Nouveau Mot de Passe:
+PWSHOWPASSWORDSWITCH=Afficher le Mot de Passe
+PWAUTOCONFSWITCH=Confirmation Auto
+PWCACHEKEYSWITCH=Clé en Cache
+PWMULTIKEYSWITCH=Entrer des Clés Multiples
+PWUSEKEYDISKSWITCH=Utiliser un Disque Clé
+TPTARGETPATHSWITCH=Utiliser Chemin Destination:
+TPBROWSEBTN=Parcourir...
+TPKEEPDIRECTORIESSWITCH=Conserver les Répertoires
+TPREMOVESOURCEFILESSWITCH=Supprimer les Fichiers Sources
+ENCSTOREPATHNAMESSWITCH=Enregistrer Chemins d'Origine
+ENCRELATIVEPATHSSWITCH=Relatif au Chemin Actuel
+ENCCOMPRESSSWITCH=Compresser les Données
+ENCRENAMEFILESSWITCH=Renommer les Fichiers
+DECRESTOREPATHSWITCH=Restaurer les Chemins d'Origine
+TARGETERR=Impossible de créer le chemin "%s".
+NOTARGET=Le chemin cible "%s" n'existe pas.\0d\0aLe créer maintenant?
+REENC1=Ancien Algorithme de Cryptage:
+REENC2=Nouvel Algorithme de Cryptage:
+PASTEANDCLEAR=Coller et vider le Presse-papiers
+
+[PASSWORDINPUT]
+ERROR=Erreur
+CONFIRM=Confirmer
+MULTIKEYREQ=Voulez-vous ajouter un autre mot de passe ou disque clé?
+CAPTION_ADDON=\20- Clé #%d
+MODE_KEYINPUT=Saisie au Clavier
+MODE_VIEW=Afficher
+MODE_WORKWITH=Travailler Avec
+MODE_SCANNER=Examen
+MODE_REENCRYPT=Recrypter
+MODE_ENCRYPT=Crypter
+MODE_DECRYPT=Décrypter
+DESTSEL=Chemin Cible
+
+[PATHINPUTWIN]
+OKBTN=OK
+CANCELBTN=Annuler
+SEARCHBTN=Chercher...
+HELPBTN=Aide
+ENTERPLEASE=Veuillez entrer quelque chose.
+ERROR=Erreur
+SELECTPATH=Sélectionner un chemin:
+
+[PATHSEARCH]
+000=interrompu
+001=erreur
+002=aucun fichier trouvé
+003=fichier "%s" introuvable
+004=le chemin contient encore des fichiers
+005=le chemin contient des fichiers protégés
+006=Chercher des fichiers dans "%s"...
+007=Enregistrer les fichiers simples...
+
+[PATHSEARCHFORM]
+CAPTION=Chercher les Fichiers
+CANCELBTN=Abandonner
+
+[PROGRESSFORM]
+PAUSEBTN=Suspendre
+CONTBTN=Continuer
+STOPBTN=Arrêter
+MINIMIZEBTN=Réduire
+CURRENTFILEINFO=Fichier Actuel:
+INPUTFILEINFO=Fichier Source:
+OUTPUTFILEINFO=Fichier Sortant:
+FILESIZEINFO=Taille du Fichier:
+FILENUMBERINFO=Nombre de Fichiers:
+WIPELOOPINFO=Effacer en Boucle:
+SINGLEPROGRESSBARHINT=Progression du Fichier Actuel
+ALLPROGRESSBARHINT=Progression d'Ensemble
+MODE_ENCRYPT=Cryptage
+MODE_DECRYPT=Décryptage
+MODE_WIPE=Effacement
+MODE_REENCRYPT=Recryptage
+MODE_DESLACK=Décharger la mémoire libre
+CONFIRM=Confirmer
+BREAKQUEST=Voulez-vous vraiment interrompre?
+
+[REENCRYPTOR]
+000=Nom du Fichier
+001=Résultat
+002=réussi
+003=Erreur:\20
+004=ignoré:\20
+005=interrompu
+006=impossible de supprimer l'ancien fichier
+007=impossible de renommer le fichier temporaire
+008=impossible de renommer le fichier temporaire "%s" pour "%s"
+009=erreur de fermeture des fichiers après interruption utilisateur
+010=Il s'est produit plus de %d erreur(s).\0d\0aContinuer tout de même?
+
+[RENAMEFORM]
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+CAPTION=Renommer
+OLDNAMEINFO=Ancien Nom:
+NEWNAMEINFO=Nouveau Nom:
+ILLEGAL_NAME=Le nom contient le caractère illégal '%s'.
+ERROR=Erreur
+
+[SDFCFORM]
+CAPTION=Dispositif de Sécurité Enfants
+OKBTN=OK
+CANCELBTN=Annuler
+HELPBTN=Aide
+CHANGE=Changer le Mot de Passe:
+ENTER=Entrer le Mot de Passe:
+
+[SETTINGSFORM]
+ERROR=Erreur
+YES=oui
+NO=non
+CONFIRM=Confirmer
+SUCCESS=Réussi
+CAPTION=Options
+OKBTN=OK
+CANCELBTN=Annulé
+HELPBTN=Aide
+APPLYBTN=Appliquer
+SECURITYSHEET=Sécurité
+SECURITYCIPHERLISTINFO=Algorithme de Cryptage:
+SECURITYCOMPRESSINFO=Méthode de Compression:
+SECURITYWIPEINFO=Méthode d'Effacement:
+SECURITY_KC_GROUP=Cache de Clé
+SECURITY_KC_EXPIRETIME=Délai d'Expiration (en secs) :
+SECURITY_KC_NEVEREXPIRES=La clé en cache n'expire jamais
+SECURITY_MNCIPHER_SHOW=Afficher les Infos
+SECURITY_CPHINF_BLOCKSIZE=Longueur du Bloc:
+SECURITY_CPHINF_KEYSIZE=Longueur de la Clé:
+SECURITY_CPHINF_TYPE=Type:
+SECURITY_CPHINF_BITS=bits
+COMPRESSNAME_LZSS=LZSS
+COMPRESSNAME_DEFLATE=Compresser
+COMPRESSNAME_BZIP2=BZIP2
+WIPE_DELETEONLY=Supprimer Seulement
+WIPE_SIMPLE=Simple (1x)
+WIPE_DOD=DoD Méthode (3x)
+WIPE_SFS=SFS Méthode (35x)
+CONFIGSHEET=Configuration
+CFG_SHOWHINTS=Afficher les Info-bulles
+CFG_HOTTRACKING=Suivi Dynamique
+CFG_HTMLSTYLE=Explorateur des Fichiers de Style Web
+CFG_GRIDLINES=Afficher la Grille
+CFG_NONETWORK=Aucun Affichage Réseau
+CFG_AUTOARRANGE=Organisation Auto
+CFG_FLATVIEW=Afficher l'Explorateur des Fichiers à Plat
+CFG_SCANBFAFILESONLY=Examiner les Fichiers .BFA Uniquement
+CFG_REPLACESCANICONS=Remplacer les Icônes (et les Types) des Fichiers Examinés
+CFG_KEEPDATETIME=Conserver l'Horodatage
+CFG_KEEPATTRIBUTES=Conserver les Attributs
+CFG_SKIPENCRYPTED=Ignorer les fichiers déjà cryptés
+CFG_WRITEPROTECT=Protéger les Fichiers Cryptés Contre l'Ecriture
+CFG_TRYRENAME83=Tenter de renommer en 8.3 compatible
+CFG_ADDEXTENSION=Ajouter l'Extension .BFA
+CFG_IGNORECRC32=Ignorer les erreurs CRC32
+CFG_ACCEPTRUNCATED=Accepter les Fichiers Tronqués
+CFG_REMOVEEMPTYDIRS=Supprimer les Répertoires Vides
+CFG_OVERWRITEEXISTING=Remplacer les Fichiers Existants
+CFG_NOCACHE=Désactiver la Mise en Cache des Fichiers
+CFG_CONFIRMOPERATIONS=Les opérations sont à confirmer
+CFG_SHOWJOBREPORT=Afficher le Rapport des Tâches
+CFG_AUTOREFRESH=Rafraîchissement Automatique de l'Explorateur des Fichiers
+CFG_OVERWRITEVIEWED=Les fichiers visibles remplacent ceux qui existent
+CFG_CLOSEAFTERWORK=Quitter à la fin d'une tâche
+CFG_DOUBLECLICKWORK=Le double-clic équivaut à "Travailler Avec"
+CFG_SAVESENSSETS=Enregistrer les Réglages Sensibles
+CFG_PLACEDRIVESFIRST=Afficher d'abord les lecteurs
+CFG_HIDEDRIVES=Cacher les Lecteurs
+CFG_COLORPROGRESS=Afficher la Progression en Couleur
+CFG_TRAYICON=Exécuter dans la Barre d'Etat Système
+CFG_SHOWCFGFILEERRORS=Afficher les erreurs du fichier de configuration
+CFG_FORCECOMPRESS=Forcer la Compression
+FILEHANDLINGSHEET=Manipulation des Fichiers
+FH_RENAMESETUP=Méthode de Renommage
+FH_RENAMERANDOMSWITCH=Caractères Aléatoires
+FH_RENAMEMASKSWITCH=Masque Utilisateur
+FH_MASKINFO=Préfixe:
+FH_NUMINFO=Numéro.
+FH_EXTINFO=Extension:
+FH_COMPRESSIONSETUP=Compression
+FH_NOCOMPRESSINFO=Ne pas compresser les fichiers du type:
+MISCSHEET=Divers
+MISC_TVP_INFO=Chemin Temporaire pour Affichage:
+MISC_TVP_BROWSE=Parcourir...
+MISC_KD_INFO=Fichier de Disque Clé:
+MISC_KD_MAKE=Créer un Disque Clé...
+MISC_CLEARKEYHASHES=Effacer les Hachages de Clés pour la Confirmation Auto
+MISC_MAXERRORS=Nombre Maximum d'Erreurs:
+MISC_REGGROUP=Réglage du Registre
+MISC_REGFILEASSOCSWITCH=Associer les Types de Fichiers
+MISC_REGSHELLEXTSSWITCH=Extensions du Menu Contextuel
+MISC_REGUPDATEBTN=Actualiser
+REGUPDATEMESS=Des paramètres du registre ont été modifiés.
+CLEARKEYHASHESREQ=Vouler-vous vraiment nettoyer le(s) fragment(s) de clé %d enregistré(s)?
+ILLEGALVALUE=Valeur illégale entrée pour "%s".
+OUTOFRANGE=La valeur entrée pour "%s" est hors limites (%d..%d).
+TVPATHNOTEXISTS=Le chemin temporaire "%s" pour l'affichage n'existe pas.
+SELECTPATH=Sélectionner un chemin:
+
+[STRINGSEARCHFORM]
+OKBTN=OK
+CANCELBTN=Annuler
+INFO=Chercher la Chaîne:
+CASESENS=Sensible à la Casse
+
+[STRPLUSI]
+000=,
+001=mm"/"dd"/"yyyy" "hh":"mma/p
+002=,
+003=.
+004=Erreur Win32/OLE Inconnue
+
+[TIPFORM]
+CAPTION=Tip
+NOTAGAINSWITCH=Ne plus afficher ce conseil
+TIP0=Pour changer de langue, utilisez l'entrée de menu "Outils...Langue".\0d\0a\0d\0a
+(Deutschsprachige Benutzuer können diese Meldung ignorieren.)
+TIP1=Um die Sprache zu wechseln benutzen Sie bitte den Menüeintrag "Tools...Language".\0d
+\0a\0d\0a(English speaking users should ignore this message.)
+TIP2=L'intégration à l'Explorateur Windows peut être activée dans "Options...Divers...Réglage du Registre".
+TIP3=L'examen est désormais activé (voyez à "SCAN" dans la barre d'état). Il peut être désactivé via le menu Options ou en appuyant sur la touche F8.
+TIP4=Avec le Dispositif de Sécurité pour les Enfants, vous disposez d'une protection simple contre l'exécution du programme par des tiers susceptibles de détruire des données par imprudence.
+TIP5=Le programme a été réduit dans la barre d'état système. Pour modifier ce comportement, décochez la fonction "Exécuter dans la barre d'Etat Système" du menu "Options...Configuration".
+TIP6=La Touche Verrouillage Majuscule a été enfoncée!\0d\0a\0d\0aCeci a pu se produire par erreur et peut fausser la mise en place d'un mot de passe non souhaité.
+
+[WINDIAG]
+000=(inconnu)
+001=oui
+002=non
+003=normal
+004=sans échec
+005=sans échec avec le réseau
+006=\20octets
+007=présent
+008=non présent
+
+[WIPE]
+001=impossible de supprimer le fichier
+002=erreur d'ouverture du fichier
+003=échec de fermeture du fichier après erreur e/s
+004=erreur e/s
+005=échec de fermeture du fichier après interruption
+006=échec de réinitialisation pour un autre passage
+007=interrompu
+008=échec de fermeture du fichier
+
+[WIPEMANAGER]
+COL_NAME=Nom du Fichier
+COL_RESULT=Résultat
+SUCCESS=effacé
+ERROR=Erreur:\20
+WARNING=Alerte:\20
+OUTOFMEMORY=mémoire insuffisante
+USERBREAK=interruption utilisateur
+

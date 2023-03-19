@@ -68,6 +68,7 @@ type
     procedure MinimizeBtnClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure ButtonHolderResize(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     //members
     m_config               : TConfigurationSection;
@@ -107,6 +108,13 @@ type
     // resets all contols
     procedure ResetCtrls;
 
+    // signals to close the dialog (and abort the current operation)
+    // <- true: stopped / false: not, still running
+    function RequestClose : Boolean;
+
+    // (overridden for proper external closure)
+    procedure Close;
+
   end;
 
 
@@ -142,7 +150,7 @@ uses
   CallBack,
   ProgressCallBack,
   General,
-  Globals;
+  GlobalsGUI;
 
 {$R *.DFM}
 
@@ -289,6 +297,10 @@ begin
       // wait
       Sleep(PAUSE_POLLING_INT);
     end;
+
+    // enable the following line for slow-motion processing (nice for debugging) 
+    //Sleep(1000);
+
   end;
 end;
 
@@ -760,7 +772,6 @@ begin
 end;
 
 
-
 procedure TProgressForm.FormShow(Sender: TObject);
 var
   blShowHints : Boolean;
@@ -822,22 +833,16 @@ end;
 
 procedure TProgressForm.StopBtnClick(Sender: TObject);
 begin
-  // one stop is enough
-  with _globals.GetSr do
-    if (not m_blStopped) then begin
-      // let the stop be confirmed
-      if (Application.MessageBox(PChar(Get(CONFIG_ID, 'BREAKQUEST')),
-                                 PChar(Get(CONFIG_ID, 'CONFIRM')),
-                                 MB_ICONQUESTION or MB_YESNO) = IDYES) then
-        m_blStopped:=True;
-    end;
+  RequestClose;
 end;
+
 
 procedure TProgressForm.MinimizeBtnClick(Sender: TObject);
 begin
   // minimize the whole application
   Application.Minimize;
 end;
+
 
 procedure TProgressForm.FormKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -866,6 +871,35 @@ begin
   WipeLoopMaxBox.Caption:='';
   SingleProgressBar.Position:=0;
   AllProgressBar.Position:=0;
+end;
+
+
+procedure TProgressForm.FormCloseQuery(Sender: TObject;
+  var CanClose: Boolean);
+begin
+  CanClose:=RequestClose;
+end;
+
+
+function TProgressForm.RequestClose : Boolean;
+begin
+  Result:=m_blStopped;
+  with _globals.GetSr do
+    if (not m_blStopped) then begin
+      // let the stop be confirmed
+      if (Application.MessageBox(PChar(Get(CONFIG_ID, 'BREAKQUEST')),
+                                 PChar(Get(CONFIG_ID, 'CONFIRM')),
+                                 MB_ICONQUESTION or MB_YESNO) = IDYES) then
+        m_blStopped:=True;
+    end;
+end;
+
+
+procedure TProgressForm.Close;
+begin
+  // we need to assume that external stops have already done the cleanup
+  m_blStopped:=True;
+  inherited;  
 end;
 
 

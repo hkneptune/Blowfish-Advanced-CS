@@ -1246,19 +1246,22 @@ begin
 end;
 
 
-class function TStrPlus.MakeTempFileName(const sPath : String;
-                                         const sPrefix : String = '') : String;
+class function TStrPlus.MakeTempFileName(
+        const sPath : String;
+        const sPrefix : String = '') : String;
 var
   buf : array[0..MAX_PATH] of Char;
 begin
 
-  if (GetTempFileName(PChar(sPath),
-                      PChar(sPrefix),
-                      0,
-                      @buf) = 0) then begin
-    // FIXME: good replacement (at least it's 8.3 copatible) ?
+  if (0 = Windows.GetTempFileName(PChar(sPath),
+        PChar(sPrefix),
+        0,
+        @buf)) then begin
+    // FIXME: good workaround/replacement (at least it's 8.3 compatible)?
     Result:=RTLPath(sPath) +
-            IntToHex(Random(65536), 4) + IntToHex(Random(65536), 4) + '.TMP'
+            IntToHex(Random(65536), 4) +
+            IntToHex(Random(65536), 4) +
+            '.TMP';
   end
   else begin
     Result:=String(PChar(@buf));

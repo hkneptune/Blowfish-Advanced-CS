@@ -189,7 +189,7 @@ var
   dwFlagsAttrs : DWORD;
 begin
   // create the first clear file name
-  sClearFileName:=TStrPlusI.MakeTempFileName(sDrivePath);
+  sClearFileName:=TStrPlusI.MakeTempFileName(sDrivePath, '[-]', );
 
   // open the file
   if (blNoBuffering) then

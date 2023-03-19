@@ -60,7 +60,7 @@ implementation
 uses FileCtrl,
      StringRes,
      Configuration,
-     Globals,
+     GlobalsGUI,
      BrowseForFolder,
      ShortcutChecker,
      Options,

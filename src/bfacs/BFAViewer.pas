@@ -89,7 +89,7 @@ type
 
 implementation
 uses
-  Globals,
+  GlobalsGUI,
   IntLists,
   WipeManager,
   BFAFile,

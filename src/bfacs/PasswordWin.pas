@@ -232,7 +232,7 @@ uses
   FileCtrl,
   General,
   HtmlHelpAPI,
-  Globals,
+  GlobalsGUI,
   MessageCallBack,
   ShortcutChecker,
   BFAFile,

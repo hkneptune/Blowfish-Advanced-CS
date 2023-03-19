@@ -121,7 +121,7 @@ const
    FB_CFGID_REPLACESCANICONS = 'ReplaceScanIcons';
    FB_CFGID_AUTOREFRESH      = 'AutoRefresh';
    FB_CFGID_PLACEDRIVESFIRST = 'PlaceDrivesFirst';
-
+   FB_CFGID_HIDEDRIVES       = 'HideDrives';
 
 // the item identifiers (bit flags)
 const
@@ -954,6 +954,7 @@ begin
   CheckBool(section, FB_CFGID_AUTOREFRESH, True);
   CheckBool(section, FB_CFGID_SCANBFAFILESONLY, True);
   CheckBool(section, FB_CFGID_PLACEDRIVESFIRST, False);
+  CheckBool(section, FB_CFGID_HIDEDRIVES, False);
 
   for cDrive:='A' to 'Z' do
     CheckString(section, FB_CFGID_DRIVEPATH_PREFIX + cDrive, '');
@@ -1570,6 +1571,10 @@ var
   sDriveRoot      : String;
   networkRootPIDL : PItemIDList;
 begin
+
+  // do we really have to?
+  if (m_config.GetBooleanOption(FB_CFGID_HIDEDRIVES)) then Exit;
+
   for cDrive:='A' to 'Z' do begin
     // build the drive root
     sDriveRoot:=cDrive + ':\';

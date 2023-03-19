@@ -201,8 +201,8 @@ type
   end;
 
 
-// every job changes an environment of settings temporary, all affected modules
-// are bundled in the following class
+// every job changes an environment of settings temporarily, all affected
+// modules are bundled in the following class
 type
   TBFJobEnvironment = class
   private
@@ -2111,7 +2111,7 @@ begin
 
   // wrote the whole bunch to the file
   try
-    cfg.SaveToFile(sFileName);
+    cfg.SaveToFile(sFileName, true);
   except
     on EConfigurationError do begin
       Clear;
